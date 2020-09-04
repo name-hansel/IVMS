@@ -118,6 +118,11 @@ ul {
     color: #363636;
     text-transform: uppercase;
 }
+
+#arrows {
+    color: pink;
+}
+
 .tour-heading {
     display: flex;
     flex-direction: column;
