@@ -126,6 +126,7 @@ body {
 .view-all {
     height: 32px;
     margin-left: 32px;
+    margin-top: 6px;
     width: 120px;
     border: none;
     letter-spacing: 3px;
@@ -179,4 +180,46 @@ body {
 
 .booked-tours {
     margin: 60px 10px;
+}
+
+.footer {
+    height: 200px;
+    padding: 10px 100px;
+    background-color: #363636;
+    border-top: 5px solid #ffbcbc;
+    margin-left: 250px;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+
+.socials {
+    display: flex;
+    flex-direction: column;
+}
+
+.socials > * {
+    margin: 15px;
+}
+
+.site>* {
+    filter: invert(98%) sepia(1%) saturate(1%) hue-rotate(26deg) brightness(104%) contrast(100%);
+    text-decoration: none;
+    font-family: 'Montserrat', sans-serif;
+    margin: 0 5px;
+    font-weight: bolder;
+}
+
+.site>img {
+    margin-bottom: -3px;
+}
+
+.contact {
+    display: flex;
+    flex-direction: column;
+}
+
+.contact > * {
+    font-family: 'Montserrat', sans-serif; 
+    color: white;
 }
