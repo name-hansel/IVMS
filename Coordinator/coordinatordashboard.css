@@ -6,7 +6,7 @@ header{
 	background-color:#363636;
 	color:#99d8d0;
 	padding-top:30px;
-	border-bottom:#b7efcd 3px solid;
+	border-bottom:#ffbcbc 5px solid;
 	font-family: 'Alata', sans-serif;
 }
 .span1{
@@ -30,7 +30,7 @@ header{
     background-color:#b7efcd;
 }
 .b {
-	background-color: #99d8d0; /* Green */
+	background-color: #99d8d0; 
     border: none;
     color:#363636;
     padding: 10px 32px;
@@ -44,8 +44,7 @@ header{
 	border: 2px solid #363636;
 }
 .b1{
-	background-color: #99d8d0; /* Green */
-    border: none;
+	background-color: #99d8d0; 
     color:#363636;
     padding: 10px 32px;
     text-align: center;
@@ -75,10 +74,10 @@ footer{
 	background-color:#363636;
 	color:#ffbcbc;
 	float:center;
-	padding-bottom:15px;
+	padding-bottom:12px;
 	/*padding-top:50px;*/
 	padding-right:10px;
 	text-align:right;
 	font-size:20px;
-	border-top:#b7efcd 2px ridge;
+	border-top:#ffbcbc 5px ridge;
 }
