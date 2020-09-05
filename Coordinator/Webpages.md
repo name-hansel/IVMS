@@ -1,11 +1,12 @@
-1. Coordinator dashboard
+1. Coordinator dashboard (getAllTours, getSampleBookedTours)
 2. Tour booking
-    - Enter details
-    - Confirm
-    - Payment
-    - Enter student details
+    - Enter details (postTourDetails) 
+    <!-- enter number of people, dates -->
+    - Enter student details (postStudentDetails)
+    - Confirm 
+    - Payment (postBookedTour)
     - Tour booked confirmation
-3. View scheduled tours
-4. View past tours
-    - Leave review
-5. Change profile details
+3. View scheduled tours (getScheduledTours)
+4. View past tours (getPastTours)
+    - Leave rating (postTourRating)
+5. Change profile details (putCoorDetails)

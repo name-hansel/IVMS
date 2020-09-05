@@ -1,3 +1,3 @@
-1. Homepage
-2. Login page
-3. Signup page
+1. Homepage (getHomeTours, getHomeCompany)
+2. Login page (getHash)
+3. Signup page (postUser)
