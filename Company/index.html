@@ -3,94 +3,117 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Dashboard</title>
+    <title>Company Dashboard</title>
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
-    <!-- left sidebar -->
-    <div class="sidebar">
-        
-        <div class="logo">
-            <img src="logo.png" alt="" width="200px">
-        </div>
-
-        <h1 id="name">IVMS</h1>
-
-        <div>
-            <ul class="list">
-                <li class="list-item">
-                    <a href="/add" class="list-link">Add New Tour</a>
-                </li>
-                <li class="list-item">
-                    <a href="/view" class="list-link">View Tour Catalog</a>
-                </li>
-                <li class="list-item">
-                    <a href="/viewscheduled" class="list-link">View Scheduled Tours</a>
-                </li>
-                <li class="list-item">
-                    <a href="/edit" class="list-link">Edit Tour</a>
-                </li>
-                <li class="list-item">
-                    <a href="/viewpast" class="list-link">View Past Tours</a>
-                </li>
-            </ul>
+    <!-- header -->
+    <div class="header">
+        <h1>Industrial Visit Management System</h1>
+        <div class="header-right">
+            <h5>Company Dashboard</h5>
         </div>
     </div>
-    <!-- main content -->
-    <div class="body">
 
-        <div class="settings">
-            <a href="/editprofile" class="settings-link">Edit Profile</a>
-            <a href="/logout" class="settings-link">Log Out</a>
+    <!-- sidebar -->
+    <div class="sidebar">
+        <img src="images/logo.png" alt="" width="180">
+        <div class="sidebar-links">
+            <a href="">Add New Tour</a>
+            <a href="">View Tour Catalog</a>
+            <a href="">View Scheduled Tours</a>
+            <a href="">Edit Tour</a>
+            <a href="">View Past Tours</a>
+        </div>
+    </div>
+
+    <!-- content -->
+    <div class="content">
+        <!-- content header -->
+        <div class="content-header">
+           <h2 id="main-heading">Hello, ABC Company.</h2>
+           <div class="content-header-icons">
+               <a href=""><img src="images/user.svg" alt="" width="35"></a>
+               <a href=""><img src="images/logout.svg" alt="" width="32"></a>
+           </div>
         </div>
 
-        <div class="heading">
-            <h1 id="main-heading">Hello, ABC Company.</h1>
-        </div>
-        
-
-        <div class="tours">
-            <h1 id="tour-main-heading">Tours <span id="arrows"> >> </span></h1>
-            <div class="tour-cards">
-                <div class="tour-card card-1">
-                    <h4 id="tour-card-heading">Tour ABC</h4>
+        <!-- tours -->
+        <div class="sample-tours">
+            <div class="sample-tours-head-div">
+                <h4 id="sample-tours-heading">Your Tours</h4>
+                <button class="view-all">View All <img src="images/arrow.svg" alt="" width="12px"></button>
+            </div>
+            <div class="sample-tours-container">
+                <div class="tour-card" id="card1">
+                    <div class="tour-card-content">
+                        <h3 id="tour-name">Server Tour</h3>
+                        <h4 id="tour-branch">Computer Science</h4>
+                        <h4 id="tour-place">Mumbai</h4>
+                        <h5 id="tour-rate">$100</h5>
+                    </div>
                 </div>
-                <div class="tour-card card-2">
-                    <h4 id="tour-card-heading">Tour ABC</h4>
+                <div class="tour-card" id="card2">
+                    <div class="tour-card-content">
+                        <h3 id="tour-name">Server Tour</h3>
+                        <h4 id="tour-branch">Computer Science</h4>
+                        <h4 id="tour-place">Mumbai</h4>
+                        <h5 id="tour-rate">$100</h5>
+                    </div>
                 </div>
-                <div class="tour-card card-3">
-                    <h4 id="tour-card-heading">Tour ABC</h4>
+                <div class="tour-card" id="card3">
+                    <div class="tour-card-content">
+                        <h3 id="tour-name">Server Tour</h3>
+                        <h4 id="tour-branch">Computer Science</h4>
+                        <h4 id="tour-place">Mumbai</h4>
+                        <h5 id="tour-rate">$100</h5>
+                    </div>
                 </div>
-                <div class="tour-card card-4">
-                    <h4 id="tour-card-heading">Tour ABC</h4>
+                <div class="tour-card" id="card4">
+                    <div class="tour-card-content">
+                        <h3 id="tour-name">Server Tour</h3>
+                        <h4 id="tour-branch">Computer Science</h4>
+                        <h4 id="tour-place">Mumbai</h4>
+                        <h5 id="tour-rate">$100</h5>
+                    </div>
                 </div>
             </div>
         </div>
 
-        <div class="b-tours">
-            <h1 id="btour-main-heading">
-                Booked Tours <span id="arrows"> >> </span>
-            </h1>
-            <div class="tour-cards">
-                <div class="tour-card card-1">
-                    <h4 id="tour-card-heading">Tour ABC</h4>
-                    <h5>XYZ College</h5>
-                    <h5>Date: 06/09/2020</h5>
+        <!-- booked -->
+        <div class="booked-tours">
+            <div class="sample-tours-head-div">
+                <h4 id="sample-tours-heading">Booked Tours</h4>
+                <button class="view-all">View All <img src="images/arrow.svg" alt="" width="12px"></button>
+            </div>
+            <div class="sample-tours-container">
+                <div class="tour-card" id="card1">
+                    <div class="tour-card-content">
+                        <h3 id="btour-name">Server Tour</h3>
+                        <h4 id="btour-date">06-09-2020</h4>
+                        <h4 id="btour-college">Pillai College, Panvel</h4>
+                    </div>
                 </div>
-                <div class="tour-card card-2">
-                    <h4 id="tour-card-heading">Tour ABC</h4>
-                    <h5>XYZ College</h5>
-                    <h5>Date: 06/09/2020</h5>
+                <div class="tour-card" id="card2">
+                    <div class="tour-card-content">
+                        <h3 id="btour-name">Server Tour</h3>
+                        <h4 id="btour-date">06-09-2020</h4>
+                        <h4 id="btour-college">Pillai College, Panvel</h4>
+                    </div>
                 </div>
-                <div class="tour-card card-3">
-                    <h4 id="tour-card-heading">Tour ABC</h4>
-                    <h5>XYZ College</h5>
-                    <h5>Date: 06/09/2020</h5>
+                <div class="tour-card" id="card3">
+                    <div class="tour-card-content">
+                        <h3 id="btour-name">Server Tour</h3>
+                        <h4 id="btour-date">06-09-2020</h4>
+                        <h4 id="btour-college">Pillai College, Panvel</h4>
+                    </div>
                 </div>
-                <div class="tour-card card-4">
-                    <h4 id="tour-card-heading">Tour ABC</h4>
-                    <h5>XYZ College</h5>
-                    <h5>Date: 06/09/2020</h5>
+                <div class="tour-card" id="card4">
+                    <div class="tour-card-content">
+                        <h3 id="btour-name">Server Tour</h3>
+                        <h4 id="btour-date">06-09-2020</h4>
+                        <h4 id="btour-college">Pillai College, Panvel</h4>
+                    </div>
                 </div>
             </div>
         </div>
