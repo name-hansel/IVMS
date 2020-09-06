@@ -1,4 +1,4 @@
-1. Company Dashboard (getSampleTours, getBookedSampleTours) ->session company id
+1. Company Dashboard (getSampleTours, getBookedSampleTours) ->session company id 
 2. Add new tour (postNewTour)
 3. View scheduled tours (getScheduledTours)
 4. Edit tour (getAllTours, putEditTour/:id)
