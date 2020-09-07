@@ -84,6 +84,7 @@ body {
 .content {
     margin-top: 120px;
     margin-left: 270px;
+    min-height: 400px;
 }
 
 #main-heading {
@@ -183,7 +184,7 @@ body {
 }
 
 .footer {
-    height: 200px;
+    height: 140px;
     padding: 10px 100px;
     background-color: #363636;
     border-top: 5px solid #ffbcbc;
