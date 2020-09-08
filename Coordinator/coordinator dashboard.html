@@ -4,25 +4,109 @@
         <meta charset="utf-8">
         <title>coordinator dashboard</title>
         <link rel="stylesheet" href="coordinatordashboard.css">
+        <script src="coordinatordashboard.js"></script>
         <link href="https://fonts.googleapis.com/css2?family=Alata&display=swap" rel="stylesheet">
         <link href="https://fonts.googleapis.com/css2?family=Alata&display=swap" rel="stylesheet">
     </head>
     <body>
         <header>
             <div class="head">
-                <div id="branding">
+                
                 <h1><span class="span1">Industrial</span> Visit management system</h1>
             </div>
             </div>
         </header>
-        <section id="showcase">
-            <div class="container">
-                <button class="b" type="button">Book Tours</button><br><br>
-                <button class="b" type="button">View Scheduled Tours</button><br><br>
-                <button class="b" type="button">View Visited Tours</button><br><br>
-                <button class="b1" type="button">Cancel</button>
+        <div class="sidebar">
+            
+            <div class="sidebar-links">
+                
+                <a href="">View Tour Catalog</a>
+                <a href="">View Scheduled Tours</a>
+                <a href="">Edit Booked Tour</a>
+                <a href="">View Past Tours</a>
             </div>
-        </section>
+        </div>
+        <div class="sample-tours">
+            <div class="sample-tours-head-div">
+                <h4 id="sample-tours-heading">Available Tours</h4>
+
+                <button class="view-all">View All <img src="../images/arrow.svg" alt="" width="12px"></button>
+            </div>
+            <div class="sample-tours-container">
+                <div class="tour-card" id="card1">
+                    <div class="tour-card-content">
+                        <h3 id="tour-name">Server Tour</h3>
+                        <h4 id="tour-branch">Computer Science</h4>
+                        <h4 id="tour-place">Mumbai</h4>
+                        <h5 id="tour-rate">$100</h5>
+                    </div>
+                </div>
+                <div class="tour-card" id="card2">
+                    <div class="tour-card-content">
+                        <h3 id="tour-name">Server Tour</h3>
+                        <h4 id="tour-branch">Computer Science</h4>
+                        <h4 id="tour-place">Mumbai</h4>
+                        <h5 id="tour-rate">$100</h5>
+                    </div>
+                </div>
+                <div class="tour-card" id="card3">
+                    <div class="tour-card-content">
+                        <h3 id="tour-name">Server Tour</h3>
+                        <h4 id="tour-branch">Computer Science</h4>
+                        <h4 id="tour-place">Mumbai</h4>
+                        <h5 id="tour-rate">$100</h5>
+                    </div>
+                </div>
+                <div class="tour-card" id="card4">
+                    <div class="tour-card-content">
+                        <h3 id="tour-name">Server Tour</h3>
+                        <h4 id="tour-branch">Computer Science</h4>
+                        <h4 id="tour-place">Mumbai</h4>
+                        <h5 id="tour-rate">$100</h5>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="booked-tours">
+            <!--<div class="sample-tours-head-div">-->
+                <h4 id="sample-tours-heading">Booked Tours</h4>
+                <button class="view-all">View All <img src="../images/arrow.svg" alt="" width="12px"></button>
+            </div>
+            <div class="sample-tours-container">
+                <div class="tour-card" id="card1">
+                    <div class="tour-card-content">
+                        <h3 id="btour-name">Server Tour</h3>    
+                        <h4 id="btour-date">06-09-2020</h4>
+                        <h4 id="btour-college">Pillai College, Panvel</h4>
+                    </div>
+                </div>
+                <div class="tour-card" id="card2">
+                    <div class="tour-card-content">
+                        <h3 id="btour-name">Server Tour</h3>
+                        <h4 id="btour-date">06-09-2020</h4>
+                        <h4 id="btour-college">Pillai College, Panvel</h4>
+                    </div>
+                </div>
+                <div class="tour-card" id="card3">
+                    <div class="tour-card-content">
+                        <h3 id="btour-name">Server Tour</h3>
+                        <h4 id="btour-date">06-09-2020</h4>
+                        <h4 id="btour-college">Pillai College, Panvel</h4>
+                    </div>
+                </div>
+                <div class="tour-card" id="card4">
+                    <div class="tour-card-content">
+                        <h3 id="btour-name">Server Tour</h3>
+                        <h4 id="btour-date">06-09-2020</h4>
+                        <h4 id="btour-college">Pillai College, Panvel</h4>
+                    </div>
+                </div>
+            </div>
+        </div>
+    
+
+
         <footer>
 			<div class="footer1">
 			<p>copy rights reserved.</p>
