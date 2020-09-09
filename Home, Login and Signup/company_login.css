@@ -38,7 +38,7 @@ a:hover {
 }
 
 .main{
-  background-color:#b7efcd;
+  background-color:white;
   height:380px;
 }
 
@@ -58,7 +58,8 @@ h1,  .h1 {
 	padding: 60px 30px;
 	transform: translate(-50%,-50%);
 	box-sizing: border-box;
-	box-shadow: 8px 8px 50px #000;
+	box-shadow: 0px 0px 20px #363636;
+	background-color: #b7efcd;
 }
 
 .textbox {
