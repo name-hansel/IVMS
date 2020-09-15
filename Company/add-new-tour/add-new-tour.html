@@ -48,7 +48,7 @@
         </div>
         <div class="form-element">
           <label for="address" class="form-label">address</label>
-          <input type="text" name="address" class="form-input" required />
+          <input type="text" name="place" class="form-input" required />
         </div>
         <div class="form-element">
           <label for="number_people" class="form-label">number of people</label>
@@ -61,7 +61,12 @@
 
         <div class="form-element">
           <label for="date" class="form-label">tour date</label>
-          <input type="text" name="date" class="form-input" id="datepicker" />
+          <input
+            type="text"
+            name="available_days"
+            class="form-input"
+            id="datepicker"
+          />
         </div>
 
         <div class="form-element">
@@ -80,12 +85,12 @@
         <div class="form-element">
           <label for="desc" class="form-label">description</label>
           <textarea
-            name="desc"
+            name="description"
             class="form-input"
             placeholder="Enter details about the tour..."
           ></textarea>
         </div>
-        <button type="submit" class="add-tour-btn">Add new tour</button>
+        <button type="submit" class="add-tour-btn">add new tour</button>
       </form>
     </div>
 
