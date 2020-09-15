@@ -1,95 +1,114 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Add New Tour</title>
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="https://code.jquery.com/jquery-1.12.4.js"></script>
+    <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
     <script src="script.js"></script>
-    <link rel="stylesheet" href="style.css">
-</head>
-<body>
+    <link
+      rel="stylesheet"
+      href="//code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css"
+    />
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
     <!-- header -->
     <div class="header">
-        <h1>Industrial Visit Management System</h1>
-        <div class="header-right">
-            <h5>Add New Tour</h5>
-        </div>
+      <h1>Industrial Visit Management System</h1>
+      <div class="header-right">
+        <h5>Add New Tour</h5>
+      </div>
     </div>
 
     <!-- sidebar -->
     <div class="sidebar">
-        <img src="../images/logo.png" alt="" width="180">
-        <div class="sidebar-links">
-            <a href="" id="active">Add New Tour</a>
-            <a href="">View Tour Catalog</a>
-            <a href="">View Scheduled Tours</a>
-            <a href="">Edit Tour</a>
-            <a href="">View Past Tours</a>
-        </div>
+      <img src="../images/logo.png" alt="" width="180" />
+      <div class="sidebar-links">
+        <a href="" id="active">Add New Tour</a>
+        <a href="">View Tour Catalog</a>
+        <a href="">View Scheduled Tours</a>
+        <a href="">Edit Tour</a>
+        <a href="">View Past Tours</a>
+      </div>
     </div>
 
     <!-- content -->
     <div class="content">
-        <h3 class="form-heading">Enter New Tour Details</h3>
-        <form action="" method="POST">
-            <div class="form-element">
-                <label for="name" class="form-label">tour name</label>
-                <input type="text" name="name" class="form-input" required>
-            </div>
-            <div class="form-element">
-                <label for="branch" class="form-label">branch</label>
-                <input type="text" name="branch" class="form-input" required>
-            </div>
-            <div class="form-element">
-                <label for="address" class="form-label">address</label>
-                <input type="text" name="address" class="form-input" required>
-            </div>
-            <div class="form-element">
-                <label for="number_people" class="form-label">number of people</label>
-                <input type="number" name="number_people" class="form-input">
-            </div>
-            <div class="form-element">
-                <label for="number_days" class="form-label">number of days</label>
-                <input type="number" name="number_days" class="form-input" required>
-            </div>
-            <!-- TODO ADD DATE INPUT HERE -->
-            <div class="form-element">
-                <!-- add rupee symbol here -->
-                <label for="rate" class="form-label">rate</label>
-                <div class="rupee-input">
-                    <img src="../images/rupee.svg" alt="" width="22px" id="rupee-icon">
-                    <input type="number" name="rate" class="form-input rate" required>
-                </div>
-            </div>
-            <div class="form-element">
-                <label for="desc" class="form-label">description</label>
-                <textarea name="desc" class="form-input" placeholder="Enter details about the tour..."></textarea>
-            </div>
-            <button type="submit" class="add-tour-btn">Add new tour</button>
-        </form>
+      <h3 class="form-heading">Enter New Tour Details</h3>
+      <form action="" method="POST">
+        <div class="form-element">
+          <label for="name" class="form-label">tour name</label>
+          <input type="text" name="name" class="form-input" required />
+        </div>
+        <div class="form-element">
+          <label for="branch" class="form-label">branch</label>
+          <input type="text" name="branch" class="form-input" required />
+        </div>
+        <div class="form-element">
+          <label for="address" class="form-label">address</label>
+          <input type="text" name="address" class="form-input" required />
+        </div>
+        <div class="form-element">
+          <label for="number_people" class="form-label">number of people</label>
+          <input type="number" name="number_people" class="form-input" />
+        </div>
+        <div class="form-element">
+          <label for="number_days" class="form-label">number of days</label>
+          <input type="number" name="number_days" class="form-input" required />
+        </div>
+
+        <div class="form-element">
+          <label for="date" class="form-label">tour date</label>
+          <input type="text" name="date" class="form-input" id="datepicker" />
+        </div>
+
+        <div class="form-element">
+          <!-- add rupee symbol here -->
+          <label for="rate" class="form-label">rate</label>
+          <div class="rupee-input">
+            <img
+              src="../images/rupee.svg"
+              alt=""
+              width="22px"
+              id="rupee-icon"
+            />
+            <input type="number" name="rate" class="form-input rate" required />
+          </div>
+        </div>
+        <div class="form-element">
+          <label for="desc" class="form-label">description</label>
+          <textarea
+            name="desc"
+            class="form-input"
+            placeholder="Enter details about the tour..."
+          ></textarea>
+        </div>
+        <button type="submit" class="add-tour-btn">Add new tour</button>
+      </form>
     </div>
 
     <!-- footer -->
     <div class="footer">
-        <div class="socials">
-            <div class="site twitter">
-                <img src="../images/twitter-square-brands.svg" alt="" width="15px">
-                <a href="">Twitter</a>
-            </div>
-            <div class="site facebook">
-                <img src="../images/facebook-square-brands.svg" alt="" width="15px">
-                <a href="">Facebook</a>
-            </div>
-            <div class="site instagram">
-                <img src="../images/instagram-brands.svg" alt="" width="15px">
-                <a href="">Instagram</a>
-            </div>
+      <div class="socials">
+        <div class="site twitter">
+          <img src="../images/twitter-square-brands.svg" alt="" width="15px" />
+          <a href="">Twitter</a>
         </div>
-        <div class="contact">
-            <h4>Email Address: contact@ivms.com</h4>
-            <h4>Contact Number: 9876543219</h4>
+        <div class="site facebook">
+          <img src="../images/facebook-square-brands.svg" alt="" width="15px" />
+          <a href="">Facebook</a>
         </div>
+        <div class="site instagram">
+          <img src="../images/instagram-brands.svg" alt="" width="15px" />
+          <a href="">Instagram</a>
+        </div>
+      </div>
+      <div class="contact">
+        <h4>Email Address: contact@ivms.com</h4>
+        <h4>Contact Number: 9876543219</h4>
+      </div>
     </div>
-</body>
+  </body>
 </html>
