@@ -10,6 +10,7 @@ header{
 	background-color:#363636;
 	color:#99d8d0;
 	padding-top:30px;
+	padding-bottom:20px;
 	position:fixed; 
 	margin-top: 0;
     
@@ -17,7 +18,9 @@ header{
 	font-family: 'Alata', sans-serif;
 }
 header p{
-    text-align:right;
+	position: fixed;
+	top:50px;
+	right:50px;
 }
 .span1{
     color:#ffbcbc;
@@ -40,7 +43,23 @@ form{
     text-align:center;
     padding-top:200px;
 	padding-bottom:50px;
+	
 	font-family: 'Alata', sans-serif;
+}
+.style{
+	border-radius: 10px;
+	border:none;
+	height:50px;
+	width:80px;
+}
+.style:hover{
+	background-color:#ffbcbc;
+	cursor: pointer;
+
+}
+.style1{
+	border-radius: 10px;
+	height:30px;
 }
 
 .sidebar-links > a:hover {
@@ -51,7 +70,7 @@ form{
     position:fixed; 
     margin: 0;
     
-    top:160px;
+    top:120px;
     width: 250px;
     background-color: #ffbcbc;
     height: 100%;

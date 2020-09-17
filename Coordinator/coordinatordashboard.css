@@ -21,7 +21,9 @@ header{
 
 }
 header p{
-    text-align:right;
+	position: fixed;
+	top:50px;
+	right:50px;
 }
 .head{
     top:0px;
@@ -55,7 +57,7 @@ header p{
     position:fixed; 
     margin: 0;
     
-    top:155px;
+    top:120px;
     width: 250px;
     background-color: #ffbcbc;
     height: 100%;
@@ -84,6 +86,8 @@ header p{
 }
 
 .view-all {
+    
+    right:80px;
     height: 32px;
     margin-left: 32px;
     margin-top: 6px;
@@ -92,7 +96,6 @@ header p{
     letter-spacing: 3px;
     font-family: 'Open Sans', sans-serif;
     font-weight: bolder;
-    
     border-radius: 10px;
     transition: 0.3s all ease-in-out;
 }
@@ -122,6 +125,9 @@ header p{
 }
 .preview{
     font-family: Montserrat light 300;
+    border-radius: 10px;
+    height:30px;
+    border:none;
 
 }
 .tour-card:hover {
