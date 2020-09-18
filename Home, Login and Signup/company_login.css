@@ -7,17 +7,16 @@ body {
 }
 
 .header{
-  background-color:#363636;
+  background-color:#99d8d0;
   height:150px;
 }
 
 a {
-	color: #b7efcd;
+	color: black;
 }
 
 a:hover {
-	color: #ffbcbc;
-	font-weight: 900;
+	color: white;
 }
 
 .img{
@@ -30,7 +29,7 @@ a:hover {
 }
 
 .home {
-	float: left;
+	float: right;
  	font-size: 20px;
   	padding:10px 40px 20px 40px;
 	color: #ffbcbc;
@@ -102,17 +101,45 @@ h1,  .h1 {
 }
 
 .footer {
-  background-color:#363636;
-  height:150px;
+  height: 140px;
+  padding: 10px 100px;
+  background-color: #99d8d0;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
 }
 
-.footer-list {
-	float: right;
+.socials {
+  display: flex;
+  flex-direction: column;
 }
 
-.footer-list li{
-  padding: 10px 30px;
-  list-style: none;
-  cursor: pointer; 
+.socials > * {
+  margin: 10px;
 }
 
+.site > a {
+  color: black;
+  text-decoration: none;
+  font-family: "Montserrat", sans-serif;
+  margin: 0 5px;
+  font-weight: bolder;
+}
+
+
+.site > img {
+  margin-bottom: -3px;
+  filter: invert(98%) sepia(1%) saturate(1%) hue-rotate(26deg) brightness(104%)
+    contrast(100%);
+}
+
+.contact {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+}
+
+.contact > * {
+  font-family: "Montserrat", sans-serif;
+  color: black;
+}
