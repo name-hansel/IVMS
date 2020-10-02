@@ -27,7 +27,7 @@ $tour_array = json_decode($json_data, true);
   <div class="sidebar">
     <img src="../images/logo.png" alt="" width="180" />
     <div class="sidebar-links">
-      <a href="../add-new-tour/add-new-tour.html">Add New Tour</a>
+      <a href="../add-new-tour/add-new-tour.php">Add New Tour</a>
       <a href="">View Tour Catalog</a>
       <a href="">View Scheduled Tours</a>
       <a href="">Edit Tour</a>
@@ -69,7 +69,8 @@ $tour_array = json_decode($json_data, true);
                   </div>';
           }
         } else {
-          // TODO show no tours here
+          // TODO add styling
+          echo "No tours.";
         }
         ?>
       </div>
@@ -86,7 +87,7 @@ $tour_array = json_decode($json_data, true);
 
       <div class="sample-tours-container">
         <?php
-        if (!isset($tour_array['data']['bookedTourData']['message'])) {
+        if (isset($tour_array['data']['bookedTourData']['message'])) {
           foreach ($tour_array['data']['bookedTourData'] as $key => $item) {
             echo
               '<div class="tour-card" id="card4">
@@ -98,7 +99,8 @@ $tour_array = json_decode($json_data, true);
                 </div>';
           }
         } else {
-          // TODO show no booked tours here
+          // TODO add styling
+          echo "No booked tours.";
         }
         ?>
       </div>

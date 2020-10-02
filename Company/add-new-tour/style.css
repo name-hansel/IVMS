@@ -88,7 +88,7 @@ body {
 
 .content {
   margin-top: 150px;
-  margin-left: 240px;
+  margin-left: 200px;
   margin-bottom: 80px;
   min-height: 400px;
 }
@@ -199,7 +199,6 @@ textarea {
   font-weight: bolder;
 }
 
-
 .site > img {
   margin-bottom: -3px;
   filter: invert(98%) sepia(1%) saturate(1%) hue-rotate(26deg) brightness(104%)
@@ -227,4 +226,25 @@ input::-webkit-inner-spin-button {
 /* Firefox */
 input[type="number"] {
   -moz-appearance: textfield;
+}
+
+/* CONFIRM.PHP STYLES */
+.confirmation {
+  margin: auto;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+
+.confirmation > * {
+  text-align: center;
+  margin: 10px;
+}
+
+.link {
+  font-family: "Alata", sans-serif;
+  color: #99d8d0;
+  text-decoration: none;
+  font-size: 26px;
 }
