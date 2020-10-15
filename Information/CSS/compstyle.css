@@ -12,14 +12,15 @@ font-family: 'Alata', sans-serif;
 
 .head {
     height: 130px;
-    top: 0;
-    left: 0;
+    top:0;
+    left:0;
     width: 100%;
     background-color: #363636;
     color: #ffbcbc;
     position: fixed;
     justify-content: space-around;
     font-family: 'Alata', sans-serif;
+    border-bottom: white 1px solid;
 }
 
 .head h1{
@@ -38,7 +39,7 @@ font-family: 'Alata', sans-serif;
 }
 
 .navb a:hover{
-  color: #F7AC2A;
+  color: #ffbcbc;
 }
 
 .navb ul li{
@@ -57,8 +58,8 @@ font-family: 'Alata', sans-serif;
 
 .footer {
   position: relative;
-  /* left:0px;
-  bottom:0px; */
+  margin:0px;
+  margin-bottom: 0px;
   height: 130px;
   width:100%;
   background-color: #363636;
@@ -101,7 +102,10 @@ font-family: 'Alata', sans-serif;
 h2{
   margin-left: 10px;
   font-family: 'Montserrat', sans-serif;
-  font-size: 30px;
+  font-size: 40px;
+  position:fixed;
+  width:100%;
+  background-color: white;
   /* font-family: 'Open Sans', sans-serif; */
 }
 
@@ -109,6 +113,7 @@ h2{
   margin: 10px;
   /* font-family: 'Montserrat', sans-serif; */
   font-family: 'Open Sans', sans-serif;
+  padding: 10px;
 }
 
 #comp th, #comp td{
@@ -129,5 +134,5 @@ tr:nth-child(even){
 }
 
 tr:hover{
-  background-color:#DDA7EF;
+  background-color:#ffbcbc;
 }
