@@ -56,7 +56,10 @@ $tour_array = json_decode($json_data, true);
       </div>
       <div class="sample-tours-container">
         <?php
-        if (!isset($tour_array['data']['tourData']['message'])) {
+        if (isset($tour_array['data']['tourData']['message'])) {
+          // TODO add styling
+          echo "No tours.";
+        } else {
           foreach ($tour_array['data']['tourData'] as $key => $item) {
             echo
               '<div class="tour-card">
@@ -68,9 +71,6 @@ $tour_array = json_decode($json_data, true);
                     </div>
                   </div>';
           }
-        } else {
-          // TODO add styling
-          echo "No tours.";
         }
         ?>
       </div>
