@@ -136,7 +136,7 @@ h1,  .h1 {
 .contact {
   display: flex;
   flex-direction: column;
-  align-items: flex-start;
+  /*align-items: flex-start;*/
 }
 
 .contact > * {

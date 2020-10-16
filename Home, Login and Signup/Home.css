@@ -1,0 +1,485 @@
+*{
+	margin: 0;
+	padding: 0;
+}
+body{
+	font-family: 'Alata' , sans-serif;
+
+}
+.wrapper{
+	width:1170px;
+	margin:0 auto;
+}
+
+
+header{
+	height: 100px;
+	background: #363636;
+	width:100%;
+	z-index: 12;
+	position: fixed;
+}
+.logo{
+	width: 30%;
+	float: left;
+}
+.logo a{
+	text-decoration: none;
+	font-size: 30px;
+	color: white;
+}
+nav{
+	float: right;
+}
+
+nav ul li{
+	background: #363636;
+	position: relative;
+	list-style: none;
+	display: inline-block;
+}
+
+nav ul li a{
+	display: block;
+	padding: 0 15px;
+	color: white;
+	text-decoration: none;
+	line-height: 60px;
+	font-size: 20px;
+}
+
+nav ul li a:hover{
+	background: #243342;
+}
+
+nav ul ul{
+	position: absolute;
+	top:60px;
+	display: none;
+}
+
+nav ul li:hover >ul{
+	display:block;
+}
+
+nav ul ul li{
+	width:300px;
+	float: none;
+	display: list-item;
+	position:relative;
+}
+.banner-area{
+	width: 300px;
+	height: 800px;
+	position: fixed;
+	top: 100px; 
+}
+.image{
+	width: inherit;
+	height: inherit;
+	border: 10px;
+	border-color: #262626;
+	position: absolute;
+	opacity: 0;
+	animation: cycleImages 20s infinite;
+}
+.image:nth-child(1){
+	animation-delay: 0s;
+}
+.image:nth-child(2){
+	animation-delay: 3s;
+}
+.image:nth-child(3){
+	animation-delay: 6s;
+}
+.image:nth-child(4){
+	animation-delay: 9s;
+}
+.content-area{
+	width: 100%;
+	position: relative;
+	top: 700px;
+	background: #ddd;
+	height: 1800px;
+	align-items: center;
+}
+@keyframes cycleImages{
+  0% {
+    opacity:1;
+  }
+  17% {
+    opacity:1;
+  }
+  25% {
+    opacity:0;
+  }
+  92% {
+    opacity:0;
+  }
+  100% {
+    opacity:1;
+  }
+}
+.content1 {
+	height: 520px;
+	background-color:#F2F4F4;
+	
+}
+.content2 {
+	height: 400px;
+	background-color: #99d8d0;
+}
+.content3 {
+	height: 600px;
+	background-color: #b7efcd;
+}
+.content4 {
+	height: 400px;
+	background-color: #ffbcbc;
+}
+.content1 img{
+	padding-left: 150px;
+	padding-top: 100px;
+}
+
+.content2 h6, .content4 h6{
+	padding-left: 55px;
+	font-size: 30px; 
+}
+
+
+.first {
+	float: right;
+	font-size: 50px;
+	padding-right: 150px;
+	padding-top: 100px;
+}
+
+.first span {
+	font-weight: bold;
+	font-size: 40px; 
+	color: #07105B;
+
+}
+
+blockquote  {
+    font-size:40px;
+}
+
+blockquote:before { 
+    content: open-quote;
+    font-weight: bold;
+    font-size:100px;
+    color:#889c0b;
+} 
+
+blockquote:after { 
+    content: close-quote;
+    font-weight: bold;
+    font-size:50px;
+    color:#889c0b;
+}
+
+/*Tour section*/
+
+.Tcard1 {
+	width: 200px;
+	height: 230px;
+	background: #99d8d0;
+	/*border-radius: 6px;*/
+	position:absolute;
+	top:38%;
+	left:15%;
+	transform: translate(-50%,-50%);
+	/*box-shadow: 0px 1px 10px 1px #000;*/ 
+	 perspective: 1000px;
+}
+
+
+.Tcard2 {
+	width: 200px;
+	height: 230px;
+	background: #99d8d0;
+	/*border-radius: 6px;*/
+	position:absolute;
+	top:38%;
+	left:38.5%;
+	transform: translate(-50%,-50%);
+	 
+}
+
+.Tcard3 {
+	width: 200px;
+	height: 230px;
+	background: #99d8d0;
+	/*border-radius: 6px;*/
+	position:absolute;
+	top:38%;
+	left:62%;
+	transform: translate(-50%,-50%);
+	
+}
+.Tcard4 {
+	width: 200px;
+	height: 230px;
+	background: #99d8d0;
+	/*border-radius: 6px;*/
+	position:absolute;
+	top:38%;
+	left:85%;
+	transform: translate(-50%,-50%);
+	
+}
+
+/* THE CARD HOLDS THE FRONT AND BACK FACES */
+.thecard{
+  position: relative;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  /*border-radius: 10px;*/
+  transform-style: preserve-3d;
+  transition: all 1s ease;
+}
+
+/* THE PSUEDO CLASS CONTROLS THE FLIP ON MOUSEOVER AND MOUSEOUT */
+.thecard:hover{
+  transform: rotateY(180deg);
+}
+
+/* THE FRONT FACE OF THE CARD, WHICH SHOWS BY DEFAULT */
+ .thefront{
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  /*border-radius: 5px;*/
+  backface-visibility: hidden;
+  overflow: hidden;
+  background: white;
+  color: #000;
+  box-shadow: 0px 1px 10px 1px #000;
+}
+
+/* THE BACK FACE OF THE CARD, WHICH SHOWS ON MOUSEOVER */
+.theback{
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  /*border-radius: 10px;*/
+  backface-visibility: hidden;
+  overflow: hidden;
+  background: #fafafa;
+  color: #333;
+  text-align: center;
+  transform: rotateY(180deg);
+  box-shadow: 0px 1px 10px 1px #000;
+}
+
+
+/*This block (starts here) is merely styling for the flip card, and is NOT an essential part of the flip code */
+.thefront h1, .theback h1{
+  padding: 20px;
+  font-weight: bold;
+  font-size: 24px;
+  text-align: center;
+}
+
+
+/*company section*/
+
+.Ccard1 {
+	width: 200px;
+	height: 230px;
+	background: #ffbcbc;
+	/*border-radius: 6px;*/
+	position:absolute;
+	top:94%;
+	left:15%;
+	transform: translate(-50%,-50%);
+	/*box-shadow: 0px 1px 10px 1px #000;*/ 
+	 perspective: 1000px;
+}
+
+
+.Ccard2 {
+	width: 200px;
+	height: 230px;
+	background: #ffbcbc;
+	/*border-radius: 6px;*/
+	position:absolute;
+	top:94%;
+	left:38.5%;
+	transform: translate(-50%,-50%);
+	 
+}
+
+.Ccard3 {
+	width: 200px;
+	height: 230px;
+	background: #ffbcbc;
+	/*border-radius: 6px;*/
+	position:absolute;
+	top:94%;
+	left:62%;
+	transform: translate(-50%,-50%);
+	
+}
+.Ccard4 {
+	width: 200px;
+	height: 230px;
+	background: #ffbcbc;
+	/*border-radius: 6px;*/
+	position:absolute;
+	top:94%;
+	left:85%;
+	transform: translate(-50%,-50%);
+	
+}
+
+/* THE CARD HOLDS THE FRONT AND BACK FACES */
+.thecard{
+  position: relative;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  /*border-radius: 10px;*/
+  transform-style: preserve-3d;
+  transition: all 1s ease;
+}
+
+/* THE PSUEDO CLASS CONTROLS THE FLIP ON MOUSEOVER AND MOUSEOUT */
+.thecard:hover{
+  transform: rotateY(180deg);
+}
+
+/* THE FRONT FACE OF THE CARD, WHICH SHOWS BY DEFAULT */
+ .thefront{
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  /*border-radius: 5px;*/
+  backface-visibility: hidden;
+  overflow: hidden;
+  background: white;
+  color: #000;
+  box-shadow: 0px 1px 10px 1px #000;
+}
+
+/* THE BACK FACE OF THE CARD, WHICH SHOWS ON MOUSEOVER */
+.theback{
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  /*border-radius: 10px;*/
+  backface-visibility: hidden;
+  overflow: hidden;
+  background: #fafafa;
+  color: #333;
+  text-align: center;
+  transform: rotateY(180deg);
+  box-shadow: 0px 1px 10px 1px #000;
+}
+
+
+/*This block (starts here) is merely styling for the flip card, and is NOT an essential part of the flip code */
+.thefront h1,{
+  padding: 20px;
+  font-weight: bold;
+  font-size: 24px;
+  text-align: center;
+}
+
+.content2 .thefront img, .content2 .theback img{
+
+  padding-left: 70px;
+}
+
+.content4 .thefront img, .content4 .theback img{
+
+  padding-left: 50px;
+}
+
+.thefront p, .theback p{
+
+  padding: 30px;
+  font-weight: normal;
+  font-size: 12px;
+  text-align: center;
+}
+
+
+.content2 span, .content4 span{
+	
+	float: right;
+	padding-top: 270px;
+	padding-right:100px;
+	font-size: 20px;
+}
+
+.content2  .fa, .content4  .fa {
+	color:#363636;
+}
+
+.content2 a, .content4 a{
+	text-decoration: none;
+}
+
+
+.footer {
+  height: 200px;
+  padding: 10px 100px;
+  background-color: #363636;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+}
+
+.socials {
+  display: flex;
+  flex-direction: column;
+}
+
+.socials > * {
+  margin: 10px;
+}
+
+.site > a {
+  color: white;
+  text-decoration: none;
+  font-family: "Montserrat", sans-serif;
+  margin: 0 5px;
+  font-weight: bolder;
+}
+
+
+.site > img {
+  margin-bottom: -3px;
+  filter: invert(98%) sepia(1%) saturate(1%) hue-rotate(26deg) brightness(104%)
+    contrast(100%);
+}
+
+.contact {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+}
+
+.contact > * {
+  font-family: "Montserrat", sans-serif;
+  color: white;
+  padding-top: 30px;
+}
+
+.fa {
+	color: white;
+}
