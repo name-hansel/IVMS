@@ -25,10 +25,10 @@
   <div class="sidebar">
     <img src="../images/logo.png" alt="" width="180" />
     <div class="sidebar-links">
+      <a href="../company-dashboard/company-dashboard.php">Dashboard</a>
       <a href="" id="active">Add New Tour</a>
-      <a href="">View Tour Catalog</a>
+      <a href="">View Your Tours</a>
       <a href="">View Scheduled Tours</a>
-      <a href="">Edit Tour</a>
       <a href="">View Past Tours</a>
     </div>
   </div>
