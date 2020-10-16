@@ -4,7 +4,7 @@ body{
 } 
 
 .head {
-    height: 130px;
+    height: 18%;
     top: 0;
     left: 0;
     width: 100%;
@@ -49,7 +49,7 @@ body{
   position: fixed;
   left:0px;
   bottom:0px;
-  height: 130px;
+  height: 17%;
   width:100%;
   padding: 10px 100px;
   background-color: #363636;
