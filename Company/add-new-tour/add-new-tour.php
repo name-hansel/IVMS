@@ -76,7 +76,7 @@
         <label for="desc" class="form-label">description</label>
         <textarea name="description" class="form-input" placeholder="Enter details about the tour..."></textarea>
       </div>
-
+      <!-- TODO add reset button -->
       <button type="submit" class="add-tour-btn">add new tour</button>
     </form>
   </div>

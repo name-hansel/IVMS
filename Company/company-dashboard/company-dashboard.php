@@ -27,6 +27,7 @@ $tour_array = json_decode($json_data, true);
   <div class="sidebar">
     <img src="../images/logo.png" alt="" width="180" />
     <div class="sidebar-links">
+      <a href="" id="active">Dashboard</a>
       <a href="../add-new-tour/add-new-tour.php">Add New Tour</a>
       <a href="">View Your Tours</a>
       <a href="">View Scheduled Tours</a>
@@ -56,19 +57,18 @@ $tour_array = json_decode($json_data, true);
       <div class="sample-tours-container">
         <?php
         if (isset($tour_array['data']['tourData']['message'])) {
-          // TODO add styling
-          echo "No tours.";
+          echo "<div class='no-tour'>
+                  <h3 class='message'>No booked tours.</h3>
+                </div>";
         } else {
           foreach ($tour_array['data']['tourData'] as $key => $item) {
             echo
               '<div class="tour-card">
-                    <div class="tour-card-content">
-                      <h3 id="tour-name">' . $item['name'] . '</h3>
-                      <h4 id="tour-branch">' . $item['branch'] . '</h4>
-                      <h4 id="tour-place">' . $item['place'] . '</h4>
-                      <h5 id="tour-rate">' . $item['rate'] . '</h5>
-                    </div>
-                  </div>';
+                  <h3 id="tour-name">' . $item['name'] . '</h3>
+                  <h4 id="tour-branch">' . $item['branch'] . '</h4>
+                  <h4 id="tour-place">' . $item['place'] . '</h4>
+                  <h5 id="tour-rate">' . $item['rate'] . '</h5>
+              </div>';
           }
         }
         ?>
@@ -98,8 +98,9 @@ $tour_array = json_decode($json_data, true);
                 </div>';
           }
         } else {
-          // TODO add styling
-          echo "No booked tours.";
+          echo "<div class='no-tour'>
+                  <h3 class='message'>No booked tours.</h3>
+                </div>";
         }
         ?>
       </div>

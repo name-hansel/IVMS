@@ -219,7 +219,7 @@ body {
 
 .tour-options {
   position: absolute;
-  top: 20px;
+  bottom: 20px;
   width: 100px;
   right: 10px;
   display: flex;

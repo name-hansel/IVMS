@@ -100,7 +100,7 @@ body {
   margin-bottom: 10px;
   margin-top: -20px;
   color: #363636;
-  font-size: 42px;
+  font-size: 32px;
   text-transform: uppercase;
   letter-spacing: 4px;
   font-family: "Alata", sans-serif;
@@ -109,7 +109,7 @@ body {
 .form-element {
   display: flex;
   flex-direction: column;
-  margin-left: 100px;
+  margin-left: 105px;
   width: 60%;
 }
 
@@ -117,7 +117,7 @@ body {
   margin: 26px 13px;
   height: 26px;
   padding: 12px 20px;
-  font-size: 22px;
+  font-size: 16px;
   font-family: "Montserrat", sans-serif;
   letter-spacing: 3px;
   font-weight: bold;
@@ -141,7 +141,7 @@ textarea {
 
 .form-label {
   font-family: "Open Sans", sans-serif;
-  font-size: 26px;
+  font-size: 18px;
   color: #363636;
   font-weight: bolder;
   margin-bottom: -22px;
