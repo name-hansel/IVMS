@@ -56,7 +56,7 @@ $tour_array = json_decode($json_data, true);
       </div>
       <div class="sample-tours-container">
         <?php
-        if (isset($tour_array['data']['tourData']['message'])) {
+        if (isset($tour_array['data']['tourData'][0]['message'])) {
           echo "<div class='no-tour'>
                   <h3 class='message'>No booked tours.</h3>
                 </div>";
@@ -86,21 +86,18 @@ $tour_array = json_decode($json_data, true);
 
       <div class="sample-tours-container">
         <?php
-        if (isset($tour_array['data']['bookedTourData']['message'])) {
-          foreach ($tour_array['data']['bookedTourData'] as $key => $item) {
-            echo
-              '<div class="tour-card" id="card4">
-                  <div class="tour-card-content">
-                    <h3 id="btour-name">' . $item['name'] . '</h3>
-                    <h4 id="btour-date">' . $item['date'] . '</h4>
-                    <h4 id="btour-college">' . $item['college'] . '</h4>
-                  </div>
-                </div>';
-          }
-        } else {
+        if (isset($tour_array['data']['bookedTourData'][0]['message'])) {
           echo "<div class='no-tour'>
                   <h3 class='message'>No booked tours.</h3>
                 </div>";
+        } else {
+          foreach ($tour_array['data']['bookedTourData'] as $key => $item) {
+            echo '<div class="tour-card">
+                    <h3 id="btour-name">' . $item['name'] . '</h3>
+                    <h4 id="btour-date">' . $item['date'] . '</h4>
+                    <h4 id="btour-college">' . $item['college'] . '</h4>
+                  </div>';
+          }
         }
         ?>
       </div>
