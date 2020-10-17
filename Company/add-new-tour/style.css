@@ -18,7 +18,7 @@ body {
 }
 
 .header {
-  height: 100px;
+  height: 15%;
   top: 0;
   width: 100%;
   background-color: #363636;
@@ -46,8 +46,8 @@ body {
   position: fixed;
   margin: 0;
   padding: 0;
-  top: 100px;
-  width: 250px;
+  top: 15%;
+  width: 19%;
   background-color: #ffbcbc;
   height: 100%;
   overflow: auto;
@@ -58,7 +58,7 @@ body {
 }
 
 .sidebar > img {
-  margin-top: 20px;
+  margin-top: 5%;
 }
 
 .sidebar-links {
@@ -69,11 +69,11 @@ body {
 }
 
 .sidebar-links > a {
-  margin: 10px;
+  margin: 3% -5%;
   text-decoration: none;
   color: white;
   font-weight: bold;
-  padding: 5px 10px;
+  padding: 2.5% 5%;
   transition: 0.2s all cubic-bezier(0.23, 1, 0.32, 1);
 }
 
@@ -87,29 +87,26 @@ body {
 }
 
 .content {
-  margin-top: 150px;
-  margin-left: 200px;
-  margin-bottom: 80px;
-  min-height: 400px;
+  margin: 8% 1% 4% 20%;
+  min-height: 20%;
 }
 
 /* content css goes here */
 
 .form-heading {
-  margin-left: 100px;
-  margin-bottom: 10px;
-  margin-top: -20px;
-  color: #363636;
-  font-size: 32px;
-  text-transform: uppercase;
-  letter-spacing: 4px;
   font-family: "Alata", sans-serif;
+  font-size: 36px;
+  color: #363636;
+  letter-spacing: 3px;
+  text-transform: uppercase;
+  margin: 4% 3%;
+  margin-top: 12%;
 }
 
 .form-element {
   display: flex;
   flex-direction: column;
-  margin-left: 105px;
+  margin-left: 5%;
   width: 60%;
 }
 
@@ -144,8 +141,16 @@ textarea {
   font-size: 18px;
   color: #363636;
   font-weight: bolder;
-  margin-bottom: -22px;
+  margin-bottom: -1%;
   letter-spacing: 3px;
+}
+
+.error {
+  font-family: "Montserrat", sans-serif;
+  margin: -2% 2% 2% 3%;
+  color: #363636;
+  font-weight: bolder;
+  visibility: hidden;
 }
 
 .add-tour-btn {
@@ -172,11 +177,11 @@ textarea {
 
 /* footer */
 .footer {
-  height: 140px;
-  padding: 10px 100px;
+  height: 10%;
+  padding: 1% 10%;
   background-color: #363636;
   border-top: 5px solid #ffbcbc;
-  margin-left: 250px;
+  margin-left: 19%;
   display: flex;
   justify-content: space-around;
   align-items: center;

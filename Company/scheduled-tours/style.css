@@ -122,9 +122,6 @@ body {
 }
 
 .tour-card {
-  position: relative;
-  z-index: -10;
-  min-height: 150px;
   background-color: #99d8d0;
   margin: 18px 18px;
   padding: 6px;
@@ -138,7 +135,8 @@ body {
   justify-content: center;
   align-items: center;
   max-width: 420px;
-  max-height: 450px;
+  min-height: 200px;
+  max-height: 350px;
 }
 
 .tour-card > * {
@@ -163,30 +161,8 @@ body {
   font-family: "Alata", sans-serif;
 }
 
-.tour-description {
-  font-family: "Open Sans", sans-serif;
-}
-
 .tour-date {
   font-family: "Open Sans", sans-serif;
-}
-
-.rating {
-  display: flex;
-  justify-content: center;
-}
-
-.tour-options {
-  position: absolute;
-  bottom: 20px;
-  width: 100px;
-  right: 10px;
-  display: flex;
-  justify-content: space-around;
-}
-
-.option {
-  height: 26px;
 }
 
 .footer {

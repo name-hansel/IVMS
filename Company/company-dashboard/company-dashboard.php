@@ -29,7 +29,7 @@ $tour_array = json_decode($json_data, true);
     <div class="sidebar-links">
       <a href="" id="active">Dashboard</a>
       <a href="../add-new-tour/add-new-tour.php">Add New Tour</a>
-      <a href="">View Your Tours</a>
+      <a href="../your-tours/your-tours.html">View Your Tours</a>
       <a href="">View Scheduled Tours</a>
       <a href="">View Past Tours</a>
     </div>
