@@ -76,12 +76,8 @@ h1,  .h1 {
  	background: transparent;
 }
 
-.eye {
- 	 position: absolute;
-}
-
-#hide1{
-	display: none;
+.textbox i {
+    cursor: pointer;
 }
 
 .btn {

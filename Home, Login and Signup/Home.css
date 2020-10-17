@@ -11,6 +11,9 @@ body{
 	margin:0 auto;
 }
 
+/*.box-area{
+	width: 100vw;
+}*/
 
 header{
 	height: 100px;
@@ -22,6 +25,7 @@ header{
 .logo{
 	width: 30%;
 	float: left;
+	margin-top: 10px;
 }
 .logo a{
 	text-decoration: none;
@@ -49,7 +53,8 @@ nav ul li a{
 }
 
 nav ul li a:hover{
-	background: #243342;
+	background:  #ffbcbc;
+	color: #363636;
 }
 
 nav ul ul{
@@ -69,14 +74,14 @@ nav ul ul li{
 	position:relative;
 }
 .banner-area{
-	width: 300px;
+	width: 100%;
 	height: 800px;
 	position: fixed;
 	top: 100px; 
 }
 .image{
-	width: inherit;
-	height: inherit;
+	width: 100%;
+	/*height: inherit;*/
 	border: 10px;
 	border-color: #262626;
 	position: absolute;
@@ -126,16 +131,16 @@ nav ul ul li{
 	
 }
 .content2 {
-	height: 400px;
-	background-color: #99d8d0;
+	height: 450px;
+	background-color: #F2F4F4;
 }
 .content3 {
 	height: 600px;
-	background-color: #b7efcd;
+	background-color:#F2F4F4;
 }
 .content4 {
-	height: 400px;
-	background-color: #ffbcbc;
+	height: 450px;
+	background-color: #F2F4F4;
 }
 .content1 img{
 	padding-left: 150px;
@@ -143,8 +148,9 @@ nav ul ul li{
 }
 
 .content2 h6, .content4 h6{
-	padding-left: 55px;
+	padding-left: 100px;
 	font-size: 30px; 
+	padding-top: 15px;
 }
 
 
@@ -188,7 +194,7 @@ blockquote:after {
 	background: #99d8d0;
 	/*border-radius: 6px;*/
 	position:absolute;
-	top:38%;
+	top:40%;
 	left:15%;
 	transform: translate(-50%,-50%);
 	/*box-shadow: 0px 1px 10px 1px #000;*/ 
@@ -202,7 +208,7 @@ blockquote:after {
 	background: #99d8d0;
 	/*border-radius: 6px;*/
 	position:absolute;
-	top:38%;
+	top:40%;
 	left:38.5%;
 	transform: translate(-50%,-50%);
 	 
@@ -214,7 +220,7 @@ blockquote:after {
 	background: #99d8d0;
 	/*border-radius: 6px;*/
 	position:absolute;
-	top:38%;
+	top:40%;
 	left:62%;
 	transform: translate(-50%,-50%);
 	
@@ -222,10 +228,10 @@ blockquote:after {
 .Tcard4 {
 	width: 200px;
 	height: 230px;
-	background: #99d8d0;
+	background: #ddd;
 	/*border-radius: 6px;*/
 	position:absolute;
-	top:38%;
+	top:40%;
 	left:85%;
 	transform: translate(-50%,-50%);
 	
@@ -258,7 +264,7 @@ blockquote:after {
   /*border-radius: 5px;*/
   backface-visibility: hidden;
   overflow: hidden;
-  background: white;
+  background:#99d8d0;
   color: #000;
   box-shadow: 0px 1px 10px 1px #000;
 }
@@ -273,7 +279,7 @@ blockquote:after {
   /*border-radius: 10px;*/
   backface-visibility: hidden;
   overflow: hidden;
-  background: #fafafa;
+  background: #99d8d0;
   color: #333;
   text-align: center;
   transform: rotateY(180deg);
@@ -295,10 +301,10 @@ blockquote:after {
 .Ccard1 {
 	width: 200px;
 	height: 230px;
-	background: #ffbcbc;
+	background: #99d8d0;
 	/*border-radius: 6px;*/
 	position:absolute;
-	top:94%;
+	top:99%;
 	left:15%;
 	transform: translate(-50%,-50%);
 	/*box-shadow: 0px 1px 10px 1px #000;*/ 
@@ -309,10 +315,10 @@ blockquote:after {
 .Ccard2 {
 	width: 200px;
 	height: 230px;
-	background: #ffbcbc;
+	background: #99d8d0;
 	/*border-radius: 6px;*/
 	position:absolute;
-	top:94%;
+	top:99%;
 	left:38.5%;
 	transform: translate(-50%,-50%);
 	 
@@ -321,10 +327,10 @@ blockquote:after {
 .Ccard3 {
 	width: 200px;
 	height: 230px;
-	background: #ffbcbc;
+	background:#99d8d0;
 	/*border-radius: 6px;*/
 	position:absolute;
-	top:94%;
+	top:99%;
 	left:62%;
 	transform: translate(-50%,-50%);
 	
@@ -332,10 +338,10 @@ blockquote:after {
 .Ccard4 {
 	width: 200px;
 	height: 230px;
-	background: #ffbcbc;
+	background: #99d8d0;
 	/*border-radius: 6px;*/
 	position:absolute;
-	top:94%;
+	top:99%;
 	left:85%;
 	transform: translate(-50%,-50%);
 	
@@ -358,41 +364,8 @@ blockquote:after {
   transform: rotateY(180deg);
 }
 
-/* THE FRONT FACE OF THE CARD, WHICH SHOWS BY DEFAULT */
- .thefront{
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  /*border-radius: 5px;*/
-  backface-visibility: hidden;
-  overflow: hidden;
-  background: white;
-  color: #000;
-  box-shadow: 0px 1px 10px 1px #000;
-}
-
-/* THE BACK FACE OF THE CARD, WHICH SHOWS ON MOUSEOVER */
-.theback{
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  /*border-radius: 10px;*/
-  backface-visibility: hidden;
-  overflow: hidden;
-  background: #fafafa;
-  color: #333;
-  text-align: center;
-  transform: rotateY(180deg);
-  box-shadow: 0px 1px 10px 1px #000;
-}
-
-
 /*This block (starts here) is merely styling for the flip card, and is NOT an essential part of the flip code */
-.thefront h1,{
+.thefront h1{
   padding: 20px;
   font-weight: bold;
   font-size: 24px;
@@ -400,8 +373,7 @@ blockquote:after {
 }
 
 .content2 .thefront img, .content2 .theback img{
-
-  padding-left: 70px;
+	padding-left: 70px;
 }
 
 .content4 .thefront img, .content4 .theback img{
@@ -421,7 +393,7 @@ blockquote:after {
 .content2 span, .content4 span{
 	
 	float: right;
-	padding-top: 270px;
+	padding-top: 330px;
 	padding-right:100px;
 	font-size: 20px;
 }
@@ -437,7 +409,7 @@ blockquote:after {
 
 .footer {
   height: 200px;
-  padding: 10px 100px;
+  padding-right: 200px;
   background-color: #363636;
   display: flex;
   justify-content: space-around;
