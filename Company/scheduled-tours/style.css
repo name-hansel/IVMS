@@ -15,6 +15,7 @@ font-family: 'Montserrat', sans-serif; */
 body {
   margin: 0;
   padding: 0;
+  font-family: "Montserrat", sans-serif;
 }
 
 .header {
@@ -88,7 +89,7 @@ body {
 
 .content {
   margin: 8% 1% 4% 20%;
-  min-height: 20%;
+  min-height: 400px;
 }
 
 #main-heading {
@@ -110,84 +111,58 @@ body {
   justify-content: space-between;
 }
 
-.sample-tours {
-  margin: -4% 1%;
-}
-
-.sample-tours-head-div {
-  display: flex;
-  height: 70px;
-  align-items: center;
-}
-
-#sample-tours-heading {
-  margin-left: 3%;
-  font-size: 22px;
-  font-family: "Open Sans", sans-serif;
-  letter-spacing: 2px;
-  color: #363636;
-}
-
-.view-all {
-  height: 28px;
-  margin-left: 32px;
-  margin-top: 6px;
-  width: 120px;
-  border: none;
-  letter-spacing: 3px;
-  font-family: "Open Sans", sans-serif;
-  font-weight: bolder;
-  cursor: pointer;
-  border-radius: 10px;
-  transition: 0.3s all ease-in-out;
-}
-
-.view-all:hover {
-  background-color: #b7efcd;
-}
-
-.sample-tours-container {
+.tour-container {
+  width: 95%;
+  min-height: 500px;
+  margin: -20px 20px;
+  margin-bottom: 30px;
   display: grid;
-  grid-template-columns: repeat(4, auto);
-  margin: 5px 40px;
+  grid-template-columns: auto auto;
+  grid-template-rows: auto;
 }
 
 .tour-card {
-  width: 250px;
-  min-height: 200px;
   background-color: #99d8d0;
-  margin: 0 2px;
-  padding: 8px;
+  margin: 18px 18px;
+  padding: 6px;
   border-radius: 12px;
   overflow: hidden;
   text-overflow: ellipsis;
   text-align: center;
   transition: 0.3s all ease-in;
-  font-family: "Montserrat", sans-serif;
-  color: #363636;
   display: flex;
   flex-direction: column;
   justify-content: center;
-}
-
-.tour-card:hover {
-  box-shadow: 0 0 30px 5px #b7efcd;
+  align-items: center;
+  max-width: 420px;
+  min-height: 200px;
+  max-height: 350px;
 }
 
 .tour-card > * {
-  margin: 2%;
+  width: 75%;
+  color: #363636;
+  margin: 4px;
 }
 
-#tour-name,
-#btour-name {
+.tour-heading {
   font-family: "Open Sans", sans-serif;
   font-size: 20px;
-  font-weight: bold;
-  letter-spacing: 2px;
+  letter-spacing: 3px;
 }
 
-.booked-tours {
-  margin: 6% 1%;
+.tour-heading > *,
+.tour-details > * {
+  margin: 0;
+}
+
+.tour-title {
+  text-transform: uppercase;
+  font-family: "Alata", sans-serif;
+}
+
+.tour-date {
+  font-family: "Open Sans", sans-serif;
 }
 
 .footer {
@@ -231,14 +206,4 @@ body {
 .contact > * {
   font-family: "Montserrat", sans-serif;
   color: white;
-}
-
-.no-tour {
-  margin: -20px 10px;
-}
-
-.message {
-  font-family: "Montserrat", sans-serif;
-  color: rgba(54, 54, 54, 0.6);
-  letter-spacing: 3px;
 }
