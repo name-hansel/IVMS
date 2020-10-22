@@ -1,10 +1,16 @@
-body{
+/* body{
   /* background: #99d8d0; */
-  background: #ffbcbc;
-} 
+  /* background: #ffbcbc; */
+  /* background-image: url("images/sampl"); */
+/* }   */
+
+*{
+  margin: 0;
+  padding: 0;
+}
 
 .head {
-    height: 18%;
+    height: 20%;
     top: 0;
     left: 0;
     width: 100%;
@@ -28,7 +34,7 @@ body{
 }
 
 .navb a:hover{
-  color: #F7AC2A;
+  color: #b7efcd;
 }
 
 .navb ul li{
@@ -43,14 +49,15 @@ body{
   color: #ffbcbc;
   text-decoration: none;
   text-transform: uppercase;
+  font-size: large;
 }
 
 .footer {
-  position: fixed;
-  left:0px;
-  bottom:0px;
-  height: 17%;
-  width:100%;
+  /* position: fixed; */
+  /* left:0px;
+  bottom:0px; */
+  height: 35%;
+  /* width:100%; */
   padding: 10px 100px;
   background-color: #363636;
   display: flex;
@@ -91,18 +98,25 @@ body{
 
 .subhead{
   font-family: 'Montserrat', sans-serif;
-  font-size: 28px;
-  /* font-stretch: extra-expanded; */
-  color: #1F445A;
-  padding-left: 30px;
-
+  font-size: 180%;
+  font-weight: bold;
+  color: #363636;
+  padding-left: 5%;
+  padding-top: 5%;
 }
 
 .content{
   font-family: 'Open Sans', sans-serif;
   font-size: 120%;
-  color: #1F445A;
-  padding-left: 30px;
-  padding-right: 30px;
+  font-weight: bold;
+  color: #363636;
+  padding-left: 5%;
+  padding-right: 5%;
+  padding-bottom: 5%;
   text-align: justify;
+}
+
+.names{
+  list-style-type: square;
+  padding-left: 5%;
 }
