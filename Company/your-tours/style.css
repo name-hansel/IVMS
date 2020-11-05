@@ -117,7 +117,7 @@ body {
   margin: -20px 20px;
   margin-bottom: 30px;
   display: grid;
-  grid-template-columns: auto auto;
+  grid-template-columns: 1fr 1fr;
   grid-template-rows: auto;
 }
 
@@ -137,7 +137,7 @@ body {
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  max-width: 420px;
+  max-width: 90%;
 }
 
 .tour-card > * {
@@ -172,11 +172,15 @@ body {
   font-family: "Open Sans", sans-serif;
 }
 
+.tour-times {
+  font-size: 12px;
+}
+
 .rating {
   display: flex;
   justify-content: center;
   margin-top: 0px;
-  margin-bottom: 10%;
+  margin-bottom: 15%;
 }
 
 .tour-options {
