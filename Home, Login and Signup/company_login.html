@@ -6,21 +6,7 @@
     <link rel="stylesheet" href="company_login.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 
-    <script>
-      function validated() {
-        var email = document.forms['form']['email'];
-        var password = document.forms['form']['password'];
 
-        var email_error = document.getElementById('email_error');
-        var pass_error = document.getElementById('pass_error');
-          if(email.value.length < 9) {
-            email_error.style.display = "block";
-            email.focus();
-            return false;
-          }
-       }
-
-    </script>
   </head>
   <body>
     <!--header-->
@@ -36,18 +22,18 @@
       <div class="form">
         <h1>Company <br>Login </h1>
 
-        <form class="login_form" name="Form"  method="post" onsubmit="return validated()">
+        <form class="login_form" name="Form"  method="post" onsubmit="return validateForm()">
         <div class="textbox">
           <i class="fa fa-user"></i>
           <input type="text" placeholder="Username"   name="name"><br>
         </div>
-        <div class="email_error">Please fill up your username</div>
+    
 
         <div class="textbox">
           <b class="fa fa-lock"></b>
           <input type="password" name="password" id="password" placeholder="Enter the password">
           <i class="fa fa-eye" id="togglePassword"></i>
-          
+
           <!-- JS for toggling password-->
           <script>
           const togglePassword = document.querySelector('#togglePassword');
@@ -62,7 +48,7 @@
           });
         </script>
         </div>
-        <div class="pass_error">Please fill up your Password</div>
+
       
         <p><button class="btn" type="submit">Sign in</button></p>
       </div>
