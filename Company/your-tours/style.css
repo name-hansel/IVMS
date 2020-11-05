@@ -238,3 +238,13 @@ body {
   font-family: "Montserrat", sans-serif;
   color: white;
 }
+
+.no-tour {
+  margin: -20px 30px;
+}
+
+.message {
+  font-family: "Montserrat", sans-serif;
+  color: rgba(54, 54, 54, 0.6);
+  letter-spacing: 3px;
+}

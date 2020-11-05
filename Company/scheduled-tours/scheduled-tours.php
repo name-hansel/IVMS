@@ -29,7 +29,7 @@ $tourArray = json_decode($json_data, true);
         <div class="sidebar-links">
             <a href="../company-dashboard/company-dashboard.php">Dashboard</a>
             <a href="../add-new-tour/add-new-tour.php">Add New Tour</a>
-            <a href="../your-tours/your-tours.html">View Your Tours</a>
+            <a href="../your-tours/your-tours.php">View Your Tours</a>
             <a href="" id="active">View Scheduled Tours</a>
             <a href="">View Past Tours</a>
         </div>
@@ -50,7 +50,7 @@ $tourArray = json_decode($json_data, true);
             <?php
             if (isset($tourArray['data'][0]['message'])) {
                 echo "<div class='no-tour'>
-                  <h3 class='message'>No tours.</h3>
+                  <h3 class='message'>No scheduled tours.</h3>
                 </div>";
             } else {
                 foreach ($tourArray['data'] as $key => $item) {

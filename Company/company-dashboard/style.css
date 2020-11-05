@@ -142,6 +142,12 @@ body {
   transition: 0.3s all ease-in-out;
 }
 
+.view-all > a:link,
+.view-all > a:visited {
+  text-decoration: none;
+  color: #363636;
+}
+
 .view-all:hover {
   background-color: #b7efcd;
 }

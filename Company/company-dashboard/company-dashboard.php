@@ -1,5 +1,5 @@
 <?php
-$url = 'http://localhost/IVMS-API/API/tour/getSampleCompanyData.php';
+$url = 'http://localhost/IVMS-API/API/tour/getSampleCompanyData.php?company_id=1';
 $json_data = file_get_contents($url);
 $tour_array = json_decode($json_data, true);
 ?>
@@ -29,8 +29,8 @@ $tour_array = json_decode($json_data, true);
     <div class="sidebar-links">
       <a href="" id="active">Dashboard</a>
       <a href="../add-new-tour/add-new-tour.php">Add New Tour</a>
-      <a href="../your-tours/your-tours.html">View Your Tours</a>
-      <a href="">View Scheduled Tours</a>
+      <a href="../your-tours/your-tours.php">View Your Tours</a>
+      <a href="../scheduled-tours/scheduled-tours.php">View Scheduled Tours</a>
       <a href="">View Past Tours</a>
     </div>
   </div>
@@ -51,8 +51,9 @@ $tour_array = json_decode($json_data, true);
       <div class="sample-tours-head-div">
         <h4 id="sample-tours-heading">Your Tours</h4>
         <button class="view-all">
-          View All <img src="../images/arrow.svg" alt="" width="12px" />
-        </button>
+          <a href="../your-tours/your-tours.php">
+            View All <img src="../images/arrow.svg" alt="" width="12px" />
+          </a></button>
       </div>
       <div class="sample-tours-container">
         <?php
@@ -80,7 +81,8 @@ $tour_array = json_decode($json_data, true);
       <div class="sample-tours-head-div">
         <h4 id="sample-tours-heading">Booked Tours</h4>
         <button class="view-all">
-          View All <img src="../images/arrow.svg" alt="" width="12px" />
+          <a href="../scheduled-tours/scheduled-tours.php">
+            View All <img src="../images/arrow.svg" alt="" width="12px" /></a>
         </button>
       </div>
 
