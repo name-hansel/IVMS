@@ -38,7 +38,7 @@ a:hover {
 
 .main{
   background-color:white;
-  height:380px;
+  height:450px;
 }
 
 h1,  .h1 {
@@ -50,9 +50,9 @@ h1,  .h1 {
 
 .form {
 	width: 400px;
-	height: 320px;
+	height: 380px;
 	position: absolute;
-	top: 55%;
+	top: 61%;
 	left: 50%;
 	padding: 60px 30px;
 	transform: translate(-50%,-50%);
@@ -76,9 +76,6 @@ h1,  .h1 {
  	background: transparent;
 }
 
-
-
-
 .btn {
  	width: 100%;
  	background: no-repeat;
@@ -93,6 +90,14 @@ h1,  .h1 {
 .btn:hover {
  	background-color: #000;
  	color: #ffbcbc;
+}
+
+.email_error, .pass_error
+{
+	margin-top: 5px;
+	width:345px;
+	font-size: 18px;
+	color:red;
 }
 
 .footer {

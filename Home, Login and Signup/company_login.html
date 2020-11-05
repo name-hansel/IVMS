@@ -7,17 +7,23 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 
     <script>
-      function validateName() {
-        var x = document.forms["myForm"]["name","password"].value;
-        if (x == "") {
-          alert("Username and Password must be filled out");
-          return false;
-        }
-      }
-      </script>
+      function validated() {
+        var email = document.forms['form']['email'];
+        var password = document.forms['form']['password'];
+
+        var email_error = document.getElementById('email_error');
+        var pass_error = document.getElementById('pass_error');
+          if(email.value.length < 9) {
+            email_error.style.display = "block";
+            email.focus();
+            return false;
+          }
+       }
+
+    </script>
   </head>
   <body>
-    
+    <!--header-->
     <div class="header">
       <span class="home">
         <a href="abc.com"><i class="fa fa-home fa-3x"></i></a>
@@ -25,21 +31,23 @@
       <img class="img" src="http://i.xp.io/2Hh2auaj.jpg">
     </div>
     
+    <!--main-->
     <div class="main" >
       <div class="form">
         <h1>Company <br>Login </h1>
 
-        <form name="myForm" action="/action_page.php" onsubmit="return validateName()" method="post">
+        <form class="login_form" name="Form"  method="post" onsubmit="return validated()">
         <div class="textbox">
           <i class="fa fa-user"></i>
           <input type="text" placeholder="Username"   name="name"><br>
         </div>
+        <div class="email_error">Please fill up your username</div>
 
         <div class="textbox">
           <b class="fa fa-lock"></b>
           <input type="password" name="password" id="password" placeholder="Enter the password">
           <i class="fa fa-eye" id="togglePassword"></i>
-
+          
           <!-- JS for toggling password-->
           <script>
           const togglePassword = document.querySelector('#togglePassword');
@@ -54,12 +62,15 @@
           });
         </script>
         </div>
+        <div class="pass_error">Please fill up your Password</div>
       
-        <p><input class="btn" type="submit" value="Sign in"></p>
+        <p><button class="btn" type="submit">Sign in</button></p>
       </div>
     </form>
     </div>
 
+
+    <!--footer-->
      <div class="footer">
       <div class="socials">
         <div class="site twitter">
