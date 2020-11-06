@@ -31,7 +31,7 @@ $tourArray = json_decode($json_data, true);
             <a href="../add-new-tour/add-new-tour.php">Add New Tour</a>
             <a href="../your-tours/your-tours.php">View Your Tours</a>
             <a href="" id="active">View Scheduled Tours</a>
-            <a href="">View Past Tours</a>
+            <a href="../past-tours/past-tours.php">View Past Tours</a>
         </div>
     </div>
 
@@ -61,7 +61,7 @@ $tourArray = json_decode($json_data, true);
             <h3 class="tour-date">' . $item['date'] . '</h3>
           </div>
           <div class="tour-details">
-            <h3 class="tour-booked">Booked at: ' . $item['booked_at'] . '</h3>
+            <h3 class="tour-booked">Booked at: ' . substr($item['booked_at'], 0, 10) . '</h3>
             <h4 class="tour-people">Number of Attendees: ' . $item['number_people'] . '</h4>
           </div>
         </section>';

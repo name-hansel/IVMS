@@ -117,14 +117,11 @@ body {
   margin: -20px 20px;
   margin-bottom: 30px;
   display: grid;
-  grid-template-columns: 1fr 1fr;
+  grid-template-columns: auto auto;
   grid-template-rows: auto;
 }
 
 .tour-card {
-  position: relative;
-  z-index: -10;
-  min-height: 150px;
   background-color: #99d8d0;
   margin: 18px 18px;
   padding: 6px;
@@ -137,7 +134,9 @@ body {
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  max-width: 90%;
+  max-width: 420px;
+  min-height: 200px;
+  max-height: 350px;
 }
 
 .tour-card > * {
@@ -148,10 +147,8 @@ body {
 
 .tour-heading {
   font-family: "Open Sans", sans-serif;
-  font-size: 18px;
-  letter-spacing: 2px;
-  padding: 6%;
-  padding-bottom: 0px;
+  font-size: 20px;
+  letter-spacing: 3px;
 }
 
 .tour-heading > *,
@@ -159,50 +156,13 @@ body {
   margin: 0;
 }
 
-.tour-details {
-  font-size: 20px;
-}
-
 .tour-title {
   text-transform: uppercase;
   font-family: "Alata", sans-serif;
 }
 
-.tour-description {
-  font-family: "Open Sans", sans-serif;
-  margin-bottom: 0px;
-}
-
 .tour-date {
   font-family: "Open Sans", sans-serif;
-}
-
-.tour-times-div {
-  margin-top: 10%;
-}
-
-.tour-times {
-  font-size: 12px;
-}
-
-.rating {
-  display: flex;
-  justify-content: center;
-  margin-top: 0px;
-  margin-bottom: 15%;
-}
-
-.tour-options {
-  position: absolute;
-  bottom: 20px;
-  width: 100px;
-  right: 10px;
-  display: flex;
-  justify-content: space-around;
-}
-
-.option {
-  height: 26px;
 }
 
 .footer {
