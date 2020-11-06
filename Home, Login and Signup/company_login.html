@@ -22,13 +22,12 @@
       <div class="form">
         <h1>Company <br>Login </h1>
 
-        <form class="login_form" name="Form"  method="post" onsubmit="return validateForm()">
+      <form name="myForm" action="/action_page.php" method="post">
         <div class="textbox">
           <i class="fa fa-user"></i>
-          <input type="text" placeholder="Username"   name="name"><br>
+          <input type="email" placeholder="Email" name="email" ><br>
         </div>
-    
-
+        
         <div class="textbox">
           <b class="fa fa-lock"></b>
           <input type="password" name="password" id="password" placeholder="Enter the password">
@@ -48,13 +47,12 @@
           });
         </script>
         </div>
-
       
         <p><button class="btn" type="submit">Sign in</button></p>
       </div>
     </form>
     </div>
-
+  
 
     <!--footer-->
      <div class="footer">
