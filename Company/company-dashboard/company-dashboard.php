@@ -96,7 +96,7 @@ $tour_array = json_decode($json_data, true);
           foreach ($tour_array['data']['bookedTourData'] as $key => $item) {
             echo '<div class="tour-card">
                     <h3 id="btour-name">' . $item['name'] . '</h3>
-                    <h4 id="btour-date">' . $item['date'] . '</h4>
+                    <h4 id="btour-date">' . $item['available_days'] . '</h4>
                     <h4 id="btour-college">' . $item['college'] . '</h4>
                   </div>';
           }
