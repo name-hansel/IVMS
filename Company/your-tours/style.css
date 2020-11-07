@@ -26,6 +26,7 @@ body {
   color: white;
   border-bottom: 5px solid #ffbcbc;
   position: fixed;
+  z-index: 2;
 }
 
 .header > h1 {
@@ -123,7 +124,7 @@ body {
 
 .tour-card {
   position: relative;
-  z-index: -10;
+  /* z-index: -10; */
   min-height: 150px;
   background-color: #99d8d0;
   margin: 18px 18px;
@@ -164,6 +165,8 @@ body {
 }
 
 .tour-title {
+  color: #363636;
+  border-bottom: 1px solid white;
   text-transform: uppercase;
   font-family: "Alata", sans-serif;
 }
@@ -201,8 +204,13 @@ body {
   justify-content: space-around;
 }
 
-.option {
-  height: 26px;
+.delete,
+.edit {
+  background-color: transparent;
+  color: white;
+  border: none;
+  cursor: pointer;
+  font-size: 35px;
 }
 
 .footer {

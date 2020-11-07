@@ -13,6 +13,12 @@ $tourArray = json_decode($json_data, true);
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Your Tours</title>
     <link rel="stylesheet" href="style.css" />
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/axios/0.21.0/axios.min.js"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <script src="https://code.jquery.com/jquery-1.12.4.js"></script>
+    <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
+    <script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
+    <script src="script.js"></script>
 </head>
 
 <body>
@@ -56,21 +62,17 @@ $tourArray = json_decode($json_data, true);
                 </div>";
             } else {
                 foreach ($tourArray['data'] as $key => $item) {
-                    echo '<section class="tour-card">
-          <div class="tour-options">
-            <a href=""
-              ><img
-                src="../images/edit-regular.svg"
-                alt="edit tour"
-                class="option"
-            /></a>
-            <a href=""
-              ><img
-                src="../images/trash-solid.svg"
-                alt="delete tour"
-                class="option"
-            /></a>
-          </div>
+                    echo '
+        <section class="tour-card">
+            <div class="tour-options">
+                <button class="edit" id=' . $item['tour_id'] . '>
+                    <i class="fa fa-edit" class="option" alt="edit tour"></i>
+                </button>
+
+                <button class="delete" id=' . $item['tour_id'] . '>
+                    <i class="fa fa-trash fa-sm" class="option" alt="delete tour"></i>
+                </button>
+            </div>
           <div class="tour-heading">
             <h2 class="tour-title">' . $item['name'] . '</h2>
             <h3 class="tour-branch">' . $item['branch'] . '</h3>
