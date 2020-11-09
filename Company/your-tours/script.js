@@ -11,7 +11,6 @@ $(document).ready(function () {
         },
       },
     }).then((value) => {
-      //   delete tour here
       axios
         .delete("http://localhost/IVMS-API/API/tour/deleteTour.php", {
           params: {
@@ -19,13 +18,7 @@ $(document).ready(function () {
           },
         })
         .then((response) => {
-          let confirm = response.data.message === "Tour deleted" ? true : false;
-          if (confirm) {
-            swal("Tour Deleted");
-            location.reload();
-          } else {
-            swal("Tour Not Deleted", "error");
-          }
+          location.reload();
         });
     });
   });

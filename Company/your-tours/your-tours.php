@@ -57,45 +57,47 @@ $tourArray = json_decode($json_data, true);
         <div class="tour-container">
             <?php
             if (isset($tourArray['data'][0]['message'])) {
-                echo "<div class='no-tour'>
-                  <h3 class='message'>No tours.</h3>
-                </div>";
+            ?>
+                <div class='no-tour'>
+                    <h3 class='message'>No tours.</h3>
+                </div>
+                <?php
             } else {
                 foreach ($tourArray['data'] as $key => $item) {
-                    echo '
-        <section class="tour-card">
-            <div class="tour-options">
-                <button class="edit" id=' . $item['tour_id'] . '>
-                    <i class="fa fa-edit" class="option" alt="edit tour"></i>
-                </button>
-
-                <button class="delete" id=' . $item['tour_id'] . '>
-                    <i class="fa fa-trash fa-sm" class="option" alt="delete tour"></i>
-                </button>
-            </div>
-          <div class="tour-heading">
-            <h2 class="tour-title">' . $item['name'] . '</h2>
-            <h3 class="tour-branch">' . $item['branch'] . '</h3>
-            <h3 class="tour-date">' . $item['available_days'] . '</h3>
-            <h3>' . $item['rate'] . '</h3>
-          </div>
-          <div class="tour-details">
-            <h3 class="tour-place">' . $item['place'] . '</h3>
-            <h4 class="tour-people">Capacity: ' . $item['number_people'] . '</h4>
-            <div class="tour-times-div">
-                <h4 class="tour-times">Created at: ' . substr($item['created_at'], 0, 10) . '</h4>
-                <h4 class="tour-times">Edited at: ' . substr($item['edited_at'], 0, 10) . '</h4>
-            </div>
-          </div>
-          <div class="description">
-            <p class="tour-description">
-              ' . $item['description'] . '
-            </p>
-            <div class="rating">
-              <h3 class="tour-rating">Average Rating: ' . $item['avg_rating'] . '</h3>
-            </div>
-          </div>
-        </section>';
+                ?>
+                    <section class="tour-card">
+                        <div class="tour-options">
+                            <button class="edit" id="<?= $item[' tour_id'] ?>">
+                                <i class="fa fa-edit" class="option" alt="edit tour"></i>
+                            </button>
+                            <button class="delete" id="<?= $item[' tour_id'] ?>">
+                                <i class="fa fa-trash fa-sm" class="option" alt="delete tour"></i>
+                            </button>
+                        </div>
+                        <div class="tour-heading">
+                            <h2 class="tour-title"><?= $item['name'] ?></h2>
+                            <h3 class="tour-branch"><?= $item['branch'] ?></h3>
+                            <h3 class="tour-date"><?= $item['available_days'] ?></h3>
+                            <h3><?= $item['rate'] ?></h3>
+                        </div>
+                        <div class="tour-details">
+                            <h3 class="tour-place"><?= $item['place'] ?></h3>
+                            <h4 class="tour-people">Capacity: <?= $item['number_people'] ?></h4>
+                            <div class="tour-times-div">
+                                <h4 class="tour-times">Created at: <?= substr($item['created_at'], 0, 10) ?></h4>
+                                <h4 class="tour-times">Edited at: <?= substr($item['edited_at'], 0, 10) ?></h4>
+                            </div>
+                        </div>
+                        <div class="description">
+                            <p class="tour-description">
+                                <?= $item['description'] ?>
+                            </p>
+                            <div class="rating">
+                                <h3 class="tour-rating">Average Rating: <?= $item['avg_rating'] ?></h3>
+                            </div>
+                        </div>
+                    </section>
+            <?php
                 }
             }
             ?>
