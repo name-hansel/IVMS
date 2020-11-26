@@ -67,10 +67,13 @@ $tourArray = json_decode($json_data, true);
                 ?>
                     <section class="tour-card">
                         <div class="tour-options">
-                            <button class="edit" id="<?= $item[' tour_id'] ?>">
-                                <i class="fa fa-edit" class="option" alt="edit tour"></i>
-                            </button>
-                            <button class="delete" id="<?= $item[' tour_id'] ?>">
+                            <form action="../edit-tour/edit-tour.php" method="POST">
+                                <input name="tour_id" type="hidden" value="<?= $item['tour_id'] ?>">
+                                <button type="submit" class="edit">
+                                    <i class="fa fa-edit" class="option" alt="edit tour"></i>
+                                </button>
+                            </form>
+                            <button class="delete" id="<?= $item['tour_id'] ?>">
                                 <i class="fa fa-trash fa-sm" class="option" alt="delete tour"></i>
                             </button>
                         </div>
