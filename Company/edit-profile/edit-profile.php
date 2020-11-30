@@ -35,7 +35,7 @@ $company = $company['data'][0];
         <img src="../images/logo.png" alt="" width="180" />
         <div class="sidebar-links">
             <a href="../company-dashboard/company-dashboard.php">Dashboard</a>
-            <a href="" id="active">Add New Tour</a>
+            <a href="">Add New Tour</a>
             <a href="../your-tours/your-tours.php">View Your Tours</a>
             <a href="../scheduled-tours/scheduled-tours.php">View Scheduled Tours</a>
             <a href="">View Past Tours</a>

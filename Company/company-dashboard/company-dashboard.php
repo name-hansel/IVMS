@@ -42,7 +42,7 @@ $tour_array = json_decode($json_data, true);
       <!-- TODO change company name -->
       <h2 id="main-heading">Hello, ABC Company.</h2>
       <div class="content-header-icons">
-        <a href=""><img src="../images/user.svg" alt="" width="35" /></a>
+        <a href="../edit-profile/edit-profile.php"><img src="../images/user.svg" alt="" width="35" /></a>
         <a href=""><img src="../images/logout.svg" alt="" width="32" /></a>
       </div>
     </div>
