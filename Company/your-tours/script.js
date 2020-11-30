@@ -26,12 +26,12 @@ $(document).ready(function () {
               swal("Success", "Tour deleted", "success");
               setTimeout(() => {
                 location.reload();
-              }, 4000);
+              }, 1000);
             } else {
               swal("Error", "Some error has occured", "error");
               setTimeout(() => {
                 location.reload();
-              }, 4000);
+              }, 2000);
             }
           });
       }

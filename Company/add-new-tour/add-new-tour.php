@@ -1,3 +1,6 @@
+<?php
+$sessionID = 1;
+?>
 <!DOCTYPE html>
 <html lang="en">
 
@@ -7,6 +10,11 @@
   <title>Add New Tour</title>
   <script src="https://code.jquery.com/jquery-1.12.4.js"></script>
   <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
+  <script>
+    const companyID = "<?php echo $sessionID ?>"
+  </script>
+  <script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/axios/0.21.0/axios.min.js"></script>
   <script src="script.js"></script>
   <link rel="stylesheet" href="//code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css" />
   <!-- bootstrap -->
@@ -38,8 +46,7 @@
   <!-- content -->
   <div class="content">
     <h3 class="form-heading">Enter New Tour Details</h3>
-    <form name="tour" onSubmit="return formValidation()" action="confirm.php" method="POST">
-
+    <form name="tour" onSubmit="return formValidation()" method="POST">
       <div class="form-element">
         <label for="name" class="form-label">tour name</label>
         <input type="text" name="name" class="form-input" required />

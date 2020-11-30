@@ -5,6 +5,50 @@ $(function () {
   $("#datepicker").datepicker("option", "dateFormat", "d MM yy");
 });
 
+const dialogAndAdd = ({
+  name,
+  branch,
+  address,
+  number,
+  date,
+  rate,
+  description,
+}) => {
+  axios({
+    method: "post",
+    url: "http://localhost/IVMS-API/API/tour/postNewTour.php",
+    data: {
+      name,
+      branch,
+      company_id: companyID,
+      available_days: date,
+      place: address,
+      number_people: number,
+      rate,
+      description,
+    },
+  })
+    .then(function (response) {
+      if (response.data.message === "Tour Created") {
+        swal("Success!", "Tour has been created!", "success");
+        setTimeout(function () {
+          window.location.href =
+            "http://localhost/IVSM%20-%20frontend/Company/company-dashboard/company-dashboard.php";
+        }, 5000);
+      } else {
+        swal("Error", "Some error has occured", "error");
+      }
+    })
+    .catch(function (error) {
+      console.log(error.message);
+      swal("Error", "Some error has occured", "error");
+    });
+  setTimeout(function () {
+    window.location.href =
+      "http://localhost/IVSM%20-%20frontend/Company/company-dashboard/company-dashboard.php";
+  }, 5000);
+};
+
 function formValidation() {
   let name = document.tour.name.value;
   let branch = document.tour.branch.value;
@@ -49,6 +93,17 @@ function formValidation() {
   } else document.getElementById("rate-error").style.visibility = "hidden";
 
   // TODO add validation so the date is one month from today
-
-  return result;
+  if (result) {
+    let tourData = {
+      name,
+      branch,
+      address,
+      number,
+      date,
+      rate,
+      description,
+    };
+    dialogAndAdd(tourData);
+  }
+  return false;
 }
