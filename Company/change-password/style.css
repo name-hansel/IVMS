@@ -171,6 +171,10 @@ textarea {
   cursor: pointer;
 }
 
+.back {
+  margin-left: -10px;
+}
+
 .change-password:hover {
   background-color: rgba(54, 54, 54, 1);
 }

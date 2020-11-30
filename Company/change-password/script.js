@@ -69,3 +69,7 @@ function formValidation() {
   }
   return false;
 }
+
+function goBack() {
+  window.location.href = "../edit-profile/edit-profile.php";
+}

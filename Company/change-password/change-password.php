@@ -64,6 +64,7 @@ $company = $company['data'][0]['password'];
                 <p class="error" id="confirm-error">Passwords do not match</p>
             </div>
             <button type="submit" class="change-password">change password</button>
+            <button type="button" class="change-password back" onclick="goBack()">back</button>
         </form>
     </main>
 

@@ -1,5 +1,4 @@
 var today = new Date();
-console.log("HELLO");
 var lastDate = new Date(today.getFullYear(), today.getMonth(0), 1);
 $(document).ready(function () {
   $("#datepicker").datepicker({ minDate: 0, maxDate: "+1M" });
@@ -9,7 +8,6 @@ $(document).ready(function () {
 });
 
 function formValidation() {
-  // console.log("hello?");
   let name = document.tour.name.value;
   let branch = document.tour.branch.value;
   let address = document.tour.place.value;
@@ -54,7 +52,6 @@ function formValidation() {
 
   // TODO add validation so the date is one month from today
   if (result) {
-    // open confirmation modal here and redirect
     let tourData = {
       tour_id: $("#tour_id").val(),
       name,
@@ -65,8 +62,7 @@ function formValidation() {
       rate,
       description,
     };
-    console.log(tourData);
-    // editTour(tourData);
+    editTour(tourData);
   }
   return false;
 }
@@ -78,9 +74,23 @@ function editTour(tourData) {
     data: tourData,
   })
     .then(function (response) {
-      console.log(response);
+      if (response.data.message === "Tour edited") {
+        swal("Success!", "Tour has been edited", "success");
+        setTimeout(() => {
+          window.location.href = "../your-tours/your-tours.php";
+        }, 1000);
+      } else {
+        swal("Error", "Some error has occured", "error");
+        setTimeout(() => {
+          window.location.href = "../your-tours/your-tours.php";
+        }, 1000);
+      }
     })
     .catch(function (error) {
       console.error(error);
+      swal("Error", "Some error has occured", "error");
+      setTimeout(() => {
+        window.location.href = "../your-tours/your-tours.php";
+      }, 1000);
     });
 }
