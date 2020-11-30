@@ -1,6 +1,7 @@
 var today = new Date();
+console.log("HELLO");
 var lastDate = new Date(today.getFullYear(), today.getMonth(0), 1);
-$(function () {
+$(document).ready(function () {
   $("#datepicker").datepicker({ minDate: 0, maxDate: "+1M" });
   $("#datepicker").datepicker("option", "dateFormat", "d-m-yy");
   //TODO fix date
@@ -8,6 +9,7 @@ $(function () {
 });
 
 function formValidation() {
+  // console.log("hello?");
   let name = document.tour.name.value;
   let branch = document.tour.branch.value;
   let address = document.tour.place.value;
@@ -54,19 +56,31 @@ function formValidation() {
   if (result) {
     // open confirmation modal here and redirect
     let tourData = {
+      tour_id: $("#tour_id").val(),
       name,
       branch,
-      address,
-      number,
-      date,
+      place: address,
+      number_people: number,
+      available_days: date,
       rate,
       description,
     };
-    editTour($("#tour_id").val(), tourData);
+    console.log(tourData);
+    // editTour(tourData);
   }
   return false;
 }
 
-function editTour(tour_id, tour) {
-  // TODO send ajax/axios request to API here
+function editTour(tourData) {
+  axios({
+    method: "put",
+    url: "http://localhost/IVMS-API/API/tour/putEditTour.php",
+    data: tourData,
+  })
+    .then(function (response) {
+      console.log(response);
+    })
+    .catch(function (error) {
+      console.error(error);
+    });
 }

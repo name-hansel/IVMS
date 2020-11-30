@@ -153,7 +153,16 @@ textarea {
   visibility: hidden;
 }
 
-.add-tour-btn {
+.change-password {
+  font-family: "Open Sans", sans-serif;
+  font-size: 18px;
+  color: #363636;
+  font-weight: bolder;
+  letter-spacing: 3px;
+  text-decoration: none;
+}
+
+.edit-profile-btn {
   margin: 15px;
   margin-left: 80px;
   width: auto;
@@ -171,11 +180,14 @@ textarea {
   cursor: pointer;
 }
 
-.add-tour-btn:hover {
+#change-password {
+  margin-left: -5px;
+}
+
+.edit-profile-btn:hover {
   background-color: rgba(54, 54, 54, 1);
 }
 
-/* footer */
 .footer {
   height: 10%;
   padding: 1% 10%;
@@ -231,25 +243,4 @@ input::-webkit-inner-spin-button {
 /* Firefox */
 input[type="number"] {
   -moz-appearance: textfield;
-}
-
-/* CONFIRM.PHP STYLES */
-.confirmation {
-  margin: auto;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  flex-direction: column;
-}
-
-.confirmation > * {
-  text-align: center;
-  margin: 10px;
-}
-
-.link {
-  font-family: "Alata", sans-serif;
-  color: #99d8d0;
-  text-decoration: none;
-  font-size: 26px;
 }

@@ -1,11 +1,14 @@
 <?php
-$tour_id = $_POST['tour_id'];
+if (isset($_POST['tour_id'])) {
+    $tour_id = $_POST['tour_id'];
+} else {
+    header('Location: http://localhost/IVSM%20-%20frontend/Company/your-tours/your-tours.php');
+}
 $url = "http://localhost/IVMS-API/API/tour/getTourDetails.php?tour_id=$tour_id";
 $json_data = file_get_contents($url);
 $tour = json_decode($json_data, true);
 $tour = $tour[0];
 ?>
-
 <!DOCTYPE html>
 <html lang="en">
 
@@ -15,6 +18,7 @@ $tour = $tour[0];
     <title>Add New Tour</title>
     <script src="https://code.jquery.com/jquery-1.12.4.js"></script>
     <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/axios/0.21.0/axios.min.js"></script>
     <script src="script.js"></script>
     <link rel="stylesheet" href="//code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css" />
     <link rel="stylesheet" href="style.css" />
@@ -25,7 +29,7 @@ $tour = $tour[0];
     <div class="header">
         <h1>Industrial Visit Management System</h1>
         <div class="header-right">
-            <h5>Add New Tour</h5>
+            <h5>Edit Tour</h5>
         </div>
     </div>
     <!-- sidebar -->
@@ -43,7 +47,7 @@ $tour = $tour[0];
     <div class="content">
         <h3 class="form-heading">Edit Tour Details</h3>
         <!-- form -->
-        <form name="tour" onSubmit="return formValidation()" method="POST" action="#">
+        <form name="tour" onSubmit="return formValidation()" method="POST">
             <input type="hidden" id="tour_id" value="<?= $tour_id ?>">
             <div class="form-element">
                 <label for="name" class="form-label">tour name</label>
