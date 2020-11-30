@@ -1,0 +1,233 @@
+@import url("https://fonts.googleapis.com/css2?family=Alata&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Open+Sans&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@300&display=swap");
+/* 
+#363636 - black
+#99d8d0 - blue
+#b7efcd - green
+#ffbcbc - pink
+*/
+
+/* font-family: 'Alata', sans-serif;
+font-family: 'Open Sans', sans-serif;
+font-family: 'Montserrat', sans-serif; */
+
+body {
+  margin: 0;
+  padding: 0;
+}
+
+.header {
+  height: 15%;
+  top: 0;
+  width: 100%;
+  background-color: #363636;
+  color: white;
+  border-bottom: 5px solid #ffbcbc;
+  position: fixed;
+}
+
+.header > h1 {
+  float: left;
+  font-family: "Alata", sans-serif;
+  letter-spacing: 3px;
+  margin-left: 20px;
+}
+
+.header-right {
+  float: right;
+  font-family: "Open Sans", sans-serif;
+  font-size: 24px;
+  letter-spacing: 3px;
+  margin-right: 20px;
+}
+
+.sidebar {
+  position: fixed;
+  margin: 0;
+  padding: 0;
+  top: 15%;
+  width: 19%;
+  background-color: #ffbcbc;
+  height: 100%;
+  overflow: auto;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  font-size: 18px;
+}
+
+.sidebar > img {
+  margin-top: 5%;
+}
+
+.sidebar-links {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  font-family: "Open Sans", sans-serif;
+}
+
+.sidebar-links > a {
+  margin: 3% -5%;
+  text-decoration: none;
+  color: white;
+  font-weight: bold;
+  padding: 2.5% 5%;
+  transition: 0.2s all cubic-bezier(0.23, 1, 0.32, 1);
+}
+
+.sidebar-links > a:hover {
+  background-color: #363636;
+}
+
+#active {
+  border: 2px solid #b7efcd;
+  background-color: #363636;
+}
+
+.content {
+  margin: 8% 1% 4% 20%;
+  min-height: 20%;
+}
+
+/* content css goes here */
+
+.form-heading {
+  font-family: "Alata", sans-serif;
+  font-size: 36px;
+  color: #363636;
+  letter-spacing: 3px;
+  text-transform: uppercase;
+  margin: 4% 3%;
+  margin-top: 12%;
+}
+
+.form-element {
+  display: flex;
+  flex-direction: column;
+  margin-left: 5%;
+  width: 60%;
+}
+
+.form-input {
+  margin: 26px 13px;
+  height: 26px;
+  padding: 12px 20px;
+  font-size: 16px;
+  font-family: "Montserrat", sans-serif;
+  letter-spacing: 3px;
+  font-weight: bold;
+  color: #363636;
+  border: none;
+  border-bottom: 3px solid #99d8d0;
+  transition: 0.3s all cubic-bezier(0.445, 0.05, 0.55, 0.95);
+}
+
+textarea {
+  height: auto;
+  padding: 10px;
+  min-height: 150px;
+  resize: none;
+}
+
+.form-input:focus {
+  background-color: rgba(183, 239, 205, 0.7);
+  border-radius: 12px;
+}
+
+.form-label {
+  font-family: "Open Sans", sans-serif;
+  font-size: 18px;
+  color: #363636;
+  font-weight: bolder;
+  margin-bottom: -1%;
+  letter-spacing: 3px;
+}
+
+.error {
+  font-family: "Montserrat", sans-serif;
+  margin: -2% 2% 2% 3%;
+  color: #363636;
+  font-weight: bolder;
+  visibility: hidden;
+}
+
+.change-password {
+  margin: 15px;
+  margin-left: 80px;
+  width: auto;
+  height: auto;
+  padding: 16px 20px;
+  border: none;
+  border-radius: 20px;
+  letter-spacing: 3px;
+  font-family: "Open Sans", sans-serif;
+  font-weight: bold;
+  text-transform: uppercase;
+  background-color: rgba(54, 54, 54, 0.8);
+  color: white;
+  transition: 0.2s all cubic-bezier(0.47, 0, 0.745, 0.715);
+  cursor: pointer;
+}
+
+.change-password:hover {
+  background-color: rgba(54, 54, 54, 1);
+}
+
+.footer {
+  height: 10%;
+  padding: 1% 10%;
+  background-color: #363636;
+  border-top: 5px solid #ffbcbc;
+  margin-left: 19%;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+}
+
+.socials {
+  display: flex;
+  flex-direction: column;
+}
+
+.socials > * {
+  margin: 10px;
+}
+
+.site > a {
+  color: white;
+  text-decoration: none;
+  font-family: "Montserrat", sans-serif;
+  margin: 0 5px;
+  font-weight: bolder;
+}
+
+.site > img {
+  margin-bottom: -3px;
+  filter: invert(98%) sepia(1%) saturate(1%) hue-rotate(26deg) brightness(104%)
+    contrast(100%);
+}
+
+.contact {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+}
+
+.contact > * {
+  font-family: "Montserrat", sans-serif;
+  color: white;
+}
+
+/* remove arrows from number input */
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+/* Firefox */
+input[type="number"] {
+  -moz-appearance: textfield;
+}

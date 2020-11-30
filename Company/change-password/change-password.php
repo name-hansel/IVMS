@@ -1,10 +1,10 @@
 <?php
-// TODO change company id
+// todo change companyid
 $companyID = 1;
-$url = "http://localhost/IVMS-API/API/company/getCompanyInfo.php?company_id=1";
+$url = "http://localhost/IVMS-API/API/company/getHashCompanyID.php?company_id=1";
 $json_data = file_get_contents($url);
 $company = json_decode($json_data, true);
-$company = $company['data'][0];
+$company = $company['data'][0]['password'];
 ?>
 
 <!DOCTYPE html>
@@ -13,14 +13,16 @@ $company = $company['data'][0];
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Edit Profile</title>
-    <script>
-        const companyID = <?php echo $companyID ?>
-    </script>
+    <title>Change Password</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/sweetalert/2.1.2/sweetalert.min.js"></script>
+    <script src="http://www.myersdaily.org/joseph/javascript/md5.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/axios/0.21.0/axios.min.js"></script>
-    <script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
+    <script>
+        const companyID = "<?php echo $companyID ?>";
+        const currentPassword = "<?php echo $company ?>";
+    </script>
     <script src="script.js"></script>
-    <link rel="stylesheet" href="style.css" />
 </head>
 
 <body>
@@ -43,30 +45,28 @@ $company = $company['data'][0];
     </div>
 
     <main class="content">
-        <h3 class="form-heading">Edit Profile</h3>
-        <form name="profile" onSubmit="return formValidation()" method="post">
+        <h3 class="form-heading">Change password</h3>
+        <form name="password" onSubmit="return formValidation()" method="post">
             <div class="form-element">
-                <label for="company" class="form-label">company name</label>
-                <input type="text" name="name" class="form-input" required value="<?= $company['name'] ?>" />
-                <p class="error" id="name-error">Please enter a valid name.</p>
+                <label for="current" class="form-label">enter current password</label>
+                <input type="password" name="current" class="form-input" required />
+                <p class="error" id="current-error">Wrong password</p>
             </div>
-
             <div class="form-element">
-                <label for="phone_number" class="form-label">company contact number</label>
-                <input type="text" name="phone_number" class="form-input" required value="<?= $company['phone_number'] ?>" />
-                <p class="error" id="phone_number-error">Please enter a valid phone number.</p>
+                <label for="new" class="form-label">enter new password</label>
+                <input type="password" name="new" class="form-input" required />
+                <p class="error" id="new-error">Enter a password with at least one capital letter, a number, and 6 or more characters.</p>
+                <p class="error" id="same-error">New password same as current password.</p>
             </div>
-
             <div class="form-element">
-                <label for="description" class="form-label">company description</label>
-                <input type="text" name="description" class="form-input" required value="<?= $company['description'] ?>" />
-                <p class="error" id="description-error">Please enter a valid description.</p>
+                <label for="confirm" class="form-label">confirm password</label>
+                <input type="password" name="confirm" class="form-input" required />
+                <p class="error" id="confirm-error">Passwords do not match</p>
             </div>
-
-            <button type="submit" class="edit-profile-btn">edit profile</button>
-            <button type="button" id="change-password" class="edit-profile-btn" onclick="password()">change password</button>
+            <button type="submit" class="change-password">change password</button>
         </form>
     </main>
+
 
     <div class="footer">
         <div class="socials">

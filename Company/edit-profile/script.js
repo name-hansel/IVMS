@@ -1,3 +1,6 @@
+function password() {
+  window.location.href = "../change-password/change-password.php";
+}
 function editProfile(profile) {
   axios({
     method: "put",
