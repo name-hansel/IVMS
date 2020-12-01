@@ -1,0 +1,175 @@
+@import url("https://fonts.googleapis.com/css2?family=Alata&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Open+Sans&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@300&display=swap");
+/* 
+#363636 - black
+#99d8d0 - blue
+#b7efcd - green
+#ffbcbc - pink
+*/
+
+/* font-family: 'Alata', sans-serif;
+font-family: 'Open Sans', sans-serif;
+font-family: 'Montserrat', sans-serif; */
+
+body {
+  margin: 0;
+  padding: 0;
+  background-color: rgba(153, 216, 208, 0.5);
+}
+
+header {
+  height: 100px;
+  top: 0;
+  width: 100%;
+  background-color: #363636;
+  color: white;
+  position: fixed;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+header > h1 {
+  font-family: "Alata", sans-serif;
+  letter-spacing: 3px;
+  margin-left: 20px;
+}
+
+header > * {
+  padding: 0 20px;
+}
+
+.header-right > a {
+  margin: 0 10px;
+  color: white;
+  font-family: "Open Sans", sans-serif;
+  font-size: 24px;
+  letter-spacing: 3px;
+  text-decoration: none;
+}
+
+nav {
+  position: fixed;
+  top: 100px;
+  background-color: #ffbcbc;
+  height: 50px;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+nav > a {
+  margin: 0 10px;
+  font-family: "Open Sans", sans-serif;
+  font-size: 18px;
+  letter-spacing: 3px;
+  text-decoration: none;
+  color: white;
+  transition: 0.2s all fade-in;
+}
+
+nav > a:hover {
+  color: #363636;
+}
+
+.banner {
+  text-align: center;
+}
+
+.banner > img {
+  width: 100%;
+}
+
+section {
+  padding: 0 20px;
+}
+
+section > h1 {
+  font-family: "Alata", sans-serif;
+  font-size: 28px;
+  letter-spacing: 3px;
+  color: #363636;
+  text-align: center;
+  border-bottom: 1px solid white;
+}
+
+.tour-div,
+.company-div {
+  background-color: white;
+  min-height: 360px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.tour-item,
+.company-item {
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  width: 200px;
+  min-height: 200px;
+  background-color: #b7efcd;
+  margin: 0 10px;
+  padding: 10px;
+}
+
+.tour-name,
+.company-name {
+  font-family: "Open Sans", sans-serif;
+  font-size: 24px;
+  color: #363636;
+}
+
+.tour-description,
+.company-description {
+  font-family: "Montserrat", sans-serif;
+  font-size: 18px;
+  color: #363636;
+}
+
+.footer {
+  margin-top: 20px;
+  height: 10%;
+  padding: 1% 10%;
+  background-color: #363636;
+  border-top: 5px solid #ffbcbc;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+}
+
+.socials {
+  display: flex;
+  flex-direction: column;
+}
+
+.socials > * {
+  margin: 15px;
+}
+
+.site > * {
+  filter: invert(98%) sepia(1%) saturate(1%) hue-rotate(26deg) brightness(104%)
+    contrast(100%);
+  text-decoration: none;
+  font-family: "Montserrat", sans-serif;
+  margin: 0 5px;
+  font-weight: bolder;
+}
+
+.site > img {
+  margin-bottom: -3px;
+}
+
+.contact {
+  display: flex;
+  flex-direction: column;
+}
+
+.contact > * {
+  font-family: "Montserrat", sans-serif;
+  color: white;
+}
