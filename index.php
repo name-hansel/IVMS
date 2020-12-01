@@ -21,8 +21,8 @@ $companyData = json_decode($jsonData, true);
   <header>
     <h1>Industrial Visit Management System</h1>
     <div class="header-right">
-      <a href="">Login</a>
-      <a href="">Register</a>
+      <a href="login.php">Login</a>
+      <a href="register.php">Register</a>
     </div>
   </header>
 
