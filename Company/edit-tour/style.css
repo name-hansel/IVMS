@@ -15,7 +15,6 @@ font-family: 'Montserrat', sans-serif; */
 body {
   margin: 0;
   padding: 0;
-  font-family: "Montserrat", sans-serif;
 }
 
 .header {
@@ -26,7 +25,6 @@ body {
   color: white;
   border-bottom: 5px solid #ffbcbc;
   position: fixed;
-  z-index: 2;
 }
 
 .header > h1 {
@@ -90,10 +88,12 @@ body {
 
 .content {
   margin: 8% 1% 4% 20%;
-  min-height: 400px;
+  min-height: 20%;
 }
 
-#main-heading {
+/* content css goes here */
+
+.form-heading {
   font-family: "Alata", sans-serif;
   font-size: 36px;
   color: #363636;
@@ -103,116 +103,79 @@ body {
   margin-top: 12%;
 }
 
-.content-header-icons {
-  margin-top: -8%;
-  margin-right: 1%;
-  float: right;
-  display: flex;
-  width: 8%;
-  justify-content: space-between;
-}
-
-.tour-container {
-  width: 95%;
-  min-height: 500px;
-  margin: -20px 20px;
-  margin-bottom: 30px;
-  display: grid;
-  grid-template-columns: 1fr 1fr;
-  grid-template-rows: auto;
-}
-
-.tour-card {
-  position: relative;
-  /* z-index: -10; */
-  min-height: 150px;
-  background-color: #99d8d0;
-  margin: 18px 18px;
-  padding: 6px;
-  border-radius: 12px;
-  overflow: hidden;
-  text-overflow: ellipsis;
-  text-align: center;
-  transition: 0.3s all ease-in;
+.form-element {
   display: flex;
   flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  max-width: 90%;
+  margin-left: 5%;
+  width: 60%;
 }
 
-.tour-card > * {
-  width: 75%;
+.form-input {
+  margin: 26px 13px;
+  height: 26px;
+  padding: 12px 20px;
+  font-size: 16px;
+  font-family: "Montserrat", sans-serif;
+  letter-spacing: 3px;
+  font-weight: bold;
   color: #363636;
-  margin: 4px;
+  border: none;
+  border-bottom: 3px solid #99d8d0;
+  transition: 0.3s all cubic-bezier(0.445, 0.05, 0.55, 0.95);
 }
 
-.tour-heading {
+textarea {
+  height: auto;
+  padding: 10px;
+  min-height: 150px;
+  resize: none;
+}
+
+.form-input:focus {
+  background-color: rgba(183, 239, 205, 0.7);
+  border-radius: 12px;
+}
+
+.form-label {
   font-family: "Open Sans", sans-serif;
   font-size: 18px;
-  letter-spacing: 2px;
-  padding: 6%;
-  padding-bottom: 0px;
-}
-
-.tour-heading > *,
-.tour-details > * {
-  margin: 0;
-}
-
-.tour-details {
-  font-size: 20px;
-}
-
-.tour-title {
   color: #363636;
-  border-bottom: 1px solid white;
-  text-transform: uppercase;
-  font-family: "Alata", sans-serif;
+  font-weight: bolder;
+  margin-bottom: -1%;
+  letter-spacing: 3px;
 }
 
-.tour-description {
-  font-family: "Open Sans", sans-serif;
-  margin-bottom: 0px;
+.error {
+  font-family: "Montserrat", sans-serif;
+  margin: -2% 2% 2% 3%;
+  color: #363636;
+  font-weight: bolder;
+  visibility: hidden;
 }
 
-.tour-date {
-  font-family: "Open Sans", sans-serif;
-}
-
-.tour-times-div {
-  margin-top: 10%;
-}
-
-.tour-times {
-  font-size: 12px;
-}
-
-.rating {
-  display: flex;
-  justify-content: center;
-  margin-top: 0px;
-  margin-bottom: 15%;
-}
-
-.tour-options {
-  position: absolute;
-  bottom: 20px;
-  width: 100px;
-  right: 10px;
-  display: flex;
-  justify-content: space-around;
-}
-
-.delete,
-.edit {
-  background-color: transparent;
-  color: white;
+.add-tour-btn {
+  margin: 15px;
+  margin-left: 80px;
+  width: auto;
+  height: auto;
+  padding: 16px 20px;
   border: none;
+  border-radius: 20px;
+  letter-spacing: 3px;
+  font-family: "Open Sans", sans-serif;
+  font-weight: bold;
+  text-transform: uppercase;
+  background-color: rgba(54, 54, 54, 0.8);
+  color: white;
+  transition: 0.2s all cubic-bezier(0.47, 0, 0.745, 0.715);
   cursor: pointer;
-  font-size: 35px;
 }
 
+.add-tour-btn:hover {
+  background-color: rgba(54, 54, 54, 1);
+}
+
+/* footer */
 .footer {
   height: 10%;
   padding: 1% 10%;
@@ -230,12 +193,11 @@ body {
 }
 
 .socials > * {
-  margin: 15px;
+  margin: 10px;
 }
 
-.site > * {
-  filter: invert(98%) sepia(1%) saturate(1%) hue-rotate(26deg) brightness(104%)
-    contrast(100%);
+.site > a {
+  color: white;
   text-decoration: none;
   font-family: "Montserrat", sans-serif;
   margin: 0 5px;
@@ -244,11 +206,14 @@ body {
 
 .site > img {
   margin-bottom: -3px;
+  filter: invert(98%) sepia(1%) saturate(1%) hue-rotate(26deg) brightness(104%)
+    contrast(100%);
 }
 
 .contact {
   display: flex;
   flex-direction: column;
+  align-items: flex-start;
 }
 
 .contact > * {
@@ -256,12 +221,35 @@ body {
   color: white;
 }
 
-.no-tour {
-  margin: -20px 30px;
+/* remove arrows from number input */
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
 }
 
-.message {
-  font-family: "Montserrat", sans-serif;
-  color: rgba(54, 54, 54, 0.6);
-  letter-spacing: 3px;
+/* Firefox */
+input[type="number"] {
+  -moz-appearance: textfield;
+}
+
+/* CONFIRM.PHP STYLES */
+.confirmation {
+  margin: auto;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+
+.confirmation > * {
+  text-align: center;
+  margin: 10px;
+}
+
+.link {
+  font-family: "Alata", sans-serif;
+  color: #99d8d0;
+  text-decoration: none;
+  font-size: 26px;
 }

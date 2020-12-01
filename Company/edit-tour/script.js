@@ -1,53 +1,11 @@
 var today = new Date();
 var lastDate = new Date(today.getFullYear(), today.getMonth(0), 1);
-$(function () {
+$(document).ready(function () {
   $("#datepicker").datepicker({ minDate: 0, maxDate: "+1M" });
-  $("#datepicker").datepicker("option", "dateFormat", "d MM yy");
+  $("#datepicker").datepicker("option", "dateFormat", "d-m-yy");
+  //TODO fix date
+  $("#datepicker").datepicker("setDate", $("#defaultDate").val());
 });
-
-const dialogAndAdd = ({
-  name,
-  branch,
-  address,
-  number,
-  date,
-  rate,
-  description,
-}) => {
-  axios({
-    method: "post",
-    url: "http://localhost/IVMS-API/API/tour/postNewTour.php",
-    data: {
-      name,
-      branch,
-      company_id: companyID,
-      available_days: date,
-      place: address,
-      number_people: number,
-      rate,
-      description,
-    },
-  })
-    .then(function (response) {
-      if (response.data.message === "Tour Created") {
-        swal("Success!", "Tour has been created!", "success");
-        setTimeout(function () {
-          window.location.href =
-            "http://localhost/IVSM%20-%20frontend/Company/company-dashboard/company-dashboard.php";
-        }, 5000);
-      } else {
-        swal("Error", "Some error has occured", "error");
-      }
-    })
-    .catch(function (error) {
-      console.log(error.message);
-      swal("Error", "Some error has occured", "error");
-    });
-  setTimeout(function () {
-    window.location.href =
-      "http://localhost/IVSM%20-%20frontend/Company/company-dashboard/company-dashboard.php";
-  }, 5000);
-};
 
 function formValidation() {
   let name = document.tour.name.value;
@@ -95,15 +53,44 @@ function formValidation() {
   // TODO add validation so the date is one month from today
   if (result) {
     let tourData = {
+      tour_id: $("#tour_id").val(),
       name,
       branch,
-      address,
-      number,
-      date,
+      place: address,
+      number_people: number,
+      available_days: date,
       rate,
       description,
     };
-    dialogAndAdd(tourData);
+    editTour(tourData);
   }
   return false;
+}
+
+function editTour(tourData) {
+  axios({
+    method: "put",
+    url: "http://localhost/IVMS-API/API/tour/putEditTour.php",
+    data: tourData,
+  })
+    .then(function (response) {
+      if (response.data.message === "Tour edited") {
+        swal("Success!", "Tour has been edited", "success");
+        setTimeout(() => {
+          window.location.href = "../your-tours/your-tours.php";
+        }, 1000);
+      } else {
+        swal("Error", "Some error has occured", "error");
+        setTimeout(() => {
+          window.location.href = "../your-tours/your-tours.php";
+        }, 1000);
+      }
+    })
+    .catch(function (error) {
+      console.error(error);
+      swal("Error", "Some error has occured", "error");
+      setTimeout(() => {
+        window.location.href = "../your-tours/your-tours.php";
+      }, 1000);
+    });
 }

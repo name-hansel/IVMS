@@ -39,7 +39,7 @@ $tourArray = json_decode($json_data, true);
         <header class="content-header">
             <h2 id="main-heading">Your Past Tours</h2>
             <div class="content-header-icons">
-                <a href=""><img src="../images/user.svg" alt="" width="35" /></a>
+                <a href="../edit-profile/edit-profile.php"><img src="../images/user.svg" alt="" width="35" /></a>
                 <a href=""><img src="../images/logout.svg" alt="" width="32" /></a>
             </div>
         </header>
@@ -48,27 +48,31 @@ $tourArray = json_decode($json_data, true);
         <div class="tour-container">
             <?php
             if (isset($tourArray['data'][0]['message'])) {
-                echo "<div class='no-tour'>
-                  <h3 class='message'>No past tours.</h3>
-                </div>";
+            ?>
+                <div class='no-tour'>
+                    <h3 class='message'>No past tours.</h3>
+                </div>
+                <?php
             } else {
                 foreach ($tourArray['data'] as $key => $item) {
-                    echo '<section class="tour-card">
-                <div class="tour-heading">
-                    <h2 class="tour-title">' . $item['name'] . '</h2>
-                    <h3 class="tour-college">' . $item['college'] . '</h3>
-                    <h3 class="tour-date">' . $item['date'] . '</h3>
-                </div>
-                <div class="tour-details">
-                    <h3 class="tour-booked">Booked at: ' . substr($item['booked_at'], 0, 10) . '</h3>
-                    <h4 class="tour-people">Number of Attendees: ' . $item['number_people'] . '</h4>
-                </div>
-                <div class="description">
-                    <div class="rating">
-                        <h3 class="tour-rating">Average Rating: ' . $item['rating'] . '/5</h3>
-                    </div>
-                </div>
-            </section>';
+                ?>
+                    <section class="tour-card">
+                        <div class="tour-heading">
+                            <h2 class="tour-title"><?= $item['name'] ?></h2>
+                            <h3 class="tour-college"><?= $item['college'] ?></h3>
+                            <h3 class="tour-date"><?= $item['date'] ?></h3>
+                        </div>
+                        <div class="tour-details">
+                            <h3 class="tour-booked">Booked at: <?= substr($item['booked_at'], 0, 10) ?></h3>
+                            <h4 class="tour-people">Number of Attendees: <?= $item['number_people'] ?></h4>
+                        </div>
+                        <div class="description">
+                            <div class="rating">
+                                <h3 class="tour-rating">Average Rating: <?= $item['rating'] ?>/5</h3>
+                            </div>
+                        </div>
+                    </section>
+            <?php
                 }
             }
             ?>

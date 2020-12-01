@@ -13,6 +13,12 @@ $tourArray = json_decode($json_data, true);
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Your Tours</title>
     <link rel="stylesheet" href="style.css" />
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/axios/0.21.0/axios.min.js"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <script src="https://code.jquery.com/jquery-1.12.4.js"></script>
+    <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
+    <script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
+    <script src="script.js"></script>
 </head>
 
 <body>
@@ -42,7 +48,7 @@ $tourArray = json_decode($json_data, true);
         <header class="content-header">
             <h2 id="main-heading">Your Tours</h2>
             <div class="content-header-icons">
-                <a href=""><img src="../images/user.svg" alt="" width="35" /></a>
+                <a href="../edit-profile/edit-profile.php"><img src="../images/user.svg" alt="" width="35" /></a>
                 <a href=""><img src="../images/logout.svg" alt="" width="32" /></a>
             </div>
         </header>
@@ -51,49 +57,50 @@ $tourArray = json_decode($json_data, true);
         <div class="tour-container">
             <?php
             if (isset($tourArray['data'][0]['message'])) {
-                echo "<div class='no-tour'>
-                  <h3 class='message'>No tours.</h3>
-                </div>";
+            ?>
+                <div class='no-tour'>
+                    <h3 class='message'>No tours.</h3>
+                </div>
+                <?php
             } else {
                 foreach ($tourArray['data'] as $key => $item) {
-                    echo '<section class="tour-card">
-          <div class="tour-options">
-            <a href=""
-              ><img
-                src="../images/edit-regular.svg"
-                alt="edit tour"
-                class="option"
-            /></a>
-            <a href=""
-              ><img
-                src="../images/trash-solid.svg"
-                alt="delete tour"
-                class="option"
-            /></a>
-          </div>
-          <div class="tour-heading">
-            <h2 class="tour-title">' . $item['name'] . '</h2>
-            <h3 class="tour-branch">' . $item['branch'] . '</h3>
-            <h3 class="tour-date">' . $item['available_days'] . '</h3>
-            <h3>' . $item['rate'] . '</h3>
-          </div>
-          <div class="tour-details">
-            <h3 class="tour-place">' . $item['place'] . '</h3>
-            <h4 class="tour-people">Capacity: ' . $item['number_people'] . '</h4>
-            <div class="tour-times-div">
-                <h4 class="tour-times">Created at: ' . substr($item['created_at'], 0, 10) . '</h4>
-                <h4 class="tour-times">Edited at: ' . substr($item['edited_at'], 0, 10) . '</h4>
-            </div>
-          </div>
-          <div class="description">
-            <p class="tour-description">
-              ' . $item['description'] . '
-            </p>
-            <div class="rating">
-              <h3 class="tour-rating">Average Rating: ' . $item['avg_rating'] . '</h3>
-            </div>
-          </div>
-        </section>';
+                ?>
+                    <section class="tour-card">
+                        <div class="tour-options">
+                            <form action="../edit-tour/edit-tour.php" method="POST">
+                                <input name="tour_id" type="hidden" value="<?= $item['tour_id'] ?>">
+                                <button type="submit" class="edit">
+                                    <i class="fa fa-edit" class="option" alt="edit tour"></i>
+                                </button>
+                            </form>
+                            <button class="delete" id="<?= $item['tour_id'] ?>">
+                                <i class="fa fa-trash fa-sm" class="option" alt="delete tour"></i>
+                            </button>
+                        </div>
+                        <div class="tour-heading">
+                            <h2 class="tour-title"><?= $item['name'] ?></h2>
+                            <h3 class="tour-branch"><?= $item['branch'] ?></h3>
+                            <h3 class="tour-date"><?= $item['available_days'] ?></h3>
+                            <h3><?= $item['rate'] ?></h3>
+                        </div>
+                        <div class="tour-details">
+                            <h3 class="tour-place"><?= $item['place'] ?></h3>
+                            <h4 class="tour-people">Capacity: <?= $item['number_people'] ?></h4>
+                            <div class="tour-times-div">
+                                <h4 class="tour-times">Created at: <?= substr($item['created_at'], 0, 10) ?></h4>
+                                <h4 class="tour-times">Edited at: <?= substr($item['edited_at'], 0, 10) ?></h4>
+                            </div>
+                        </div>
+                        <div class="description">
+                            <p class="tour-description">
+                                <?= $item['description'] ?>
+                            </p>
+                            <div class="rating">
+                                <h3 class="tour-rating">Average Rating: <?= $item['avg_rating'] ?></h3>
+                            </div>
+                        </div>
+                    </section>
+            <?php
                 }
             }
             ?>
