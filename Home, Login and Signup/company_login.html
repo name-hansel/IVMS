@@ -2,17 +2,26 @@
 <html>
   <head>
     <meta charset="utf-8">
-    <title>Login Page</title>
+    <title>Company Login</title>
     <link rel="stylesheet" href="company_login.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-
-
+    <script>
+      function formValidation(){
+        let email = document.login.email.value;
+        let password = document.login.password.value;
+        let result = true;
+        if(email.length===0||password.length===0){
+          result = false;
+        }
+        return result;
+      }
+    </script>
   </head>
   <body>
     <!--header-->
     <div class="header">
       <span class="home">
-        <a href="abc.com"><i class="fa fa-home fa-3x"></i></a>
+        <a href="../index.php"><i class="fa fa-home fa-3x"></i></a>
       </span>
       <img class="img" src="http://i.xp.io/2Hh2auaj.jpg">
     </div>
@@ -22,10 +31,10 @@
       <div class="form">
         <h1>Company <br>Login </h1>
 
-      <form name="myForm" action="/action_page.php" method="post">
+      <form name="login" action="login.php?type=company" method="POST" onsubmit="return formValidation()">
         <div class="textbox">
           <i class="fa fa-user"></i>
-          <input type="email" placeholder="Email" name="email" ><br>
+          <input type="email" placeholder="Email" name="email" required><br>
         </div>
 
         <div class="error">
@@ -34,7 +43,7 @@
         
         <div class="textbox">
           <b class="fa fa-lock"></b>
-          <input type="password" name="password" id="password" placeholder="Enter the password">
+          <input type="password" name="password" id="password" placeholder="Enter the password" required>
           <i class="fa fa-eye" id="togglePassword"></i>
 
           <!-- JS for toggling password-->

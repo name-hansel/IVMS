@@ -5,6 +5,17 @@
     <title>Login Page</title>
     <link rel="stylesheet" href="coordinator_login.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <script>
+      function formValidation(){
+        let email = document.login.email.value;
+        let password = document.login.password.value;
+        let result = true;
+        if(email.length===0||password.length===0){
+          result = false;
+        }
+        return result;
+      }
+    </script>
   </head>
 
 
@@ -21,15 +32,15 @@
       <div class="form">
         <h1>Coordinator <br>Login </h1>
 
-      <form name="myForm" action="/action_page.php" method="post">
+      <form name="login" action="login.php?type=coordinator" method="post" onsubmit="return formValidation()">
         <div class="textbox">
           <i class="fa fa-user"></i>
-          <input type="email" placeholder="Email" name="email" ><br>
+          <input type="email" placeholder="Email" name="email" required><br>
         </div>
         
         <div class="textbox">
           <b class="fa fa-lock"></b>
-          <input type="password" name="password" id="password" placeholder="Enter the password">
+          <input type="password" name="password" id="password" placeholder="Enter the password" required>
           <i class="fa fa-eye" id="togglePassword"></i>
 
           <!-- JS for toggling password-->
