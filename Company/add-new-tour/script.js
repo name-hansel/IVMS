@@ -34,7 +34,7 @@ const dialogAndAdd = ({
         setTimeout(function () {
           window.location.href =
             "http://localhost/IVSM%20-%20frontend/Company/company-dashboard/company-dashboard.php";
-        }, 5000);
+        }, 1000);
       } else {
         swal("Error", "Some error has occured", "error");
       }

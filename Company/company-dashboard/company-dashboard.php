@@ -1,5 +1,8 @@
 <?php
 session_start();
+if (!isset($_SESSION['company_id'])) {
+  header("location: ../../index.php");
+}
 $company_id = $_SESSION['company_id'];
 $url = "http://localhost/IVMS-API/API/tour/getSampleCompanyData.php?company_id=$company_id";
 $json_data = file_get_contents($url);

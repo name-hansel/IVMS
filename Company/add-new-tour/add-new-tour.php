@@ -1,5 +1,8 @@
 <?php
 session_start();
+if (!isset($_SESSION['company_id'])) {
+  header("location: ../../index.php");
+}
 $company_id = $_SESSION['company_id'];
 ?>
 <!DOCTYPE html>
