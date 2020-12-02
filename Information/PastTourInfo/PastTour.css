@@ -1,0 +1,230 @@
+/* 
+#363636 - black   background: #363636;
+#99d8d0 - blue    background: #99d8d0;
+#b7efcd - green
+#ffbcbc - pink
+
+font-family: 'Montserrat', sans-serif;
+font-family: 'Open Sans', sans-serif;
+font-family: 'Alata', sans-serif;
+*/
+
+*{
+    margin: 0;
+    padding: 0;
+  }
+  
+  .head {
+    background-color: #363636;
+    color: #b7efcd;
+    display: flex;
+    justify-content: space-around;
+    font-family: 'Alata', sans-serif;   
+    padding-top: 2%;
+  }
+  
+  .head h1{ 
+    padding-bottom: 3%;
+    padding-top: 1%;
+    margin-left: 0%;
+  }
+  
+  /* Nav menu*/
+  
+  nav{
+    float: right;
+    padding-top: 3%;
+    
+  }
+  
+  nav ul li{
+      background: #363636;
+      position: relative;
+      list-style: none;
+      display: inline-block;
+  }
+  
+  nav ul li a{
+      display: block;
+      padding: 0 15px;
+      color: #ffbcbc;
+      text-decoration: none;
+      line-height: 60px;
+    font-size: 130%;
+    text-transform: uppercase;
+  }
+  
+  nav ul li a:hover{
+      background:  #ffbcbc;
+      color: #363636;
+  }
+  
+  nav ul ul{
+      position: absolute;
+      top:60px;
+      display: none;
+  }
+  
+  nav ul li:hover >ul{
+      display:block;
+  }
+  
+  nav ul ul li{
+      width:300px;
+      float: none;
+      display: list-item;
+    position:relative;
+    z-index:999;
+  }
+    
+    .footer {
+      /* position: fixed; */
+      /* left:0px;
+      bottom:0px; */
+      height: 35%;
+      /* width:100%; */
+      bottom:0px;
+      padding: 10px 100px;
+      background-color: #363636;
+      display: flex;
+      justify-content: space-around;
+      align-items: center;
+    }
+    
+    .socials {
+      display: flex;
+      flex-direction: column;
+    }
+    
+    .socials > * {
+      margin: 15px;
+    }
+    
+    .site>* {
+      filter: invert(98%) sepia(1%) saturate(1%) hue-rotate(26deg) brightness(104%) contrast(100%);
+      text-decoration: none;
+      font-family: 'Montserrat', sans-serif;
+      margin: 0 5px;
+      font-weight: bolder;
+    }
+    
+    .site>img {
+      margin-bottom: -3px;
+    }
+    
+    .contact {
+      display: flex;
+      flex-direction: column;
+    }
+    
+    .contact > * {
+      font-family: 'Montserrat', sans-serif; 
+      color: white;
+    }
+  
+  
+    /*------ content css starts ------ */
+    body {
+      font-family: 'Open Sans', sans-serif;
+    }
+  
+    .content {
+      display: flex;
+      flex-direction: row;
+      flex-wrap: wrap;
+    }
+  
+    .card {
+      width: 17%;
+      height: 460px; 
+      padding: 30px;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      position: relative;
+      overflow: hidden;
+      /* background: #b7efcd; */
+      background: white;
+      margin-left: 2%;
+      margin-right: 2%;
+      margin-bottom: 2%;
+      text-align: center;
+      font-weight: bold;
+      color: #363636;
+      /* background: linear-gradient(to left, #91eae4, #86a8e7, #7f7fd5); */
+      /* background: linear-gradient(to left, #99d8d0, #b7efcd); */
+      background: linear-gradient(to left, #ffbcbc, #FCA9FC, #FC8CFC, #FC75FC, #FE62FE);
+      /* float:left; */
+      /* display: block; */
+      /* display: inline; */
+    }
+  
+    .card:hover {
+      cursor: pointer;
+      box-shadow: 0px 2px 30px rgba(0,0,0,0.3);
+      transform: scale(1.05);
+    }
+  
+    .card:hover .sign_in {
+      opacity: 1 !important;
+      visibility: visible !important;
+    }
+  
+    .card:hover .sign_in .btn {
+      transform: translateY(0px) !important;
+   }
+  
+    .sign_in {
+      opacity: 0;
+      visibility: hidden;
+      transition: all .3s ease-in-out;
+    }
+      
+    .btn {
+      background: #b7efcd;
+      border-top: #363636 solid;
+      padding: 15px 20px;
+      display: inline-block;
+      text-decoration: none;
+      color: #363636;
+      font-weight: bolder;
+      position: absolute;
+      text-align: center;
+      font-size: 110%;
+      top: 91%;
+      left: 0;
+      right: 0;
+      width: 90%;
+      height: 10%;
+      text-transform: uppercase;
+      transform: translateY(20px);
+      transition: all .3s ease-in-out;
+  
+    } 
+    
+    /*-----Card Content-----*/
+    .bid,.tname,.cname,.clg,.nop,.dov,.ratg{
+      padding:5%;
+    }
+
+    .bid{
+      font-size: 120%;
+    }
+
+    .clg{
+      font-size: 140%;
+      border-bottom: #363636 dashed;
+    }
+
+    .cname{
+      border-bottom: #363636 dashed;
+    }
+
+    .tname,.nop,.ratg{
+      font-family: 'Alata', sans-serif;
+    }
+  
+    
+    
+  
+    
