@@ -1,7 +1,5 @@
 <?php
-session_start();
-$user_id = $_SESSION['user_id'];
-$url = "http://localhost/IVMS-API/API/tour/getSampleCoordinatorTours.php?user_id=$user_id";
+$url = 'http://localhost/IVMS-API/API/tour/getSampleCoordinatorTours.php?user_id=1';
 $json_data = file_get_contents($url);
 $tour_array = json_decode($json_data, true);
 ?>
@@ -32,16 +30,16 @@ $tour_array = json_decode($json_data, true);
       <a href="" id="active">Dashboard</a>
       <a href="../Edit-profile/edit_profile.php">Edit Profile</a>
       <a href="../Scheduled-tours/scheduled_tours.php">View Scheduled Tours</a>
-
+      
       <a href="../Past-tours/past_tours.php">View Past Tours</a>
     </div>
   </div>
 
-
+  
   <div class="content">
 
     <div class="content-header">
-
+      
       <h2 id="main-heading">Hello, ABC Company.</h2>
       <div class="content-header-icons">
         <a href=""><img src="../images/user.svg" alt="" width="35" /></a>
@@ -67,56 +65,33 @@ $tour_array = json_decode($json_data, true);
           </div>
           <?php
         } else {
-          foreach ($tour_array['data']['tourData'] as $key => $item) {
+          foreach ($tour_array['data'] as $key => $item) {
           ?>
             <div class="tour-card">
+            <h3 id="tour-id"><?= $item['tour_id'] ?></h3>
               <h3 id="tour-name"><?= $item['name'] ?></h3>
               <h4 id="tour-branch"><?= $item['branch'] ?></h4>
               <h4 id="tour-place"><?= $item['place'] ?></h4>
               <h5 id="tour-rate"><?= $item['rate'] ?></h5>
+              <form action="select_tour.php" method="POST">
+                <input name="select_id" type="hidden" value="<?= $item['tour_id'] ?>">
+                <input name="select_name" type="hidden" value="<?= $item['name'] ?>">
+                <input name="select_branch" type="hidden" value="<?= $item['branch'] ?>">
+              <button class="select-button">Click to select tour</button>
+          </form>
             </div>
         <?php
-          }
         }
+        }
+       
         ?>
+           
       </div>
+      
     </div>
 
-    <!-- booked -->
-    <div class="booked-tours">
-      <div class="sample-tours-head-div">
-        <h4 id="sample-tours-heading">Booked Tours</h4>
-        <button class="view-all">
-          <a href="">
-            View All <img src="../images/arrow.svg" alt="" width="12px" /></a>
-        </button>
-      </div>
 
-      <div class="sample-tours-container">
-        <?php
-        if (isset($tour_array['data']['bookedTourData'][0]['message'])) {
-        ?>
-          <div class='no-tour'>
-            <h3 class='message'>No booked tours.</h3>
-          </div>
-          <?php
-        } else {
-          foreach ($tour_array['data']['bookedTourData'] as $key => $item) {
-          ?>
-            <div class="tour-card">
-              <h3 id="btour-name"><?= $item['name'] ?></h3>
-              <h4 id="btour-date"><?= $item['available_days'] ?></h4>
-              <h4 id="btour-college"><?= $item['college'] ?></h4>
-            </div>
-        <?php
-          }
-        }
-        ?>
-      </div>
-    </div>
-  </div>
-
-  <!-- footer -->
+  <!-- footer 
   <div class="footer">
     <div class="socials">
       <div class="site twitter">
@@ -136,7 +111,7 @@ $tour_array = json_decode($json_data, true);
       <h4>Email Address: contact@ivms.com</h4>
       <h4>Contact Number: 9876543219</h4>
     </div>
-  </div>
+  </div>-->
 </body>
 
 </html>

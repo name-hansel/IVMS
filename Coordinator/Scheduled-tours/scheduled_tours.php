@@ -1,6 +1,6 @@
 <?php
-// TODO change company_id
-$url = 'http://localhost/IVMS-API/API/bookedTour/getCoordinatorBookedTours.php?company_id=1';
+
+$url = 'http://localhost/IVMS-API/API/bookedTour/getCoordinatorBookedTours.php?user_id=1';
 $json_data = file_get_contents($url);
 $tourArray = json_decode($json_data, true);
 ?>
