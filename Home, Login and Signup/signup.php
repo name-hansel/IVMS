@@ -19,9 +19,9 @@ if (isset($_GET['type'])) {
         $result = file_get_contents($url, false, $context);
         $result = json_decode($result, true);
         if ($result['message'] === 'successful') {
-            header("location: /coordinator_login.html?msg=success");
+            header("location: /coordinator_login.php?msg=success");
         } else {
-            header("location: ./coordinator_signup.html?msg=error");
+            header("location: ./coordinator_signup.php?msg=error");
         }
     } else {
         // Company

@@ -32,7 +32,7 @@ if (isset($_GET['type'])) {
                 $_SESSION["user_id"] = $company['data'][0]['user_id'];
                 header("location: ../Coordinator/Coordinator-dashboard/coordinator-dashboard.php");
             } else {
-                header("location: ./coordinator_login.html?error=wrong_password");
+                header("location: ./coordinator_login.php?error=wrong_password");
             }
         }
     }
