@@ -28,9 +28,7 @@ $tour_array = json_decode($json_data, true);
     <img src="../images/logo.png" alt="" width="180" />
     <div class="sidebar-links">
       <a href="" id="active">Dashboard</a>
-      <a href="../Edit-profile/edit_profile.php">Edit Profile</a>
       <a href="../Scheduled-tours/scheduled_tours.php">View Scheduled Tours</a>
-
       <a href="../Past-tours/past_tours.php">View Past Tours</a>
     </div>
   </div>

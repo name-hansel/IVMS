@@ -1,10 +1,4 @@
 <?php
-
-    print_r($_POST);
-    
-?>
- 
- <?php
 $sessionID = 1;
 ?>
 <!DOCTYPE html>
@@ -57,7 +51,7 @@ $sessionID = 1;
         <p class="error" id="name-error">Please enter a valid name.</p>
       </div>
 
-      
+
       <button type="submit" class="add-tour-btn">Confirm tour</button>
     </form>
   </div>
@@ -86,4 +80,3 @@ $sessionID = 1;
 </body>
 
 </html>
-

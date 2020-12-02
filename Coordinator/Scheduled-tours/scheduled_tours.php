@@ -1,5 +1,4 @@
 <?php
-
 $url = 'http://localhost/IVMS-API/API/bookedTour/getCoordinatorBookedTours.php?user_id=1';
 $json_data = file_get_contents($url);
 $tourArray = json_decode($json_data, true);
@@ -28,9 +27,8 @@ $tourArray = json_decode($json_data, true);
         <img src="../images/logo.png" alt="" width="180" />
         <div class="sidebar-links">
             <a href="../Coordinator-dashboard/coordinator-dashboard.php">Dashboard</a>
-            <a href="../your-tours/your-tours.php">View Your Tours</a>
             <a href="" id="active">View Scheduled Tours</a>
-            <a href="../past-tours/past-tours.php">View Past Tours</a>
+            <a href="../Past-tours/past_tours.php">View Past Tours</a>
         </div>
     </div>
 
@@ -40,7 +38,7 @@ $tourArray = json_decode($json_data, true);
             <h2 id="main-heading">Your Scheduled Tours</h2>
             <div class="content-header-icons">
                 <a href="../edit-profile/edit-profile.php"><img src="../images/user.svg" alt="" width="35" /></a>
-                <a href=""><img src="../images/logout.svg" alt="" width="32" /></a>
+                <a href="../logout.php"><img src="../images/logout.svg" alt="" width="32" /></a>
             </div>
         </header>
 
