@@ -66,15 +66,12 @@ $tour_array = json_decode($json_data, true);
           foreach ($tour_array['data'] as $key => $item) {
           ?>
             <div class="tour-card">
-              <h3 id="tour-id"><?= $item['tour_id'] ?></h3>
               <h3 id="tour-name"><?= $item['name'] ?></h3>
               <h4 id="tour-branch"><?= $item['branch'] ?></h4>
               <h4 id="tour-place"><?= $item['place'] ?></h4>
               <h5 id="tour-rate"><?= $item['rate'] ?></h5>
               <form action="select_tour.php" method="POST">
                 <input name="select_id" type="hidden" value="<?= $item['tour_id'] ?>">
-                <input name="select_name" type="hidden" value="<?= $item['name'] ?>">
-                <input name="select_branch" type="hidden" value="<?= $item['branch'] ?>">
                 <button class="select-button">Click to select tour</button>
               </form>
             </div>

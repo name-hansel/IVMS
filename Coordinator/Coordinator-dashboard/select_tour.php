@@ -1,5 +1,10 @@
 <?php
 $sessionID = 1;
+$tour_id = $_POST['select_id'];
+$url = "http://localhost/IVMS-API/API/tour/getTourDetails.php?tour_id=$tour_id";
+$json_data = file_get_contents($url);
+$tour_array = json_decode($json_data, true);
+$tour_array = $tour_array[0];
 ?>
 <!DOCTYPE html>
 <html lang="en">
@@ -17,8 +22,6 @@ $sessionID = 1;
   <script src="https://cdnjs.cloudflare.com/ajax/libs/axios/0.21.0/axios.min.js"></script>
   <script src="script.js"></script>
   <link rel="stylesheet" href="//code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css" />
-  <!-- bootstrap -->
-  <!-- <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous"> -->
   <link rel="stylesheet" href="select_tour.css" />
 </head>
 
@@ -44,6 +47,16 @@ $sessionID = 1;
   <!-- content -->
   <div class="content">
     <h3 class="form-heading">Enter Details</h3>
+    <div class="tour-card">
+      <h1><?= $tour_array['name'] ?></h1>
+      <h2><?= $tour_array['branch'] ?></h2>
+      <h2><?= $tour_array['place'] ?></h2>
+      <h4><?= $tour_array['available_days'] ?></h4>
+      <p>
+        <?= $tour_array['description'] ?>
+      </p>
+      <h4><?= $tour_array['rate'] ?></h4>
+    </div>
     <form name="tour" onSubmit="return formValidation()" method="POST">
       <div class="form-element">
         <label for="name" class="form-label">Enter Number of People</label>

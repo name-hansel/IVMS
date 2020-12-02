@@ -253,3 +253,22 @@ input[type="number"] {
   text-decoration: none;
   font-size: 26px;
 }
+
+.tour-card {
+  margin: auto;
+  background-color: #99d8d0;
+  width: 50%;
+  text-align: center;
+  padding: 10px;
+  margin-bottom: 30px;
+  border-radius: 12px;
+  color: #363636;
+}
+
+.tour-card > h1 {
+  font-family: "Open Sans", sans-serif;
+}
+
+.tour-card > * {
+  font-family: "Montserrat", sans-serif;
+}
