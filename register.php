@@ -1,3 +1,12 @@
+<?php
+session_start();
+if (isset($_SESSION['user_id'])) {
+    header("location: ./Coordinator/Coordinator-dashboard/coordinator-dashboard.php");
+} elseif (isset($_SESSION['company_id'])) {
+    header("location: ./Company/company-dashboard/company-dashboard.php");
+}
+?>
+
 <!DOCTYPE html>
 <html lang="en">
 
