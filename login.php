@@ -18,7 +18,7 @@
 
     <main>
         <div class="main">
-            <button><a href="./Home, Login and Signup/company_login.html">Company</a></button>
+            <button><a href="./Home, Login and Signup/company_login.php">Company</a></button>
             <button><a href="./Home, Login and Signup/coordinator_login.html">Coordinator</a></button>
         </div>
     </main>

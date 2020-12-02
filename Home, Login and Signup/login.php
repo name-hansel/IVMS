@@ -7,14 +7,14 @@ if (isset($_GET['type'])) {
         $json = file_get_contents($url);
         $company = json_decode($json, true);
         if (isset($company['data'][0]['message'])) {
-            header("location: ./company_login.html?error=no_account");
+            header("location: ./company_login.php?error=no_account");
         } else {
             if ($company['data'][0]['password'] === $password) {
                 session_start();
                 $_SESSION["company_id"] = $company['data'][0]['company_id'];
                 header("location: ../Company/company-dashboard/company-dashboard.php");
             } else {
-                header("location: ./company_login.html?error=wrong_password");
+                header("location: ./company_login.php?error=wrong_password");
             }
         }
     } else {
