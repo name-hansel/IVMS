@@ -1,4 +1,6 @@
 <?php
+session_start();
+$company_id = $_SESSION['company_id'];
 if (isset($_POST['tour_id'])) {
     $tour_id = $_POST['tour_id'];
 } else {

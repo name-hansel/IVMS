@@ -10,7 +10,9 @@ if (isset($_GET['type'])) {
             header("location: ./company_login.html?error=no_account");
         } else {
             if ($company['data'][0]['password'] === $password) {
-                // open session and redirect
+                session_start();
+                $_SESSION["company_id"] = $company['data'][0]['company_id'];
+                header("location: ../Company/company-dashboard/company-dashboard.php");
             } else {
                 header("location: ./company_login.html?error=wrong_password");
             }

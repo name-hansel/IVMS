@@ -1,5 +1,7 @@
 <?php
-$url = 'http://localhost/IVMS-API/API/tour/getSampleCompanyData.php?company_id=1';
+session_start();
+$company_id = $_SESSION['company_id'];
+$url = "http://localhost/IVMS-API/API/tour/getSampleCompanyData.php?company_id=$company_id";
 $json_data = file_get_contents($url);
 $tour_array = json_decode($json_data, true);
 ?>
@@ -43,7 +45,7 @@ $tour_array = json_decode($json_data, true);
       <h2 id="main-heading">Hello, ABC Company.</h2>
       <div class="content-header-icons">
         <a href="../edit-profile/edit-profile.php"><img src="../images/user.svg" alt="" width="35" /></a>
-        <a href=""><img src="../images/logout.svg" alt="" width="32" /></a>
+        <a href="../logout.php"><img src="../images/logout.svg" alt="" width="32" /></a>
       </div>
     </div>
 

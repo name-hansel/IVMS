@@ -1,5 +1,6 @@
 <?php
-$sessionID = 1;
+session_start();
+$company_id = $_SESSION['company_id'];
 ?>
 <!DOCTYPE html>
 <html lang="en">
@@ -11,7 +12,7 @@ $sessionID = 1;
   <script src="https://code.jquery.com/jquery-1.12.4.js"></script>
   <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
   <script>
-    const companyID = "<?php echo $sessionID ?>"
+    const companyID = "<?php echo $company_id ?>"
   </script>
   <script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/axios/0.21.0/axios.min.js"></script>

@@ -1,7 +1,7 @@
 <?php
-// todo change companyid
-$companyID = 1;
-$url = "http://localhost/IVMS-API/API/company/getHashCompanyID.php?company_id=1";
+session_start();
+$company_id = $_SESSION['company_id'];
+$url = "http://localhost/IVMS-API/API/company/getHashCompanyID.php?company_id=$company_id";
 $json_data = file_get_contents($url);
 $company = json_decode($json_data, true);
 $company = $company['data'][0]['password'];
@@ -19,7 +19,7 @@ $company = $company['data'][0]['password'];
     <script src="http://www.myersdaily.org/joseph/javascript/md5.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/axios/0.21.0/axios.min.js"></script>
     <script>
-        const companyID = "<?php echo $companyID ?>";
+        const companyID = "<?php echo $company_id ?>";
         const currentPassword = "<?php echo $company ?>";
     </script>
     <script src="script.js"></script>

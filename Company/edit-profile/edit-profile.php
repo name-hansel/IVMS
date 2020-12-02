@@ -1,7 +1,7 @@
 <?php
-// TODO change company id
-$companyID = 1;
-$url = "http://localhost/IVMS-API/API/company/getCompanyInfo.php?company_id=1";
+session_start();
+$company_id = $_SESSION['company_id'];
+$url = "http://localhost/IVMS-API/API/company/getCompanyInfo.php?company_id=$company_id";
 $json_data = file_get_contents($url);
 $company = json_decode($json_data, true);
 $company = $company['data'][0];
@@ -15,7 +15,7 @@ $company = $company['data'][0];
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Edit Profile</title>
     <script>
-        const companyID = <?php echo $companyID ?>
+        const companyID = <?php echo $company_id ?>
     </script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/axios/0.21.0/axios.min.js"></script>
     <script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
