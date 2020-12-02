@@ -1,5 +1,7 @@
 <?php
-$url = 'http://localhost/IVMS-API/API/tour/getSampleCoordinatorTours.php?user_id=1';
+session_start();
+$user_id = $_SESSION['user_id'];
+$url = "http://localhost/IVMS-API/API/tour/getSampleCoordinatorTours.php?user_id=$user_id";
 $json_data = file_get_contents($url);
 $tour_array = json_decode($json_data, true);
 ?>
@@ -30,16 +32,16 @@ $tour_array = json_decode($json_data, true);
       <a href="" id="active">Dashboard</a>
       <a href="../Edit-profile/edit_profile.php">Edit Profile</a>
       <a href="../Scheduled-tours/scheduled_tours.php">View Scheduled Tours</a>
-      
+
       <a href="../Past-tours/past_tours.php">View Past Tours</a>
     </div>
   </div>
 
-  
+
   <div class="content">
 
     <div class="content-header">
-      
+
       <h2 id="main-heading">Hello, ABC Company.</h2>
       <div class="content-header-icons">
         <a href=""><img src="../images/user.svg" alt="" width="35" /></a>
@@ -74,7 +76,7 @@ $tour_array = json_decode($json_data, true);
               <h5 id="tour-rate"><?= $item['rate'] ?></h5>
             </div>
         <?php
-        }
+          }
         }
         ?>
       </div>

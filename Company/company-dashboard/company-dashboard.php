@@ -4,6 +4,11 @@ $company_id = $_SESSION['company_id'];
 $url = "http://localhost/IVMS-API/API/tour/getSampleCompanyData.php?company_id=$company_id";
 $json_data = file_get_contents($url);
 $tour_array = json_decode($json_data, true);
+
+$url = "http://localhost/IVMS-API/API/company/getCompanyInfo.php?company_id=$company_id";
+$json_data = file_get_contents($url);
+$name = json_decode($json_data, true);
+$name = $name['data'][0]['name'];
 ?>
 
 <!DOCTYPE html>
@@ -42,7 +47,7 @@ $tour_array = json_decode($json_data, true);
     <!-- content header -->
     <div class="content-header">
       <!-- TODO change company name -->
-      <h2 id="main-heading">Hello, ABC Company.</h2>
+      <h2 id="main-heading">Hello, <?= $name ?>.</h2>
       <div class="content-header-icons">
         <a href="../edit-profile/edit-profile.php"><img src="../images/user.svg" alt="" width="35" /></a>
         <a href="../logout.php"><img src="../images/logout.svg" alt="" width="32" /></a>

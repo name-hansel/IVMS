@@ -18,16 +18,19 @@ if (isset($_GET['type'])) {
             }
         }
     } else {
+        // Coordinator
         $email = $_POST['email'];
         $password = md5($_POST['password']);
         $url = "http://localhost/IVMS-API/API/coordinator/getHashCoordinator.php?email=$email";
         $json = file_get_contents($url);
-        $data = json_decode($json);
+        $data = json_decode($json, true);
         if (isset($data['data'][0]['message'])) {
             header("location: ./coordinator_login.html?error=no_account");
         } else {
             if ($data['data'][0]['password'] === $password) {
-                // open session and redirect
+                session_start();
+                $_SESSION["user_id"] = $company['data'][0]['user_id'];
+                header("location: ../Coordinator/Coordinator-dashboard/coordinator-dashboard.php");
             } else {
                 header("location: ./coordinator_login.html?error=wrong_password");
             }
