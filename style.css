@@ -110,7 +110,8 @@ section > h1 {
   display: flex;
   flex-direction: column;
   justify-content: center;
-  width: 200px;
+  min-width: 200px;
+  max-width: 400px;
   min-height: 200px;
   background-color: #b7efcd;
   margin: 0 10px;

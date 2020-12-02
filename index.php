@@ -28,7 +28,7 @@ $companyData = json_decode($jsonData, true);
 
   <nav>
     <a href="./Information/AvailableTourInfo/AvailableToursInfo.php">Tours</a>
-    <a href="">About Us</a>
+    <a href="./Information/About.html">About Us</a>
     <a href="./Information/CompanyInfo/CompanyInfo.php">Companies</a>
   </nav>
 
