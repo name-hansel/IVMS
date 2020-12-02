@@ -18,8 +18,8 @@
 
     <main>
         <div class="main">
-            <button><a href="./Home, Login and Signup/company_signup.html">Company</a></button>
-            <button><a href="./Home, Login and Signup/coordinator_signup.html">Coordinator</a></button>
+            <button><a href="./Home, Login and Signup/company_signup.php">Company</a></button>
+            <button><a href="./Home, Login and Signup/coordinator_signup.php">Coordinator</a></button>
         </div>
     </main>
 
