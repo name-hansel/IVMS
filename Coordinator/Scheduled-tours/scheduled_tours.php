@@ -1,5 +1,10 @@
 <?php
-$url = 'http://localhost/IVMS-API/API/bookedTour/getCoordinatorBookedTours.php?user_id=1';
+session_start();
+if (!isset($_SESSION['user_id'])) {
+    header("location: ../../index.php");
+}
+$user_id = $_SESSION['user_id'];
+$url = "http://localhost/IVMS-API/API/bookedTour/getCoordinatorBookedTours.php?user_id=$user_id";
 $json_data = file_get_contents($url);
 $tourArray = json_decode($json_data, true);
 ?>
@@ -57,8 +62,8 @@ $tourArray = json_decode($json_data, true);
                     <section class="tour-card">
                         <div class="tour-heading">
                             <h2 class="tour-title"><?= $item['name'] ?></h2>
-                            <h3 class="tour-college"><?= $item['college'] ?></h3>
-                            <h3 class="tour-date"><?= $item['date'] ?></h3>
+                            <h3 class="tour-college"><?= $item['company'] ?></h3>
+                            <h3 class="tour-date"><?= $item['available_days'] ?></h3>
                         </div>
                         <div class="tour-details">
                             <h3 class="tour-booked">Booked at: <?= substr($item['booked_at'], 0, 10) ?></h3>

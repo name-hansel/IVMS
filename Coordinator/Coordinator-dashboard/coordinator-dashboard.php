@@ -1,5 +1,10 @@
 <?php
-$url = 'http://localhost/IVMS-API/API/tour/getSampleCoordinatorTours.php?user_id=1';
+session_start();
+if (!isset($_SESSION['user_id'])) {
+  header("location: ../../index.php");
+}
+$user_id = $_SESSION['user_id'];
+$url = "http://localhost/IVMS-API/API/tour/getSampleCoordinatorTours.php?user_id=$user_id";
 $json_data = file_get_contents($url);
 $tour_array = json_decode($json_data, true);
 ?>
@@ -38,7 +43,7 @@ $tour_array = json_decode($json_data, true);
 
     <div class="content-header">
 
-      <h2 id="main-heading">Hello, ABC Company.</h2>
+      <h2 id="main-heading">Hello, Coordinator.</h2>
       <div class="content-header-icons">
         <a href=""><img src="../images/user.svg" alt="" width="35" /></a>
         <a href="../logout.php"><img src="../images/logout.svg" alt="" width="32" /></a>
@@ -48,11 +53,7 @@ $tour_array = json_decode($json_data, true);
     <!-- tours -->
     <div class="sample-tours">
       <div class="sample-tours-head-div">
-        <h4 id="sample-tours-heading">Your Tours</h4>
-        <button class="view-all">
-          <a href="">
-            View All <img src="../images/arrow.svg" alt="" width="12px" />
-          </a></button>
+        <h4 id="sample-tours-heading">Available Tours</h4>
       </div>
       <div class="sample-tours-container">
         <?php
@@ -72,17 +73,14 @@ $tour_array = json_decode($json_data, true);
               <h5 id="tour-rate"><?= $item['rate'] ?></h5>
               <form action="select_tour.php" method="POST">
                 <input name="select_id" type="hidden" value="<?= $item['tour_id'] ?>">
-                <button class="select-button">Click to select tour</button>
+                <button class="select-button">Book tour</button>
               </form>
             </div>
         <?php
           }
         }
-
         ?>
-
       </div>
-
     </div>
 
 
@@ -107,6 +105,23 @@ $tour_array = json_decode($json_data, true);
       <h4>Contact Number: 9876543219</h4>
     </div>
   </div>-->
+    <?php
+    if (isset($_GET['msg'])) {
+      if ($_GET['msg'] === 'success') {
+    ?>
+        <script>
+          alert("Your tour has been booked!");
+        </script>
+      <?php
+      } elseif ($_GET['msg'] === 'error') {
+      ?>
+        <script>
+          alert("Some error has occured. Please try again.");
+        </script>
+    <?php
+      }
+    }
+    ?>
 </body>
 
 </html>

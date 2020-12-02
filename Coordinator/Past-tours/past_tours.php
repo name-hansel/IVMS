@@ -1,6 +1,10 @@
 <?php
-// TODO change company_id
-$url = 'http://localhost/IVMS-API/API/bookedTour/getCoordinatorPastTours.php?user_id=1';
+session_start();
+if (!isset($_SESSION['user_id'])) {
+    header("location: ../../index.php");
+}
+$user_id = $_SESSION['user_id'];
+$url = "http://localhost/IVMS-API/API/bookedTour/getCoordinatorPastTours.php?user_id=$user_id";
 $json_data = file_get_contents($url);
 $tourArray = json_decode($json_data, true);
 ?>
@@ -27,9 +31,7 @@ $tourArray = json_decode($json_data, true);
         <img src="../images/logo.png" alt="" width="180" />
         <div class="sidebar-links">
             <a href="../Coordinator-dashboard/coordinator-dashboard.php">Dashboard</a>
-            <a href="../Edit-profile/edit_profile.php">Edit Profile</a>
             <a href="../Scheduled-tours/scheduled_tours.php">View Scheduled Tours</a>
-            <a href="">Edit Booked Tours</a>
             <a href="" id="active">View Past Tours</a>
         </div>
     </div>
@@ -59,7 +61,7 @@ $tourArray = json_decode($json_data, true);
                     <section class="tour-card">
                         <div class="tour-heading">
                             <h2 class="tour-title"><?= $item['name'] ?></h2>
-                            <h3 class="tour-college"><?= $item['college'] ?></h3>
+                            <h3 class="tour-college"><?= $item['company'] ?></h3>
                             <h3 class="tour-date"><?= $item['date'] ?></h3>
                         </div>
                         <div class="tour-details">
