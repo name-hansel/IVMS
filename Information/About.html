@@ -2,7 +2,7 @@
 <html>
 <head>
 	<title>About Us</title>
-	<link rel="stylesheet" type="text/css" href="CSS/styling.css">
+	<link rel="stylesheet" type="text/css" href="styling.css">
 	<link href="https://fonts.googleapis.com/css2?family=Alata&family=Montserrat:wght@300&family=Open+Sans&display=swap" rel="stylesheet">
 	<style>
 		#bak{
@@ -14,22 +14,25 @@
 	</style>
 </head>
 <body>
-	<div id="bak">
+<div id="bak">
 	<div class="head">
         <h1>Industrial Visit Management System</h1>
         <nav class="navb">
-			<ul>
-				<li><a href="Home.html">Home</a></li>
-				<li><a href="About.html">About</a></li>
-				<li><a href="Tour_info.html">Tours</a></li>
-				<li><a href="comp.html">Companies</a></li>
-				<li><a href="Gallery.html">Gallery</a></li>
-				<li><a href="Reviews.html">Reviews</a></li>
-				<li><a href="Login">Login/Sign up</a></li>
-			</ul>
-		</nav>
-	</div>
-   <br><br><br><br><br>
+            <ul>
+                <li class="items"><a href="../index.php">Home</a></li>
+                <li class="items"><a href="About.html">About</a></li>
+                <li class="items" id="tlist"><a href="#">Tours</a>
+                    <ul class="tourlist">
+                        <li><a href="AvailableTourInfo/AvailableToursInfo.php">Available Tours</a></li>
+                        <li><a href="ptour.html">Past Tours</a></li>
+                    </ul>
+                </li>
+                <li class="items"><a href="CompanyInfo/CompanyInfo.php">Companies</a></li>
+                <li class="items"><a href="Login">Login/Sign up</a></li>
+            </ul>
+        </nav>
+    </div>
+   
 	<div class="subhead">
 		<br>
 		<strong><h3>About Us</h3></strong>

@@ -1,8 +1,13 @@
-/* body{
-  /* background: #99d8d0; */
-  /* background: #ffbcbc; */
-  /* background-image: url("images/sampl"); */
-/* }   */
+/* 
+#363636 - black   background: #363636;
+#99d8d0 - blue    background: #99d8d0;
+#b7efcd - green
+#ffbcbc - pink
+
+font-family: 'Montserrat', sans-serif;
+font-family: 'Open Sans', sans-serif;
+font-family: 'Alata', sans-serif;
+*/
 
 *{
   margin: 0;
@@ -10,46 +15,65 @@
 }
 
 .head {
-    height: 20%;
-    top: 0;
-    left: 0;
-    width: 100%;
-    background-color: #363636;
-    color: #b7efcd;
-    position: fixed;
-    justify-content: space-around;
-    font-family: 'Alata', sans-serif;
+  background-color: #363636;
+  color: #b7efcd;
+  display: flex;
+  justify-content: space-around;
+  font-family: 'Alata', sans-serif;   
+  padding-top: 2%;
 }
 
 .head h1{ 
-  margin-top: 20px;
-  margin-left: 15px;
+  padding-bottom: 3%;
+  padding-top: 1%;
+  margin-left: 0%;
 }
 
-.navb ul{
-  /* float: left; */
+/* Nav menu*/
+
+nav{
   float: right;
-  list-style-type: none;
-  /* background-color:  #363636; */
+  padding-top: 3%;
+  
 }
 
-.navb a:hover{
-  color: #b7efcd;
+nav ul li{
+	background: #363636;
+	position: relative;
+	list-style: none;
+	display: inline-block;
 }
 
-.navb ul li{
-   float: left; 
-   margin-right: 40px;
-  /* float: right; */
-}
-
-.navb ul li a{
-  /* float: left; */
-  /* float: right; */
-  color: #ffbcbc;
-  text-decoration: none;
+nav ul li a{
+	display: block;
+	padding: 0 15px;
+	color: #ffbcbc;
+	text-decoration: none;
+	line-height: 60px;
+  font-size: 130%;
   text-transform: uppercase;
-  font-size: large;
+}
+
+nav ul li a:hover{
+	background:  #ffbcbc;
+	color: #363636;
+}
+
+nav ul ul{
+	position: absolute;
+	top:60px;
+	display: none;
+}
+
+nav ul li:hover >ul{
+	display:block;
+}
+
+nav ul ul li{
+	width:300px;
+	float: none;
+	display: list-item;
+	position:relative;
 }
 
 .footer {
@@ -102,12 +126,12 @@
   font-weight: bold;
   color: #363636;
   padding-left: 5%;
-  padding-top: 5%;
+  padding-top: 2%;
 }
 
 .content{
   font-family: 'Open Sans', sans-serif;
-  font-size: 120%;
+  font-size: 140%;
   font-weight: bold;
   color: #363636;
   padding-left: 5%;
