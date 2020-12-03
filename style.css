@@ -44,9 +44,10 @@ header > * {
   margin: 0 10px;
   color: white;
   font-family: "Open Sans", sans-serif;
-  font-size: 24px;
+  font-size: 18px;
   letter-spacing: 3px;
   text-decoration: none;
+  text-transform: uppercase;
 }
 
 nav {
@@ -83,22 +84,23 @@ nav > a:hover {
 }
 
 section {
-  padding: 0 20px;
+  padding: 0 40px;
 }
 
 section > h1 {
   font-family: "Alata", sans-serif;
-  font-size: 28px;
+  font-size: 36px;
   letter-spacing: 3px;
   color: #363636;
   text-align: center;
   border-bottom: 1px solid white;
+  text-transform: uppercase;
 }
 
 .tour-div,
 .company-div {
   background-color: white;
-  min-height: 360px;
+  min-height: 300px;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -110,11 +112,20 @@ section > h1 {
   display: flex;
   flex-direction: column;
   justify-content: center;
-  width: 400px;
-  height: 400px;
+  width: 200px;
+  height: 200px;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
   background-color: #b7efcd;
-  margin: 30px 10px;
+  margin: 30px 20px;
   padding: 10px;
+  border-radius: 12px;
+}
+
+.company-item {
+  padding: 20px;
+  height: 100px;
 }
 
 .tour-name,

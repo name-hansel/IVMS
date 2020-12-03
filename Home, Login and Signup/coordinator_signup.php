@@ -42,6 +42,7 @@
                     <input type="text" name="college" id="" class="form-input" required>
                 </div>
                 <input type="submit" class="signup-btn" value="submit" />
+                <p class="form-label"><a href="./coordinator_login.php">Already have an account? Login.</a></p>
             </form>
         </div>
     </main>

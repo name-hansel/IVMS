@@ -22,7 +22,7 @@ $companyData = json_decode($jsonData, true);
     <h1>Industrial Visit Management System</h1>
     <div class="header-right">
       <a href="login.php">Login</a>
-      <a href="register.php">Register</a>
+      <a href="register.php">Sign Up</a>
     </div>
   </header>
 
@@ -45,7 +45,8 @@ $companyData = json_decode($jsonData, true);
         ?>
           <div class="tour-item">
             <h3 class="tour-name"><?= $item['name'] ?></h3>
-            <p class="tour-description"><?= $item['description'] ?></p>
+            <p class="tour-description"><?= $item['branch'] ?></p>
+            <p class="tour-description"><?= $item['date'] ?></p>
           </div>
         <?php
         }
@@ -61,7 +62,6 @@ $companyData = json_decode($jsonData, true);
         ?>
           <div class="company-item">
             <h3 class="company-name"><?= $item['company'] ?></h3>
-            <p class="company-description"><?= $item['description'] ?></p>
           </div>
         <?php
         }
