@@ -73,15 +73,17 @@ button > a {
 
 button {
   background-color: #363636;
-  font-family: "Montserrat", sans-serif;
+  font-family: "Alata", sans-serif;
+  letter-spacing: 2px;
   color: white;
-  width: 300px;
-  padding: 10px;
-  font-size: 32px;
+  width: auto;
+  padding: 10px 40px;
+  font-size: 28px;
   margin: 0 20px;
   border: none;
   cursor: pointer;
   border-radius: 12px;
+  text-transform: uppercase;
 }
 
 .footer {

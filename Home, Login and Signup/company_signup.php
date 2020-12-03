@@ -46,7 +46,7 @@
                     <label for="description" class="form-label">company description</label>
                     <textarea rows="4" name="description" placeholder="Enter your description!" class="form-input"></textarea>
                 </div>
-                <input type="submit" class="signup-btn" value="submit" />
+                <input type="submit" class="signup-btn" value="Signup" />
                 <p class="form-label"><a href="./company_login.php">Already have an account? Login.</a></p>
             </form>
         </div>

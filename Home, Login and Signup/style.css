@@ -82,7 +82,7 @@ main {
 
 .content {
   background-color: white;
-  min-height: 70vh;
+  min-height: 60vh;
   width: 40%;
   margin: auto;
   padding: 10px 5px;
@@ -90,7 +90,8 @@ main {
   justify-content: center;
 }
 
-.sign-up-title {
+.sign-up-title,
+.login-title {
   text-align: center;
   font-family: "Alata", sans-serif;
   color: #363636;
@@ -149,9 +150,10 @@ textarea {
   text-decoration: none;
 }
 
-.signup-btn {
+.signup-btn,
+.login-btn {
   margin: 15px;
-  margin-left: 120px;
+  margin-left: 140px;
   width: auto;
   height: auto;
   padding: 16px 20px;

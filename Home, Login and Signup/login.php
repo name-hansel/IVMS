@@ -26,7 +26,7 @@ if (isset($_GET['type'])) {
         $data = json_decode($json, true);
 
         if (isset($data['data'][0]['message'])) {
-            header("location: ./coordinator_login.html?error=no_account");
+            header("location: ./coordinator_login.php?error=no_account");
         } else {
             if ($data['data'][0]['password'] === $password) {
                 session_start();
