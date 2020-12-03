@@ -84,6 +84,12 @@
             <script>
                 alert("Some error has occured. Please try again.");
             </script>
+        <?php
+        } elseif ($_GET['msg'] === 'user-exists') {
+        ?>
+            <script>
+                alert("An account with this email already exists.");
+            </script>
     <?php
         }
     }
