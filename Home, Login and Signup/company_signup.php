@@ -1,67 +1,88 @@
-<html>
+<!DOCTYPE html>
+<html lang="en">
 
 <head>
-  <meta charset="utf-8" />
-  <title>Sign up Page</title>
-  <link rel="stylesheet" href="company_signup.css" />
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css" />
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Company Signup</title>
+    <link rel="stylesheet" href="style.css">
 </head>
 
 <body>
-  <div class="row">
-    <div class="header">
-      Sign <br />
-      Up<br />
-      for<br />
-      <span>Company</span>
-    </div>
+    <header>
+        <h1>Industrial Visit Management System</h1>
+        <div class="header-right">
+            <a href="../index.php">Back to Home</a>
+        </div>
+    </header>
 
-    <form action="signup.php?type=company" method="POST">
-      <div class="main">
-        Email : <br />
-        <input type="email" name="email" pattern=".+@gmail.com" size="30" required /><br /><br />
-        password : <br /><input type="password" name="password" pattern="(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{8,}" required /><br /><br />
-        phone no. : <br /><input type="text" name="phn" pattern="[789][0-9]{9}" required /><br /><br />
-        company : <br /><input type="text" name="company" required /><br /><br />
-        description : <br /><textarea rows="4" cols="50" name="description" placeholder="enter here">
-        </textarea><br /><br />
-        <input type="submit" class="button" value="submit" />
-      </div>
-  </div>
-  </form>
+    <nav>
+        <a href="../Information/AvailableTourInfo/AvailableToursInfo.php">Tours</a>
+        <a href="../Information/About.html">About Us</a>
+        <a href="../Information/CompanyInfo/CompanyInfo.php">Companies</a>
+    </nav>
 
-  <div class="footer">
-    <div class="socials">
-      <div class="site twitter">
-        <i class="fa fa-twitter-square" aria-hidden="true"></i>
-        <a href="">Twitter</a>
-      </div>
-      <div class="site facebook">
-        <i class="fa fa-facebook-official" aria-hidden="true"></i>
-        <a href="">Facebook</a>
-      </div>
-      <div class="site instagram">
-        <i class="fa fa-instagram" aria-hidden="true"></i>
-        <a href="">Instagram</a>
-      </div>
-    </div>
-    <div class="contact">
-      <h4>Email Address: contact@ivms.com</h4>
-      <h4>Contact Number: 9876543219</h4>
-    </div>
-  </div>
+    <main class="sign-up">
+        <h1 class="sign-up-title">Company Sign-Up</h1>
+        <div class="content">
+            <form action="signup.php?type=company" method="POST">
+                <div class="form-element">
+                    <label for="email" class="form-label">email</label>
+                    <input type="email" name="email" id="" class="form-input" pattern=".+@gmail.com" required>
+                </div>
+                <div class="form-element">
+                    <label for="password" class="form-label">password</label>
+                    <input type="password" name="password" id="" class="form-input" pattern="(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{8,}" required>
+                </div>
+                <div class="form-element">
+                    <label for="phn" class="form-label">phone number</label>
+                    <input type="text" name="phn" id="" class="form-input" pattern="[789][0-9]{9}" required>
+                </div>
+                <div class="form-element">
+                    <label for="company" class="form-label">company name</label>
+                    <input type="text" name="company" id="" class="form-input" required>
+                </div>
+                <div class="form-element">
+                    <label for="description" class="form-label">company description</label>
+                    <textarea rows="4" name="description" placeholder="Enter your description!" class="form-input"></textarea>
+                </div>
+                <input type="submit" class="signup-btn" value="submit" />
+                <p class="form-label"><a href="./company_login.php">Already have an account? Login.</a></p>
+            </form>
+        </div>
+    </main>
 
-  <?php
-  if (isset($_GET['msg'])) {
-    if ($_GET['msg'] === 'error') {
-  ?>
-      <script>
-        alert("Some error has occured. Please try again.");
-      </script>
-  <?php
+    <div class="footer">
+        <div class="socials">
+            <div class="site twitter">
+                <img src="Company/images/twitter-square-brands.svg" alt="" width="15px" />
+                <a href="">Twitter</a>
+            </div>
+            <div class="site facebook">
+                <img src="Company/images/facebook-square-brands.svg" alt="" width="15px" />
+                <a href="">Facebook</a>
+            </div>
+            <div class="site instagram">
+                <img src="Company/images/instagram-brands.svg" alt="" width="15px" />
+                <a href="">Instagram</a>
+            </div>
+        </div>
+        <div class="contact">
+            <h4>Email Address: contact@ivms.com</h4>
+            <h4>Contact Number: 9876543219</h4>
+        </div>
+    </div>
+    <?php
+    if (isset($_GET['msg'])) {
+        if ($_GET['msg'] === 'error') {
+    ?>
+            <script>
+                alert("Some error has occured. Please try again.");
+            </script>
+    <?php
+        }
     }
-  }
-  ?>
+    ?>
 </body>
 
 </html>

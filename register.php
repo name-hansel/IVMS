@@ -26,8 +26,12 @@ if (isset($_SESSION['user_id'])) {
     </header>
 
     <main>
-        <div class="main">
+        <div class="button-div">
+            <img src="./Company/images/logo.png" alt="" width="200px">
             <button><a href="./Home, Login and Signup/company_signup.php">Company</a></button>
+        </div>
+        <div class="button-div">
+            <img src="./Company/images/person.png" alt="" width="200px">
             <button><a href="./Home, Login and Signup/coordinator_signup.php">Coordinator</a></button>
         </div>
     </main>

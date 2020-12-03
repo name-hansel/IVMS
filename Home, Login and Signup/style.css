@@ -15,7 +15,7 @@ font-family: 'Montserrat', sans-serif; */
 body {
   margin: 0;
   padding: 0;
-  background-color: rgba(153, 216, 208, 0.5);
+  background-color: rgba(153, 216, 208, 0.3);
 }
 
 header {
@@ -44,7 +44,7 @@ header > * {
   margin: 0 10px;
   color: white;
   font-family: "Open Sans", sans-serif;
-  font-size: 18px;
+  font-size: 20px;
   letter-spacing: 3px;
   text-decoration: none;
   text-transform: uppercase;
@@ -75,71 +75,100 @@ nav > a:hover {
   color: #363636;
 }
 
-.banner {
-  text-align: center;
+main {
+  min-height: 80vh;
+  margin-top: 180px;
 }
 
-.banner > img {
-  width: 100%;
-}
-
-section {
-  padding: 0 40px;
-}
-
-section > h1 {
-  font-family: "Alata", sans-serif;
-  font-size: 36px;
-  letter-spacing: 3px;
-  color: #363636;
-  text-align: center;
-  border-bottom: 1px solid white;
-  text-transform: uppercase;
-}
-
-.tour-div,
-.company-div {
+.content {
   background-color: white;
-  min-height: 300px;
+  min-height: 70vh;
+  width: 40%;
+  margin: auto;
+  padding: 10px 5px;
   display: flex;
   justify-content: center;
-  align-items: center;
 }
 
-.tour-item,
-.company-item {
+.sign-up-title {
   text-align: center;
+  font-family: "Alata", sans-serif;
+  color: #363636;
+  text-transform: uppercase;
+  letter-spacing: 3px;
+}
+
+.form-element {
   display: flex;
   flex-direction: column;
-  justify-content: center;
-  width: 200px;
-  height: 200px;
-  white-space: nowrap;
-  overflow: hidden;
-  text-overflow: ellipsis;
-  background-color: #b7efcd;
-  margin: 30px 20px;
-  padding: 10px;
+  text-align: center;
+}
+
+.input-title {
+  font-family: "Open Sans", sans-serif;
+  color: #363636;
+}
+
+.form-input {
+  margin: 13px;
+  height: 26px;
+  padding: 12px 20px;
+  font-size: 16px;
+  font-family: "Montserrat", sans-serif;
+  letter-spacing: 3px;
+  font-weight: bold;
+  color: #363636;
+  border: none;
+  border-bottom: 3px solid #99d8d0;
+  transition: 0.3s all cubic-bezier(0.445, 0.05, 0.55, 0.95);
+}
+
+.form-input:focus {
+  background-color: rgba(183, 239, 205, 0.7);
   border-radius: 12px;
 }
 
-.company-item {
-  padding: 20px;
-  height: 100px;
+textarea {
+  height: auto;
+  padding: 10px;
+  min-height: 150px;
+  resize: none;
 }
 
-.tour-name,
-.company-name {
+.form-label {
   font-family: "Open Sans", sans-serif;
-  font-size: 24px;
-  color: #363636;
-}
-
-.tour-description,
-.company-description {
-  font-family: "Montserrat", sans-serif;
   font-size: 18px;
   color: #363636;
+  font-weight: bolder;
+  letter-spacing: 3px;
+  margin-top: 5px;
+}
+
+.form-label > a {
+  color: #363636;
+  text-decoration: none;
+}
+
+.signup-btn {
+  margin: 15px;
+  margin-left: 120px;
+  width: auto;
+  height: auto;
+  padding: 16px 20px;
+  border: none;
+  border-radius: 20px;
+  letter-spacing: 3px;
+  font-family: "Open Sans", sans-serif;
+  font-weight: bold;
+  text-transform: uppercase;
+  background-color: rgba(54, 54, 54, 0.8);
+  color: white;
+  transition: 0.2s all cubic-bezier(0.47, 0, 0.745, 0.715);
+  cursor: pointer;
+}
+
+.signup-btn:hover {
+  background-color: rgba(54, 54, 54, 1);
 }
 
 .footer {

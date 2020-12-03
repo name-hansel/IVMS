@@ -44,17 +44,25 @@ header > * {
   margin: 0 10px;
   color: white;
   font-family: "Open Sans", sans-serif;
-  font-size: 24px;
+  font-size: 20px;
   letter-spacing: 3px;
   text-decoration: none;
+  text-transform: uppercase;
 }
 
 main {
-  min-height: 450px;
+  height: 450px;
   margin-top: 100px;
   display: flex;
   align-items: center;
   justify-content: center;
+}
+
+.button-div {
+  display: flex;
+  flex-direction: column;
+  justify-content: stretch;
+  align-items: center;
 }
 
 h1 > a,
