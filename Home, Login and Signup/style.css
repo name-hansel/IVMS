@@ -28,6 +28,7 @@ header {
   display: flex;
   align-items: center;
   justify-content: space-between;
+  border-bottom: 5px solid #ffbcbc;
 }
 
 header > h1 {
@@ -50,39 +51,14 @@ header > * {
   text-transform: uppercase;
 }
 
-nav {
-  position: fixed;
-  top: 100px;
-  background-color: #ffbcbc;
-  height: 50px;
-  width: 100%;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-}
-
-nav > a {
-  margin: 0 10px;
-  font-family: "Open Sans", sans-serif;
-  font-size: 18px;
-  letter-spacing: 3px;
-  text-decoration: none;
-  color: white;
-  transition: 0.2s all fade-in;
-}
-
-nav > a:hover {
-  color: #363636;
-}
-
 main {
   min-height: 80vh;
-  margin-top: 180px;
+  margin-top: 120px;
 }
 
 .content {
   background-color: white;
-  min-height: 70vh;
+  min-height: 60vh;
   width: 40%;
   margin: auto;
   padding: 10px 5px;
@@ -90,7 +66,8 @@ main {
   justify-content: center;
 }
 
-.sign-up-title {
+.sign-up-title,
+.login-title {
   text-align: center;
   font-family: "Alata", sans-serif;
   color: #363636;
@@ -102,6 +79,7 @@ main {
   display: flex;
   flex-direction: column;
   text-align: center;
+  align-items: center;
 }
 
 .input-title {
@@ -121,6 +99,10 @@ main {
   border: none;
   border-bottom: 3px solid #99d8d0;
   transition: 0.3s all cubic-bezier(0.445, 0.05, 0.55, 0.95);
+}
+
+i {
+  margin-left: -10px;
 }
 
 .form-input:focus {
@@ -149,9 +131,18 @@ textarea {
   text-decoration: none;
 }
 
-.signup-btn {
+.error {
+  font-family: "Montserrat", sans-serif;
+  margin: -2% 2% 2% 3%;
+  color: #363636;
+  font-weight: bolder;
+  width: 55%;
+  visibility: hidden;
+}
+
+.signup-btn,
+.login-btn {
   margin: 15px;
-  margin-left: 120px;
   width: auto;
   height: auto;
   padding: 16px 20px;
@@ -167,7 +158,8 @@ textarea {
   cursor: pointer;
 }
 
-.signup-btn:hover {
+.signup-btn:hover,
+.login-btn:hover {
   background-color: rgba(54, 54, 54, 1);
 }
 

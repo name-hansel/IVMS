@@ -72,16 +72,23 @@ button > a {
 }
 
 button {
-  background-color: #363636;
-  font-family: "Montserrat", sans-serif;
-  color: white;
-  width: 300px;
-  padding: 10px;
-  font-size: 32px;
+  /* background-color: #363636; */
+  font-family: "Open Sans", sans-serif;
+  letter-spacing: 2px;
+  background-color: white;
+  color: #363636;
+  width: auto;
+  padding: 10px 40px;
+  font-size: 22px;
   margin: 0 20px;
   border: none;
   cursor: pointer;
   border-radius: 12px;
+  text-transform: uppercase;
+}
+
+button > a {
+  color: #363636;
 }
 
 .footer {

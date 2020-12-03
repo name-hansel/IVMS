@@ -6,6 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Company Signup</title>
     <link rel="stylesheet" href="style.css">
+    <script src="script.js"></script>
 </head>
 
 <body>
@@ -16,38 +17,42 @@
         </div>
     </header>
 
-    <nav>
-        <a href="../Information/AvailableTourInfo/AvailableToursInfo.php">Tours</a>
-        <a href="../Information/About.html">About Us</a>
-        <a href="../Information/CompanyInfo/CompanyInfo.php">Companies</a>
-    </nav>
-
     <main class="sign-up">
         <h1 class="sign-up-title">Company Sign-Up</h1>
         <div class="content">
-            <form action="signup.php?type=company" method="POST">
+            <form action="signup.php?type=company" onSubmit="return formCompanyValidation()" method="POST" name="signup">
+                <!-- Email -->
                 <div class="form-element">
                     <label for="email" class="form-label">email</label>
-                    <input type="email" name="email" id="" class="form-input" pattern=".+@gmail.com" required>
+                    <input type="email" name="email" id="" class="form-input" required>
+                    <p class="error" id="email-error">Please enter a valid email.</p>
                 </div>
+                <!-- Password -->
                 <div class="form-element">
                     <label for="password" class="form-label">password</label>
-                    <input type="password" name="password" id="" class="form-input" pattern="(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{8,}" required>
+                    <input type="password" name="password" id="" class="form-input" required>
+                    <p class="error" id="password-error">Should contain 6 to 20 characters, at least one numeric digit, one uppercase and one lowercase letter</p>
                 </div>
+                <!-- Phone -->
                 <div class="form-element">
                     <label for="phn" class="form-label">phone number</label>
-                    <input type="text" name="phn" id="" class="form-input" pattern="[789][0-9]{9}" required>
+                    <input type="text" name="phn" id="" class="form-input" required>
+                    <p class="error" id="phn-error">Please enter a valid email.</p>
                 </div>
                 <div class="form-element">
                     <label for="company" class="form-label">company name</label>
                     <input type="text" name="company" id="" class="form-input" required>
+                    <p class="error" id="company-error">Please enter only 120 characters</p>
                 </div>
                 <div class="form-element">
                     <label for="description" class="form-label">company description</label>
-                    <textarea rows="4" name="description" placeholder="Enter your description!" class="form-input"></textarea>
+                    <textarea rows="4" name="description" placeholder="Enter your company description" class="form-input"></textarea>
+                    <p class="error" id="desc-error">Please enter only 120 characters</p>
                 </div>
-                <input type="submit" class="signup-btn" value="submit" />
-                <p class="form-label"><a href="./company_login.php">Already have an account? Login.</a></p>
+                <div class="form-element">
+                    <input type="submit" class="signup-btn" value="Signup" />
+                    <p class="form-label"><a href="./company_login.php">Already have an account? Login.</a></p>
+                </div>
             </form>
         </div>
     </main>
@@ -55,15 +60,15 @@
     <div class="footer">
         <div class="socials">
             <div class="site twitter">
-                <img src="Company/images/twitter-square-brands.svg" alt="" width="15px" />
+                <img src="../Company/images/twitter-square-brands.svg" alt="" width="15px" />
                 <a href="">Twitter</a>
             </div>
             <div class="site facebook">
-                <img src="Company/images/facebook-square-brands.svg" alt="" width="15px" />
+                <img src="../Company/images/facebook-square-brands.svg" alt="" width="15px" />
                 <a href="">Facebook</a>
             </div>
             <div class="site instagram">
-                <img src="Company/images/instagram-brands.svg" alt="" width="15px" />
+                <img src="../Company/images/instagram-brands.svg" alt="" width="15px" />
                 <a href="">Instagram</a>
             </div>
         </div>
@@ -78,6 +83,12 @@
     ?>
             <script>
                 alert("Some error has occured. Please try again.");
+            </script>
+        <?php
+        } elseif ($_GET['msg'] === 'user-exists') {
+        ?>
+            <script>
+                alert("An account with this email already exists.");
             </script>
     <?php
         }

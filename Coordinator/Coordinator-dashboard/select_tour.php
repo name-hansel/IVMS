@@ -62,10 +62,12 @@ $tour_array = $tour_array[0];
       <h4><?= $tour_array['rate'] ?></h4>
     </div>
     <form name="tour" onSubmit="return formValidation()" method="POST" action="book_tour.php">
+      <!-- hidden inputs -->
       <input type="hidden" name="max_people" value="<?= $tour_array['number_people'] ?>">
       <input type="hidden" name="user_id" value="<?= $_SESSION['user_id'] ?>">
       <input type="hidden" name="tour_id" value="<?= $tour_id ?>">
       <input type="hidden" name="available_days" value="<?= $tour_array['available_days'] ?>">
+
       <div class="form-element">
         <label for="name" class="form-label">Enter Number of People</label>
         <input type="text" name="number_people" class="form-input" required />

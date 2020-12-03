@@ -6,6 +6,14 @@ if (isset($_GET['type'])) {
         $password = md5($_POST['password']);
         $phone_number = $_POST['phn'];
         $college = $_POST['college'];
+        // Check if email exists
+        $url = "http://localhost/IVMS-API/API/coordinator/getCoordinatorEmailExist.php?email=$email";
+        $json = file_get_contents($url);
+        $data = json_decode($json, true);
+        if ($data[0]['exist'] == 1) {
+            header("location: ./coordinator_signup.php?msg=user-exists");
+        }
+        // Add user
         $url = "http://localhost/IVMS-API/API/coordinator/postUserCoordinator.php";
         $data = array('email' => $email, 'password' => $password, 'phone_number' => $phone_number, 'college' => $college);
         $options = array(
@@ -30,6 +38,15 @@ if (isset($_GET['type'])) {
         $phone_number = $_POST['phn'];
         $company = $_POST['company'];
         $description = $_POST['description'];
+        // Check if email exists
+        $url = "http://localhost/IVMS-API/API/company/getCompanyEmailExist.php?email=$email";
+        $json = file_get_contents($url);
+        $data = json_decode($json, true);
+        if ($data[0]['exist'] == 1) {
+            header("location: ./company_signup.php?msg=user-exists");
+        }
+
+        // Add user
         $url = "http://localhost/IVMS-API/API/company/postUserCompany.php";
         $data = array('email' => $email, 'password' => $password, 'phone_number' => $phone_number, 'company' => $company, 'description' => $description);
         $options = array(
