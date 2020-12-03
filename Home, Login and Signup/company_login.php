@@ -28,12 +28,6 @@
         </div>
     </header>
 
-    <nav>
-        <a href="../Information/AvailableTourInfo/AvailableToursInfo.php">Tours</a>
-        <a href="../Information/About.html">About Us</a>
-        <a href="../Information/CompanyInfo/CompanyInfo.php">Companies</a>
-    </nav>
-
     <main class="login">
         <h1 class="login-title">Company Login</h1>
         <div class="content">
@@ -62,8 +56,10 @@
                         });
                     </script>
                 </div>
-                <input type="submit" class="login-btn" value="login" />
-                <p class="form-label"><a href="./company_signup.php">Don't have an account? Signup.</a></p>
+                <div class="form-element">
+                    <input type="submit" class="login-btn" value="login" />
+                    <p class="form-label"><a href="./company_signup.php">Don't have an account? Signup.</a></p>
+                </div>
             </form>
         </div>
     </main>
@@ -71,15 +67,15 @@
     <div class="footer">
         <div class="socials">
             <div class="site twitter">
-                <img src="Company/images/twitter-square-brands.svg" alt="" width="15px" />
+                <img src="../Company/images/twitter-square-brands.svg" alt="" width="15px" />
                 <a href="">Twitter</a>
             </div>
             <div class="site facebook">
-                <img src="Company/images/facebook-square-brands.svg" alt="" width="15px" />
+                <img src="../Company/images/facebook-square-brands.svg" alt="" width="15px" />
                 <a href="">Facebook</a>
             </div>
             <div class="site instagram">
-                <img src="Company/images/instagram-brands.svg" alt="" width="15px" />
+                <img src="../Company/images/instagram-brands.svg" alt="" width="15px" />
                 <a href="">Instagram</a>
             </div>
         </div>
