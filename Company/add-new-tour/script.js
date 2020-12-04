@@ -35,6 +35,7 @@ const dialogAndAdd = ({
           window.location.href = "../company-dashboard/company-dashboard.php";
         }, 1000);
       } else {
+        console.log(response);
         swal("Error", "Some error has occured", "error");
       }
     })
@@ -42,9 +43,9 @@ const dialogAndAdd = ({
       console.log(error.message);
       swal("Error", "Some error has occured", "error");
     });
-  setTimeout(function () {
+  /*  setTimeout(function () {
     window.location.href = "../company-dashboard/company-dashboard.php";
-  }, 5000);
+  }, 5000); */
 };
 
 function formValidation() {
