@@ -32,7 +32,7 @@ $tour_array = json_decode($json_data, true);
         <img src="../../Company/images/person.png" alt="" width="180" />
         <div class="sidebar-links">
             <a href="" id="active">Dashboard</a>
-            <a href="../View-tours/view-tours.php">View All Tours</a>
+            <a href="../view-tours/view-tours.php">View All Tours</a>
             <a href="../Scheduled-tours/scheduled-tours.php">View Scheduled Tours</a>
             <a href="../Past-tours/past-tours.php">View Past Tours</a>
         </div>
@@ -51,7 +51,7 @@ $tour_array = json_decode($json_data, true);
             <div class="sample-tours-head-div">
                 <h4 id="sample-tours-heading">Available Tours</h4>
                 <button class="view-all">
-                    <a href="">
+                    <a href="../View-tours/view-tours.php">
                         View All <img src="../images/arrow.svg" alt="" width="12px" />
                     </a></button>
             </div>

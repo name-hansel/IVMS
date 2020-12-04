@@ -217,3 +217,23 @@ body {
   color: rgba(54, 54, 54, 0.6);
   letter-spacing: 3px;
 }
+
+.rate-button {
+  width: auto;
+  height: auto;
+  padding: 16px 20px;
+  border: none;
+  border-radius: 20px;
+  letter-spacing: 3px;
+  font-family: "Open Sans", sans-serif;
+  font-weight: bold;
+  text-transform: uppercase;
+  background-color: rgba(54, 54, 54, 0.8);
+  color: white;
+  transition: 0.2s all cubic-bezier(0.47, 0, 0.745, 0.715);
+  cursor: pointer;
+}
+
+.rate-button:hover {
+  background-color: rgba(54, 54, 54, 1);
+}

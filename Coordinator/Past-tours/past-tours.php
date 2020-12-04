@@ -67,7 +67,7 @@ $tourArray = json_decode($json_data, true);
         <img src="../../Company/images/person.png" alt="" width="180" />
         <div class="sidebar-links">
             <a href="../Coordinator-dashboard/coordinator-dashboard.php">Dashboard</a>
-            <a href="../View-tours/view-tours.php">View All Tours</a>
+            <a href="../view-tours/view-tours.php">View All Tours</a>
             <a href="../Scheduled-tours/scheduled-tours.php">View Scheduled Tours</a>
             <a href="" id="active">View Past Tours</a>
         </div>
@@ -112,7 +112,7 @@ $tourArray = json_decode($json_data, true);
                         </div>
                         <form name="btour" action="" onsubmit="return openRating();">
                             <input type="hidden" name="btourid" value="<?= $item['btour_id'] ?>">
-                            <button>Rate tour</button>
+                            <button class="rate-button">Rate tour</button>
                         </form>
                     </section>
             <?php
