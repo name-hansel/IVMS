@@ -30,7 +30,7 @@ $company = $company['data'][0];
     <div class="header">
         <h1>Industrial Visit Management System</h1>
         <div class="header-right">
-            <h5>Add New Tour</h5>
+            <h5>Edit Profile</h5>
         </div>
     </div>
 
