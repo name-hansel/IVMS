@@ -52,7 +52,7 @@ $ptour_arr = json_decode($json_data, true);
             <h1>Available Tours</h1>
             <div class="available-tour-div">
                 <?php
-                if (isset($tour_arr[0]['message'])) {
+                if (isset($tour_arr['message'])) {
                 ?>
                     <div class='no-tour'>
                         <h3 class='message'>No tours.</h3>

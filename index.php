@@ -56,13 +56,23 @@ $companyData = json_decode($jsonData, true);
       <h1><a class="view-more" href="./Information/AvailableTourInfo/available-tours.php">Tours Available</a></h1>
       <div class="tour-div">
         <?php
-        foreach ($tourData['data'] as $key => $item) {
+        if (isset($tourData['message'])) {
         ?>
-          <div class="tour-item">
-            <h3 class="tour-name"><?= $item['name'] ?></h3>
-            <p class="tour-description"><?= $item['branch'] ?></p>
-            <p class="tour-description"><?= $item['date'] ?></p>
+          <div class='no-tour'>
+            <h3 class='message'>No tours.</h3>
           </div>
+          <?php
+        } else {
+          foreach ($tourData['data'] as $key => $item) {
+          ?>
+            <div class="tour-item">
+              <h3 class="tour-name"><?= $item['name'] ?></h3>
+              <p class="tour-description"><?= $item['branch'] ?></p>
+              <p class="tour-description"><?= $item['date'] ?></p>
+            </div>
+          <?php
+          }
+          ?>
         <?php
         }
         ?>
@@ -73,11 +83,23 @@ $companyData = json_decode($jsonData, true);
       <h1><a href="./Information/CompanyInfo/CompanyInfo.php" class="view-more">Companies Available</a></h1>
       <div class="company-div">
         <?php
-        foreach ($companyData['data'] as $key => $item) {
+        if (isset($companyData)) {
         ?>
-          <div class="company-item">
-            <h3 class="company-name"><?= $item['company'] ?></h3>
+          <div class='no-tour'>
+            <h3 class='message'>No companies.</h3>
           </div>
+        <?php
+        } else {
+        ?>
+          <?php
+          foreach ($companyData['data'] as $key => $item) {
+          ?>
+            <div class="company-item">
+              <h3 class="company-name"><?= $item['company'] ?></h3>
+            </div>
+          <?php
+          }
+          ?>
         <?php
         }
         ?>
