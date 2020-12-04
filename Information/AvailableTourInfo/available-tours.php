@@ -42,9 +42,9 @@ $ptour_arr = json_decode($json_data, true);
     </header>
 
     <nav>
-        <a href="./Information/AvailableTourInfo/AvailableToursInfo.php">Tours</a>
-        <a href="./Information/About.html">About Us</a>
-        <a href="./Information/CompanyInfo/CompanyInfo.php">Companies</a>
+        <a href="">Tours</a>
+        <a href="../About.html">About Us</a>
+        <a href="../CompanyInfo/CompanyInfo.php">Companies</a>
     </nav>
 
     <main id="tour-main">

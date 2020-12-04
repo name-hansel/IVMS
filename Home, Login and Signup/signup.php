@@ -12,6 +12,7 @@ if (isset($_GET['type'])) {
         $data = json_decode($json, true);
         if ($data[0]['exist'] == 1) {
             header("location: ./coordinator_signup.php?msg=user-exists");
+            die();
         }
         // Add user
         $url = "http://localhost/IVMS-API/API/coordinator/postUserCoordinator.php";
@@ -44,6 +45,7 @@ if (isset($_GET['type'])) {
         $data = json_decode($json, true);
         if ($data[0]['exist'] == 1) {
             header("location: ./company_signup.php?msg=user-exists");
+            die();
         }
 
         // Add user

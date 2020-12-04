@@ -16,6 +16,7 @@ $tour_array = json_decode($json_data, true);
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Coordinator Dashboard</title>
     <link rel="stylesheet" href="style.css">
+    <script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
 </head>
 
@@ -112,13 +113,13 @@ $tour_array = json_decode($json_data, true);
         if ($_GET['msg'] === 'success') {
     ?>
             <script>
-                alert("Your tour has been booked!");
+                swal("Success", "Your tour has been booked!", "success");
             </script>
         <?php
         } elseif ($_GET['msg'] === 'error') {
         ?>
             <script>
-                alert("Some error has occured. Please try again.");
+                swal("Error", "Something went wrong.", "error");
             </script>
     <?php
         }
