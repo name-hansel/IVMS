@@ -29,10 +29,10 @@ $tour_array = json_decode($json_data, true);
     <div class="sidebar">
         <img src="../../Company/images/person.png" alt="" width="180" />
         <div class="sidebar-links">
-            <a href="../coordinator-dashboard/coordinator-dashboard.php">Dashboard</a>
-            <a href="../view-tours/view-tours.php" id="active">View All Tours</a>
-            <a href="../scheduled-tours/scheduled_tours.php">View Scheduled Tours</a>
-            <a href="../past-tours/past_tours.php">View Past Tours</a>
+            <a href="../Coordinator-dashboard/coordinator-dashboard.php">Dashboard</a>
+            <a href="../View-tours/view-tours.php" id="active">View All Tours</a>
+            <a href="../Scheduled-tours/scheduled-tours.php">View Scheduled Tours</a>
+            <a href="../Past-tours/past-tours.php">View Past Tours</a>
         </div>
     </div>
 
@@ -65,7 +65,7 @@ $tour_array = json_decode($json_data, true);
                                 <h4 id="tour-place"><?= $item['place'] ?></h4>
                                 <h5 id="tour-rate"><i class="fa fa-inr" aria-hidden="true"></i><?= $item['rate'] ?></h5>
                             </div>
-                            <form action="../coordinator-dashboard/select_tour.php" method="POST">
+                            <form action="../Coordinator-dashboard/select_tour.php" method="POST">
                                 <input name="select_id" type="hidden" value="<?= $item['tour_id'] ?>">
                                 <button class="select-button">Book tour</button>
                             </form>
