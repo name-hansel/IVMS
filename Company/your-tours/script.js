@@ -16,11 +16,14 @@ $(document).ready(function () {
     }).then((value) => {
       if (value) {
         axios
-          .get("http://localhost/IVMS-API/API/tour/deleteTour.php", {
-            params: {
-              tour_id: value,
-            },
-          })
+          .get(
+            "https://industrialvisit-api.herokuapp.com/API/tour/deleteTour.php",
+            {
+              params: {
+                tour_id: value,
+              },
+            }
+          )
           .then((response) => {
             if (response.data.message === "Tour deleted") {
               swal("Success", "Tour deleted", "success");

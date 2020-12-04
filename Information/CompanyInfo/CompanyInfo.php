@@ -1,5 +1,5 @@
 <?php
-$url = 'http://localhost/IVMS-API/API/company/getInfoAllCompanies.php';
+$url = 'https://industrialvisit-api.herokuapp.com/API/company/getInfoAllCompanies.php';
 $json_data = file_get_contents($url);
 $company_arr = json_decode($json_data, true);
 ?>

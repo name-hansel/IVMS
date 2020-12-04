@@ -4,7 +4,7 @@ $user_id = $_POST['user_id'];
 $tour_id = $_POST['tour_id'];
 $number_people = $_POST['number_people'];
 $available_days = $_POST['available_days'];
-$url = "http://localhost/IVMS-API/API/bookedTour/postBookedTour.php";
+$url = "https://industrialvisit-api.herokuapp.com/API/bookedTour/postBookedTour.php";
 $data = array('user_id' => $user_id, 'tour_id' => $tour_id, 'number_people' => $number_people, 'date' => $available_days);
 $options = array(
     'http' => array(

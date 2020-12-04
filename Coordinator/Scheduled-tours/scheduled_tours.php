@@ -4,7 +4,7 @@ if (!isset($_SESSION['user_id'])) {
     header("location: ../../index.php");
 }
 $user_id = $_SESSION['user_id'];
-$url = "http://localhost/IVMS-API/API/bookedTour/getCoordinatorBookedTours.php?user_id=$user_id";
+$url = "https://industrialvisit-api.herokuapp.com/API/bookedTour/getCoordinatorBookedTours.php?user_id=$user_id";
 $json_data = file_get_contents($url);
 $tourArray = json_decode($json_data, true);
 ?>

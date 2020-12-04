@@ -7,7 +7,7 @@ if (isset($_GET['type'])) {
         $phone_number = $_POST['phn'];
         $college = $_POST['college'];
         // Check if email exists
-        $url = "http://localhost/IVMS-API/API/coordinator/getCoordinatorEmailExist.php?email=$email";
+        $url = "https://industrialvisit-api.herokuapp.com/API/coordinator/getCoordinatorEmailExist.php?email=$email";
         $json = file_get_contents($url);
         $data = json_decode($json, true);
         if ($data[0]['exist'] == 1) {
@@ -15,7 +15,7 @@ if (isset($_GET['type'])) {
             die();
         }
         // Add user
-        $url = "http://localhost/IVMS-API/API/coordinator/postUserCoordinator.php";
+        $url = "https://industrialvisit-api.herokuapp.com/API/coordinator/postUserCoordinator.php";
         $data = array('email' => $email, 'password' => $password, 'phone_number' => $phone_number, 'college' => $college);
         $options = array(
             'http' => array(
@@ -40,7 +40,7 @@ if (isset($_GET['type'])) {
         $company = $_POST['company'];
         $description = $_POST['description'];
         // Check if email exists
-        $url = "http://localhost/IVMS-API/API/company/getCompanyEmailExist.php?email=$email";
+        $url = "https://industrialvisit-api.herokuapp.com/API/company/getCompanyEmailExist.php?email=$email";
         $json = file_get_contents($url);
         $data = json_decode($json, true);
         if ($data[0]['exist'] == 1) {
@@ -49,7 +49,7 @@ if (isset($_GET['type'])) {
         }
 
         // Add user
-        $url = "http://localhost/IVMS-API/API/company/postUserCompany.php";
+        $url = "https://industrialvisit-api.herokuapp.com/API/company/postUserCompany.php";
         $data = array('email' => $email, 'password' => $password, 'phone_number' => $phone_number, 'company' => $company, 'description' => $description);
         $options = array(
             'http' => array(

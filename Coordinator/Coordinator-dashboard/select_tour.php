@@ -8,7 +8,7 @@ if (!isset($_POST['select_id'])) {
 }
 $user_id = $_SESSION['user_id'];
 $tour_id = $_POST['select_id'];
-$url = "http://localhost/IVMS-API/API/tour/getTourDetails.php?tour_id=$tour_id";
+$url = "https://industrialvisit-api.herokuapp.com/API/tour/getTourDetails.php?tour_id=$tour_id";
 $json_data = file_get_contents($url);
 $tour_array = json_decode($json_data, true);
 $tour_array = $tour_array[0];

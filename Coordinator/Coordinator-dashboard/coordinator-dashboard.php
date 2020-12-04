@@ -3,7 +3,7 @@ session_start();
 if (!isset($_SESSION['user_id'])) {
     header("location: ../../index.php");
 }
-$url = "http://localhost/IVMS-API/API/tour/getSampleCoordinatorTours.php";
+$url = "https://industrialvisit-api.herokuapp.com/API/tour/getSampleCoordinatorTours.php";
 $json_data = file_get_contents($url);
 $tour_array = json_decode($json_data, true);
 ?>

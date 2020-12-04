@@ -1,9 +1,9 @@
 <?php
 session_start();
-$url = 'http://localhost/IVMS-API/API/tour/getAvailableTours.php';
+$url = 'https://industrialvisit-api.herokuapp.com/API/tour/getAvailableTours.php';
 $json_data = file_get_contents($url);
 $tour_arr = json_decode($json_data, true);
-$url = 'http://localhost/IVMS-API/API/bookedTour/getInfoPastTours.php';
+$url = 'https://industrialvisit-api.herokuapp.com/API/bookedTour/getInfoPastTours.php';
 $json_data = file_get_contents($url);
 $ptour_arr = json_decode($json_data, true);
 ?>

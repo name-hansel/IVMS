@@ -4,7 +4,8 @@ function password() {
 function editProfile(profile) {
   axios({
     method: "put",
-    url: "http://localhost/IVMS-API/API/company/putCompanyDetails.php",
+    url:
+      "https://industrialvisit-api.herokuapp.com/API/company/putCompanyDetails.php",
     data: profile,
   })
     .then((response) => {

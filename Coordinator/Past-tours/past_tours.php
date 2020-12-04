@@ -4,7 +4,7 @@ if (!isset($_SESSION['user_id'])) {
     header("location: ../../index.php");
 }
 $user_id = $_SESSION['user_id'];
-$url = "http://localhost/IVMS-API/API/bookedTour/getCoordinatorPastTours.php?user_id=$user_id";
+$url = "https://industrialvisit-api.herokuapp.com/API/bookedTour/getCoordinatorPastTours.php?user_id=$user_id";
 $json_data = file_get_contents($url);
 $tourArray = json_decode($json_data, true);
 ?>
@@ -34,7 +34,7 @@ $tourArray = json_decode($json_data, true);
                     swal("Please enter a valid rating", "", 'error');
                     return false;
                 } else {
-                    axios.post('http://localhost/IVMS-API/API/bookedTour/postTourRating.php', {
+                    axios.post('https://industrialvisit-api.herokuapp.com/API/bookedTour/postTourRating.php', {
                         btour_id,
                         rating
                     }).then(function(response) {

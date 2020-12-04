@@ -70,7 +70,7 @@ function formValidation() {
 function editTour(tourData) {
   axios({
     method: "put",
-    url: "http://localhost/IVMS-API/API/tour/putEditTour.php",
+    url: "https://industrialvisit-api.herokuapp.com/API/tour/putEditTour.php",
     data: tourData,
   })
     .then(function (response) {

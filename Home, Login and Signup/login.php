@@ -3,7 +3,7 @@ if (isset($_GET['type'])) {
     if ($_GET['type'] === 'company') {
         $email = $_POST['email'];
         $password = md5($_POST['password']);
-        $url = "http://localhost/IVMS-API/API/company/getHashCompany.php?email=$email";
+        $url = "https://industrialvisit-api.herokuapp.com/API/company/getHashCompany.php?email=$email";
         $json = file_get_contents($url);
         $company = json_decode($json, true);
         if (isset($company['data'][0]['message'])) {
@@ -21,7 +21,7 @@ if (isset($_GET['type'])) {
         // Coordinator
         $email = $_POST['email'];
         $password = md5($_POST['password']);
-        $url = "http://localhost/IVMS-API/API/coordinator/getHashCoordinator.php?email=$email";
+        $url = "https://industrialvisit-api.herokuapp.com/API/coordinator/getHashCoordinator.php?email=$email";
         $json = file_get_contents($url);
         $data = json_decode($json, true);
 

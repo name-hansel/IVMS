@@ -1,7 +1,8 @@
 function changePassword(newP) {
   axios({
     method: "put",
-    url: "http://localhost/IVMS-API/API/company/putCompanyHash.php",
+    url:
+      "https://industrialvisit-api.herokuapp.com/API/company/putCompanyHash.php",
     data: {
       password: newP,
       company_id: companyID,

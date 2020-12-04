@@ -10,9 +10,10 @@ $company_id = $_SESSION['company_id'];
 if (isset($_POST['tour_id'])) {
     $tour_id = $_POST['tour_id'];
 } else {
+    // TODO change url
     header('Location: http://localhost/IVSM%20-%20frontend/Company/your-tours/your-tours.php');
 }
-$url = "http://localhost/IVMS-API/API/tour/getTourDetails.php?tour_id=$tour_id";
+$url = "https://industrialvisit-api.herokuapp.com/API/tour/getTourDetails.php?tour_id=$tour_id";
 $json_data = file_get_contents($url);
 $tour = json_decode($json_data, true);
 $tour = $tour[0];

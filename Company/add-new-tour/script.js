@@ -16,7 +16,7 @@ const dialogAndAdd = ({
 }) => {
   axios({
     method: "post",
-    url: "http://localhost/IVMS-API/API/tour/postNewTour.php",
+    url: "https://industrialvisit-api.herokuapp.com/API/tour/postNewTour.php",
     data: {
       name,
       branch,
@@ -32,8 +32,7 @@ const dialogAndAdd = ({
       if (response.data.message === "Tour Created") {
         swal("Success!", "Tour has been created!", "success");
         setTimeout(function () {
-          window.location.href =
-            "http://localhost/IVSM%20-%20frontend/Company/company-dashboard/company-dashboard.php";
+          window.location.href = "../company-dashboard/company-dashboard.php";
         }, 1000);
       } else {
         swal("Error", "Some error has occured", "error");
@@ -44,8 +43,8 @@ const dialogAndAdd = ({
       swal("Error", "Some error has occured", "error");
     });
   setTimeout(function () {
-    window.location.href =
-      "http://localhost/IVSM%20-%20frontend/Company/company-dashboard/company-dashboard.php";
+    // TODO change url
+    window.location.href = "../company-dashboard/company-dashboard.php";
   }, 5000);
 };
 

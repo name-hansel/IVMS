@@ -4,7 +4,7 @@ if (!isset($_SESSION['company_id'])) {
     header("location: ../../index.php");
 }
 $company_id = $_SESSION['company_id'];
-$url = "http://localhost/IVMS-API/API/company/getCompanyInfo.php?company_id=$company_id";
+$url = "https://industrialvisit-api.herokuapp.com/API/company/getCompanyInfo.php?company_id=$company_id";
 $json_data = file_get_contents($url);
 $company = json_decode($json_data, true);
 $company = $company['data'][0];
