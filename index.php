@@ -1,10 +1,10 @@
 <?php
 session_start();
-$url = "http://localhost/IVMS-API/API/tour/getHomeTour.php";
+$url = "https://industrialvisit-api.herokuapp.com/API/tour/getHomeTour.php";
 $jsonData = file_get_contents($url);
 $tourData = json_decode($jsonData, true);
 
-$url = "http://localhost/IVMS-API/API/company/getHomeCompany.php";
+$url = "https://industrialvisit-api.herokuapp.com/API/company/getHomeCompany.php";
 $jsonData = file_get_contents($url);
 $companyData = json_decode($jsonData, true);
 ?>
