@@ -83,7 +83,7 @@ $companyData = json_decode($jsonData, true);
       <h1><a href="./Information/CompanyInfo/CompanyInfo.php" class="view-more">Companies Available</a></h1>
       <div class="company-div">
         <?php
-        if (isset($companyData)) {
+        if (isset($companyData['message'])) {
         ?>
           <div class='no-tour'>
             <h3 class='message'>No companies.</h3>
