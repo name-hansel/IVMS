@@ -141,11 +141,11 @@ section > h1 {
   justify-content: center;
   width: 200px;
   height: 200px;
-  white-space: nowrap;
+  white-space: normal;
   overflow: hidden;
   text-overflow: ellipsis;
   background-color: #b7efcd;
-  margin: 30px 20px;
+  margin: 20px;
   padding: 10px;
   border-radius: 12px;
 }
