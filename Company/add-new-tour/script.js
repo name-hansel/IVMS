@@ -43,7 +43,6 @@ const dialogAndAdd = ({
       swal("Error", "Some error has occured", "error");
     });
   setTimeout(function () {
-    // TODO change url
     window.location.href = "../company-dashboard/company-dashboard.php";
   }, 5000);
 };
