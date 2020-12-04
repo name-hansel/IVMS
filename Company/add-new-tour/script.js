@@ -40,12 +40,11 @@ const dialogAndAdd = ({
       }
     })
     .catch(function (error) {
-      console.log(error.message);
       swal("Error", "Some error has occured", "error");
     });
-  /*  setTimeout(function () {
+  setTimeout(function () {
     window.location.href = "../company-dashboard/company-dashboard.php";
-  }, 5000); */
+  }, 5000);
 };
 
 function formValidation() {
