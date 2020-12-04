@@ -55,6 +55,10 @@ header > * {
   text-transform: uppercase;
 }
 
+.view-more {
+  color: #363636;
+}
+
 nav {
   position: fixed;
   top: 100px;

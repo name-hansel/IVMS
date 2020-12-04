@@ -53,7 +53,7 @@ $companyData = json_decode($jsonData, true);
 
   <main>
     <section class="tours">
-      <h1>Tours Available</h1>
+      <h1><a class="view-more" href="./Information/AvailableTourInfo/available-tours.php">Tours Available</a></h1>
       <div class="tour-div">
         <?php
         foreach ($tourData['data'] as $key => $item) {
@@ -70,7 +70,7 @@ $companyData = json_decode($jsonData, true);
     </section>
 
     <section class="companies">
-      <h1>Companies Available</h1>
+      <h1><a href="./Information/CompanyInfo/CompanyInfo.php" class="view-more">Companies Available</a></h1>
       <div class="company-div">
         <?php
         foreach ($companyData['data'] as $key => $item) {
