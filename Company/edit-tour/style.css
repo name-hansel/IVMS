@@ -155,7 +155,7 @@ textarea {
 
 .add-tour-btn {
   margin: 15px;
-  margin-left: 80px;
+  margin-left: 60px;
   width: auto;
   height: auto;
   padding: 16px 20px;
@@ -169,6 +169,10 @@ textarea {
   color: white;
   transition: 0.2s all cubic-bezier(0.47, 0, 0.745, 0.715);
   cursor: pointer;
+}
+
+.reset {
+  margin-left: 10px;
 }
 
 .add-tour-btn:hover {

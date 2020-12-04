@@ -16,6 +16,7 @@ $tourArray = json_decode($json_data, true);
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Your Tours</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
     <link rel="stylesheet" href="style.css" />
     <script src="https://cdnjs.cloudflare.com/ajax/libs/axios/0.21.0/axios.min.js"></script>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
@@ -53,7 +54,7 @@ $tourArray = json_decode($json_data, true);
             <h2 id="main-heading">Your Tours</h2>
             <div class="content-header-icons">
                 <a href="../edit-profile/edit-profile.php"><img src="../images/user.svg" alt="" width="35" /></a>
-                <a href="../edit-profile/edit-profile.php"><img src="../images/logout.svg" alt="" width="32" /></a>
+                <a href="../logout.php"><img src="../images/logout.svg" alt="" width="32" /></a>
             </div>
         </header>
 
@@ -85,7 +86,7 @@ $tourArray = json_decode($json_data, true);
                             <h2 class="tour-title"><?= $item['name'] ?></h2>
                             <h3 class="tour-branch"><?= $item['branch'] ?></h3>
                             <h3 class="tour-date"><?= $item['available_days'] ?></h3>
-                            <h3><?= $item['rate'] ?></h3>
+                            <h3><i class="fa fa-inr" aria-hidden="true"></i><?= $item['rate'] ?></h3>
                         </div>
                         <div class="tour-details">
                             <h3 class="tour-place"><?= $item['place'] ?></h3>

@@ -3,7 +3,7 @@ function formValidation() {
   let max = document.tour.max_people.value;
   console.log(number_people, max);
   let result = true;
-  if (number_people > max) {
+  if (int(number_people) > int(max)) {
     document.getElementById("number-error").style.visibility = "visible";
     result = false;
   } else {

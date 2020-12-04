@@ -36,6 +36,11 @@ header > h1 {
   margin-left: 20px;
 }
 
+h1 > a {
+  text-decoration: none;
+  color: white;
+}
+
 header > * {
   padding: 0 20px;
 }
@@ -87,6 +92,14 @@ section {
   padding: 0 40px;
 }
 
+main {
+  min-height: 50vh;
+}
+
+#tour-main {
+  margin-top: 180px;
+}
+
 section > h1 {
   font-family: "Alata", sans-serif;
   font-size: 36px;
@@ -106,6 +119,16 @@ section > h1 {
   align-items: center;
 }
 
+.available-tour-div {
+  background-color: white;
+  min-height: 300px;
+  padding: 20px;
+  display: grid;
+  grid-template-columns: repeat(3, auto);
+  justify-content: center;
+  align-content: center;
+}
+
 .tour-item,
 .company-item {
   text-align: center;
@@ -121,6 +144,32 @@ section > h1 {
   margin: 30px 20px;
   padding: 10px;
   border-radius: 12px;
+}
+
+.message {
+  font-family: "Montserrat", sans-serif;
+  color: rgba(54, 54, 54, 0.6);
+  letter-spacing: 3px;
+}
+
+.available-item {
+  width: 300px;
+  height: 300px;
+}
+
+.select-button {
+  padding: 12px;
+  margin-top: 16px;
+  border: none;
+  letter-spacing: 3px;
+  font-family: "Open Sans", sans-serif;
+  font-weight: bolder;
+  cursor: pointer;
+  border-radius: 10px;
+  transition: 0.3s all ease-in-out;
+  text-transform: uppercase;
+  color: #363636;
+  transition: 0.3s all ease-in-out;
 }
 
 .company-item {
@@ -140,6 +189,10 @@ section > h1 {
   font-family: "Montserrat", sans-serif;
   font-size: 18px;
   color: #363636;
+}
+
+.tour-description {
+  margin: 0px;
 }
 
 .footer {

@@ -1,10 +1,8 @@
-var today = new Date();
-var lastDate = new Date(today.getFullYear(), today.getMonth(0), 1);
 $(document).ready(function () {
   $("#datepicker").datepicker({ minDate: 0, maxDate: "+1M" });
-  $("#datepicker").datepicker("option", "dateFormat", "d-m-yy");
-  //TODO fix date
-  $("#datepicker").datepicker("setDate", $("#defaultDate").val());
+  $("#datepicker").datepicker("option", "dateFormat", "d MM yy");
+  let defDate = new Date($("#defaultDate").val());
+  $("#datepicker").datepicker("setDate", defDate);
 });
 
 function formValidation() {
@@ -22,13 +20,7 @@ function formValidation() {
     result = false;
   } else document.getElementById("name-error").style.visibility = "hidden";
 
-  let branchformat = /^[a-zA-Z]+$/;
-  if (
-    branch === " " ||
-    branch.length < 5 ||
-    branch.length > 30 ||
-    !branch.match(branchformat)
-  ) {
+  if (branch === " " || branch.length < 5 || branch.length > 30) {
     document.getElementById("branch-error").style.visibility = "visible";
     result = false;
   } else document.getElementById("branch-error").style.visibility = "hidden";
@@ -50,7 +42,15 @@ function formValidation() {
     result = false;
   } else document.getElementById("rate-error").style.visibility = "hidden";
 
-  // TODO add validation so the date is one month from today
+  let d = new Date(date);
+  let current = new Date();
+  let difference = (d - current) / (1000 * 3600 * 24);
+  console.log(difference);
+  if (Math.abs(difference) > 30) {
+    document.getElementById("date-error").style.visibility = "visible";
+    result = false;
+  } else document.getElementById("date-error").style.visibility = "hidden";
+
   if (result) {
     let tourData = {
       tour_id: $("#tour_id").val(),

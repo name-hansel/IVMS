@@ -5,6 +5,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Company Login</title>
+    <script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
     <link rel="stylesheet" href="style.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     <script>
@@ -90,13 +91,13 @@
         if ($_GET['error'] === 'no_account') {
     ?>
             <script>
-                alert("No account found!");
+                swal("Error", "No account found", "error");
             </script>
         <?php
         } elseif ($_GET['error'] === 'wrong_password') {
         ?>
             <script>
-                alert("Wrong password!");
+                swal("Error", "Wrong password", "error");
             </script>
         <?php
         }
@@ -105,7 +106,7 @@
         if ($_GET['msg'] === 'success') {
         ?>
             <script>
-                alert("You have successfully registered. Please login.");
+                swal("Success!", "You have registered.", "success");
             </script>
     <?php
         }

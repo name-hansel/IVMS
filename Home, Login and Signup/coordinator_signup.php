@@ -6,6 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Coordinator Signup</title>
     <link rel="stylesheet" href="style.css">
+    <script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
     <script src="script.js"></script>
 </head>
 
@@ -78,13 +79,13 @@
         if ($_GET['msg'] === 'error') {
     ?>
             <script>
-                alert("Some error has occured. Please try again.");
+                swal("Error", "Something went wrong.", "error");
             </script>
         <?php
         } elseif ($_GET['msg'] === 'user-exists') {
         ?>
             <script>
-                alert("An account with this email already exists.");
+                swal("Error", "An account with this email already exists", "error");
             </script>
     <?php
         }

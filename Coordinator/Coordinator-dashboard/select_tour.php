@@ -22,8 +22,8 @@ $tour_array = $tour_array[0];
   <title>Book Tour</title>
   <script src="https://code.jquery.com/jquery-1.12.4.js"></script>
   <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/axios/0.21.0/axios.min.js"></script>
   <script src="script.js"></script>
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
   <link rel="stylesheet" href="//code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css" />
   <link rel="stylesheet" href="select_tour.css" />
 </head>
@@ -42,6 +42,7 @@ $tour_array = $tour_array[0];
     <img src="../images/logo.png" alt="" width="180" />
     <div class="sidebar-links">
       <a href="../Coordinator-dashboard/coordinator-dashboard.php">Dashboard</a>
+      <a href="../view-tours/view-tours.php">View All Tours</a>
       <a href="../Scheduled-tours/scheduled_tours.php">View Scheduled Tours</a>
       <a href="">View Past Tours</a>
     </div>
@@ -52,14 +53,15 @@ $tour_array = $tour_array[0];
     <h3 class="form-heading">Enter Details</h3>
     <div class="tour-card">
       <h1><?= $tour_array['name'] ?></h1>
-      <h2><?= $tour_array['branch'] ?></h2>
-      <h2><?= $tour_array['number_people'] ?></h2>
-      <h2><?= $tour_array['place'] ?></h2>
-      <h4><?= $tour_array['available_days'] ?></h4>
+      <h2>Branch: <?= $tour_array['branch'] ?></h2>
+      <h2>Capacity: <?= $tour_array['number_people'] ?></h2>
+      <h2>Address: <?= $tour_array['place'] ?></h2>
+      <h4>Date: <?= $tour_array['available_days'] ?></h4>
       <p>
         <?= $tour_array['description'] ?>
       </p>
-      <h4><?= $tour_array['rate'] ?></h4>
+      <h4><i class="fa fa-inr" aria-hidden="true"></i>
+        <?= $tour_array['rate'] ?></h4>
     </div>
     <form name="tour" onSubmit="return formValidation()" method="POST" action="book_tour.php">
       <!-- hidden inputs -->

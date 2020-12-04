@@ -58,7 +58,7 @@ $company_id = $_SESSION['company_id'];
       <div class="form-element">
         <label for="branch" class="form-label">branch</label>
         <input type="text" name="branch" class="form-input" required />
-        <p class="error" id="branch-error">Please enter a valid branch.</p>
+        <p class="error" id="branch-error">Please enter between 5 and 30 characters.</p>
       </div>
 
       <div class="form-element">
@@ -76,7 +76,7 @@ $company_id = $_SESSION['company_id'];
       <div class="form-element">
         <label for="date" class="form-label">tour date</label>
         <input type="text" name="available_days" class="form-input" id="datepicker" />
-        <p class="error" id="date-error">Please enter a valid date.</p>
+        <p class="error" id="date-error">Please enter a date one month from now.</p>
       </div>
 
       <div class="form-element">
@@ -92,8 +92,8 @@ $company_id = $_SESSION['company_id'];
         <label for="desc" class="form-label">description</label>
         <textarea name="description" class="form-input" placeholder="Enter details about the tour..."></textarea>
       </div>
-      <!-- TODO add reset button -->
       <button type="submit" class="add-tour-btn">add new tour</button>
+      <button type="reset" class="add-tour-btn reset">reset</button>
     </form>
   </div>
 

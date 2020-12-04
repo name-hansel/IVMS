@@ -22,6 +22,7 @@ $name = $name['data'][0]['name'];
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Company Dashboard</title>
   <link rel="stylesheet" href="style.css" />
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
 </head>
 
 <body>
@@ -49,7 +50,6 @@ $name = $name['data'][0]['name'];
   <div class="content">
     <!-- content header -->
     <div class="content-header">
-      <!-- TODO change company name -->
       <h2 id="main-heading">Hello, <?= $name ?>.</h2>
       <div class="content-header-icons">
         <a href="../edit-profile/edit-profile.php"><img src="../images/user.svg" alt="" width="35" /></a>
@@ -81,7 +81,7 @@ $name = $name['data'][0]['name'];
               <h3 id="tour-name"><?= $item['name'] ?></h3>
               <h4 id="tour-branch"><?= $item['branch'] ?></h4>
               <h4 id="tour-place"><?= $item['place'] ?></h4>
-              <h5 id="tour-rate"><?= $item['rate'] ?></h5>
+              <h5 id="tour-rate"><i class="fa fa-inr" aria-hidden="true"></i><?= $item['rate'] ?></h5>
             </div>
         <?php
           }

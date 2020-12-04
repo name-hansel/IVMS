@@ -86,7 +86,7 @@ $tour = $tour[0];
                 <label for="date" class="form-label">tour date</label>
                 <input type="hidden" id="defaultDate" value="<?= $tour['available_days'] ?>">
                 <input type="text" name="available_days" class="form-input" id="datepicker" />
-                <p class="error" id="date-error">Please enter a valid date.</p>
+                <p class="error" id="date-error">Please enter a date one month from now.</p>
             </div>
 
             <div class="form-element">
@@ -100,12 +100,10 @@ $tour = $tour[0];
 
             <div class="form-element">
                 <label for="desc" class="form-label">description</label>
-                <textarea name="description" class="form-input">
-                    <?= $tour['description'] ?>
-                </textarea>
+                <textarea name="description" class="form-input"><?= $tour['description'] ?></textarea>
             </div>
-            <!-- TODO add reset button -->
             <button type="submit" class="add-tour-btn">edit tour</button>
+            <button type="reset" class="add-tour-btn reset">Reset</button>
         </form>
     </div>
 

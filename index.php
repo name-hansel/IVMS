@@ -1,4 +1,5 @@
 <?php
+session_start();
 $url = "http://localhost/IVMS-API/API/tour/getHomeTour.php";
 $jsonData = file_get_contents($url);
 $tourData = json_decode($jsonData, true);
@@ -21,13 +22,27 @@ $companyData = json_decode($jsonData, true);
   <header>
     <h1>Industrial Visit Management System</h1>
     <div class="header-right">
-      <a href="login.php">Login</a>
-      <a href="register.php">Sign Up</a>
+      <?php
+      if (!isset($_SESSION['user_id'])) {
+      ?>
+        <a href="login.php">Login</a>
+        <a href="register.php">Sign Up</a>
+      <?php
+      } elseif (isset($_SESSION['user_id'])) {
+      ?>
+        <a href="Coordinator/coordinator-dashboard/coordinator-dashboard.php">Dashboard</a>
+      <?php
+      } elseif (isset($_SESSION['company_id'])) {
+      ?>
+        <a href="Company/company-dashboard/company-dashboard.php">Dashboard</a>
+      <?php
+      }
+      ?>
     </div>
   </header>
 
   <nav>
-    <a href="./Information/AvailableTourInfo/AvailableToursInfo.php">Tours</a>
+    <a href="./Information/AvailableTourInfo/available-tours.php">Tours</a>
     <a href="./Information/About.html">About Us</a>
     <a href="./Information/CompanyInfo/CompanyInfo.php">Companies</a>
   </nav>
