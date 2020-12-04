@@ -10,8 +10,7 @@ $company_id = $_SESSION['company_id'];
 if (isset($_POST['tour_id'])) {
     $tour_id = $_POST['tour_id'];
 } else {
-    // TODO change url
-    header('Location: http://localhost/IVSM%20-%20frontend/Company/your-tours/your-tours.php');
+    header('Location: ../your-tours/your-tours.php');
 }
 $url = "https://industrialvisit-api.herokuapp.com/API/tour/getTourDetails.php?tour_id=$tour_id";
 $json_data = file_get_contents($url);
@@ -50,13 +49,12 @@ $tour = $tour[0];
             <a href="">Add New Tour</a>
             <a href="../your-tours/your-tours.php" id="active">View Your Tours</a>
             <a href="../scheduled-tours/scheduled-tours.php">View Scheduled Tours</a>
-            <a href="">View Past Tours</a>
+            <a href="../past-tours/past-tours.php">View Past Tours</a>
         </div>
     </div>
 
     <div class="content">
         <h3 class="form-heading">Edit Tour Details</h3>
-        <!-- form -->
         <form name="tour" onSubmit="return formValidation()" method="POST">
             <input type="hidden" id="tour_id" value="<?= $tour_id ?>">
             <div class="form-element">

@@ -43,7 +43,7 @@ $tourArray = json_decode($json_data, true);
             <a href="../add-new-tour/add-new-tour.php">Add New Tour</a>
             <a href="" id="active">View Your Tours</a>
             <a href="../scheduled-tours/scheduled-tours.php">View Scheduled Tours</a>
-            <a href="">View Past Tours</a>
+            <a href="../past-tours/past-tours.php">View Past Tours</a>
         </div>
     </div>
 

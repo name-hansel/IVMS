@@ -34,7 +34,7 @@ $tourArray = json_decode($json_data, true);
             <a href="../Coordinator-dashboard/coordinator-dashboard.php">Dashboard</a>
             <a href="../view-tours/view-tours.php">View All Tours</a>
             <a href="" id="active">View Scheduled Tours</a>
-            <a href="../Past-tours/past_tours.php">View Past Tours</a>
+            <a href="../past-tours/past-tours.php">View Past Tours</a>
         </div>
     </div>
 

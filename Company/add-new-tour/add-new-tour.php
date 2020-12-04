@@ -41,7 +41,7 @@ $company_id = $_SESSION['company_id'];
       <a href="" id="active">Add New Tour</a>
       <a href="../your-tours/your-tours.php">View Your Tours</a>
       <a href="../scheduled-tours/scheduled-tours.php">View Scheduled Tours</a>
-      <a href="">View Past Tours</a>
+      <a href="../past-tours/past-tours.php">View Past Tours</a>
     </div>
   </div>
 
