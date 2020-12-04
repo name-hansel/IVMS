@@ -43,7 +43,6 @@ $tourArray = json_decode($json_data, true);
         <header class="content-header">
             <h2 id="main-heading">Your Scheduled Tours</h2>
             <div class="content-header-icons">
-                <a href="../edit-profile/edit-profile.php"><img src="../images/user.svg" alt="" width="35" /></a>
                 <a href="../logout.php"><img src="../images/logout.svg" alt="" width="32" /></a>
             </div>
         </header>
