@@ -94,7 +94,7 @@ function formValidation() {
     result = false;
   } else document.getElementById("date-error").style.visibility = "hidden";
 
-  /* if (result) {
+  if (result) {
     let tourData = {
       name,
       branch,
@@ -105,6 +105,6 @@ function formValidation() {
       description,
     };
     dialogAndAdd(tourData);
-  } */
+  }
   return false;
 }
