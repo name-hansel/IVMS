@@ -64,13 +64,7 @@ function formValidation() {
     result = false;
   } else document.getElementById("name-error").style.visibility = "hidden";
 
-  let branchformat = /^[a-zA-Z]+$/;
-  if (
-    branch === " " ||
-    branch.length < 5 ||
-    branch.length > 30 ||
-    !branch.match(branchformat)
-  ) {
+  if (branch === " " || branch.length < 5 || branch.length > 30) {
     document.getElementById("branch-error").style.visibility = "visible";
     result = false;
   } else document.getElementById("branch-error").style.visibility = "hidden";
@@ -92,8 +86,15 @@ function formValidation() {
     result = false;
   } else document.getElementById("rate-error").style.visibility = "hidden";
 
-  // TODO add validation so the date is one month from today
-  if (result) {
+  let d = new Date(date);
+  let current = new Date();
+  let difference = (d - current) / (1000 * 3600 * 24);
+  if (Math.abs(difference) > 30) {
+    document.getElementById("date-error").style.visibility = "visible";
+    result = false;
+  } else document.getElementById("date-error").style.visibility = "hidden";
+
+  /* if (result) {
     let tourData = {
       name,
       branch,
@@ -104,6 +105,6 @@ function formValidation() {
       description,
     };
     dialogAndAdd(tourData);
-  }
+  } */
   return false;
 }

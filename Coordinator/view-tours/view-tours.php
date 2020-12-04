@@ -3,19 +3,18 @@ session_start();
 if (!isset($_SESSION['user_id'])) {
     header("location: ../../index.php");
 }
-$url = "http://localhost/IVMS-API/API/tour/getSampleCoordinatorTours.php";
+$url = "http://localhost/IVMS-API/API/tour/getAvailableTours.php";
 $json_data = file_get_contents($url);
 $tour_array = json_decode($json_data, true);
 ?>
-
 <!DOCTYPE html>
 <html lang="en">
 
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Coordinator Dashboard</title>
-    <link rel="stylesheet" href="style.css">
+    <title>View Available Tours</title>
+    <link rel="stylesheet" href="../coordinator-dashboard/style.css">
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
 </head>
 
@@ -23,39 +22,33 @@ $tour_array = json_decode($json_data, true);
     <div class="header">
         <h1>Industrial Visit Management System</h1>
         <div class="header-right">
-            <h5>Coordinator Dashboard</h5>
+            <h5>Available Tours</h5>
         </div>
     </div>
 
     <div class="sidebar">
         <img src="../../Company/images/person.png" alt="" width="180" />
         <div class="sidebar-links">
-            <a href="" id="active">Dashboard</a>
-            <a href="../view-tours/view-tours.php">View All Tours</a>
+            <a href="../coordinator-dashboard/coordinator-dashboard.php">Dashboard</a>
+            <a href="../view-tours/view-tours.php" id="active">View All Tours</a>
             <a href="../scheduled-tours/scheduled_tours.php">View Scheduled Tours</a>
             <a href="../past-tours/past_tours.php">View Past Tours</a>
         </div>
     </div>
 
     <div class="content">
-        <!-- content header -->
+        <!-- header and profile -->
         <div class="content-header">
-            <h2 id="main-heading">Hello, Coordinator.</h2>
+            <h2 id="main-heading">Available Tours</h2>
             <div class="content-header-icons">
                 <a href="../edit-profile/edit-profile.php"><img src="../images/user.svg" alt="" width="35" /></a>
                 <a href="../logout.php"><img src="../images/logout.svg" alt="" width="32" /></a>
             </div>
         </div>
 
-        <div class="sample-tours">
-            <div class="sample-tours-head-div">
-                <h4 id="sample-tours-heading">Available Tours</h4>
-                <button class="view-all">
-                    <a href="">
-                        View All <img src="../images/arrow.svg" alt="" width="12px" />
-                    </a></button>
-            </div>
-            <div class="sample-tours-container">
+        <!-- tours -->
+        <div class="available-tours">
+            <div class="available-tours-container">
                 <?php
                 if (isset($tour_array['message'])) {
                 ?>
@@ -73,7 +66,7 @@ $tour_array = json_decode($json_data, true);
                                 <h4 id="tour-place"><?= $item['place'] ?></h4>
                                 <h5 id="tour-rate"><i class="fa fa-inr" aria-hidden="true"></i><?= $item['rate'] ?></h5>
                             </div>
-                            <form action="select_tour.php" method="POST">
+                            <form action="../coordinator-dashboard/select_tour.php" method="POST">
                                 <input name="select_id" type="hidden" value="<?= $item['tour_id'] ?>">
                                 <button class="select-button">Book tour</button>
                             </form>
@@ -106,24 +99,6 @@ $tour_array = json_decode($json_data, true);
             <h4>Contact Number: 9876543219</h4>
         </div>
     </div>
-
-    <?php
-    if (isset($_GET['msg'])) {
-        if ($_GET['msg'] === 'success') {
-    ?>
-            <script>
-                alert("Your tour has been booked!");
-            </script>
-        <?php
-        } elseif ($_GET['msg'] === 'error') {
-        ?>
-            <script>
-                alert("Some error has occured. Please try again.");
-            </script>
-    <?php
-        }
-    }
-    ?>
 </body>
 
 </html>
