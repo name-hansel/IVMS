@@ -39,7 +39,7 @@ $tour_array = $tour_array[0];
 
   <!-- sidebar -->
   <div class="sidebar">
-    <img src="../images/logo.png" alt="" width="180" />
+    <img src="../../Company/images/person.png" alt="" width="180" />
     <div class="sidebar-links">
       <a href="../Coordinator-dashboard/coordinator-dashboard.php">Dashboard</a>
       <a href="../view-tours/view-tours.php">View All Tours</a>

@@ -30,11 +30,11 @@ $ptour_arr = json_decode($json_data, true);
             <?php
             } elseif (isset($_SESSION['user_id'])) {
             ?>
-                <a href="../../Coordinator/coordinator-dashboard/coordinator-dashboard.php">Dashboard</a>
+                <a href="../../Coordinator/Coordinator-dashboard/coordinator-dashboard.php">Dashboard</a>
             <?php
             } elseif (isset($_SESSION['company_id'])) {
             ?>
-                <a href="../../Company/company-dashboard/company-dashboard.php">Dashboard</a>
+                <a href="../../Company/Company-dashboard/company-dashboard.php">Dashboard</a>
             <?php
             }
             ?>
