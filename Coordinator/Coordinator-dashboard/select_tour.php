@@ -72,7 +72,7 @@ $tour_array = $tour_array[0];
 
       <div class="form-element">
         <label for="name" class="form-label">Enter Number of People</label>
-        <input type="text" name="number_people" class="form-input" required />
+        <input type="number" name="number_people" class="form-input" required />
         <p class="error" id="number-error">Please enter a valid number.</p>
       </div>
       <button type="submit" class="add-tour-btn">Confirm tour</button>

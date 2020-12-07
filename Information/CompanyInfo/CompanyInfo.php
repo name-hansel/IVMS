@@ -50,7 +50,6 @@ $company_arr = json_decode($json_data, true);
             <table id="comp">
                 <thead>
                     <tr>
-                        <!-- Company_id,Company,description,email,phone number -->
                         <th class="idhead">Company ID</th>
                         <th class="chead">Company Name</th>
                         <th class="dhead">Description</th>
@@ -65,7 +64,7 @@ $company_arr = json_decode($json_data, true);
                     if (isset($company_arr[0]['message'])) {
                     ?>
                         <div class='no-tour'>
-                            <h3 class='message'>No tours.</h3>
+                            <h3 class='message'>No companies.</h3>
                         </div>
                         <?php
                     } else {
