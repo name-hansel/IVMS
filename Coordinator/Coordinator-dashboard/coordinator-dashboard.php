@@ -70,8 +70,10 @@ $tour_array = json_decode($json_data, true);
                             <div class="tour-card">
                                 <h3 id="tour-name"><?= $item['name'] ?></h3>
                                 <h4 id="tour-branch"><?= $item['branch'] ?></h4>
+                                <h4 class="tour-place"><?= $item['available_days'] ?></h4>
                                 <h4 id="tour-place"><?= $item['place'] ?></h4>
                                 <h5 id="tour-rate"><i class="fa fa-inr" aria-hidden="true"></i><?= $item['rate'] ?></h5>
+
                             </div>
                             <form action="select_tour.php" method="POST">
                                 <input name="select_id" type="hidden" value="<?= $item['tour_id'] ?>">
