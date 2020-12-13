@@ -21,7 +21,7 @@ $tourArray = json_decode($json_data, true);
 <body>
     <!-- header -->
     <header class="header">
-        <h1>Industrial Visit Management System</h1>
+        <h1><a href="../../index.php" class="link">Industrial Visit Management System</a></h1>
         <div class="header-right">
             <h5>Your Past Tours</h5>
         </div>
@@ -32,7 +32,7 @@ $tourArray = json_decode($json_data, true);
         <div class="sidebar-links">
             <a href="../company-dashboard/company-dashboard.php">Dashboard</a>
             <a href="../add-new-tour/add-new-tour.php">Add New Tour</a>
-            <a href="../your-tours/your-tours.html">View Your Tours</a>
+            <a href="../your-tours/your-tours.php">View Your Tours</a>
             <a href="../scheduled-tours/scheduled-tours.php">View Scheduled Tours</a>
             <a href="" id="active">View Past Tours</a>
         </div>

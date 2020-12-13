@@ -21,6 +21,7 @@ $name = $name['data'][0]['name'];
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Company Dashboard</title>
+  <script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
   <link rel="stylesheet" href="style.css" />
   <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
 </head>
@@ -28,7 +29,7 @@ $name = $name['data'][0]['name'];
 <body>
   <!-- header -->
   <div class="header">
-    <h1>Industrial Visit Management System</h1>
+    <h1><a href="../../index.php" class="link">Industrial Visit Management System</a></h1>
     <div class="header-right">
       <h5>Company Dashboard</h5>
     </div>
@@ -145,6 +146,23 @@ $name = $name['data'][0]['name'];
       <h4>Contact Number: 9876543219</h4>
     </div>
   </div>
+  <?php
+  if (isset($_GET['msg'])) {
+    if ($_GET['msg'] === 'success') {
+  ?>
+      <script>
+        swal("Success!", "Password has been updated", "success");
+      </script>
+    <?php
+    } elseif ($_GET['msg'] === 'error') {
+    ?>
+      <script>
+        swal("Error", "Some error has occurred", "error");
+      </script>
+  <?php
+    }
+  }
+  ?>
 </body>
 
 </html>

@@ -23,7 +23,7 @@ $companyData = json_decode($jsonData, true);
     <h1>Industrial Visit Management System</h1>
     <div class="header-right">
       <?php
-      if (!isset($_SESSION['user_id'])) {
+      if (!isset($_SESSION['user_id']) && !isset($_SESSION['company_id'])) {
       ?>
         <a href="login.php">Login</a>
         <a href="register.php">Sign Up</a>

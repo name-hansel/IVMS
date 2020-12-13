@@ -57,7 +57,7 @@ $tourArray = json_decode($json_data, true);
 <body>
     <!-- header -->
     <header class="header">
-        <h1>Industrial Visit Management System</h1>
+        <h1><a href="../../index.php" class="link">Industrial Visit Management System</a></h1>
         <div class="header-right">
             <h5>Your Past Tours</h5>
         </div>

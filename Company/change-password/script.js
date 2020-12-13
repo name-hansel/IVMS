@@ -1,34 +1,3 @@
-function changePassword(newP) {
-  axios({
-    method: "put",
-    url:
-      "https://industrialvisit-api.herokuapp.com/API/company/putCompanyHash.php",
-    data: {
-      password: newP,
-      company_id: companyID,
-    },
-  })
-    .then((response) => {
-      if (response.data.message === "Company password changed.") {
-        swal("Success!", "Password has been updated", "success");
-        setTimeout(() => {
-          window.location.href = "../company-dashboard/company-dashboard.php";
-        }, 1000);
-      } else {
-        swal("Error", "Some error has occurred", "error");
-        setTimeout(() => {
-          window.location.href = "../company-dashboard/company-dashboard.php";
-        }, 1000);
-      }
-    })
-    .catch((error) => {
-      console.error(error);
-      swal("Error", "Some error has occurred", "error");
-      setTimeout(() => {
-        window.location.href = "../company-dashboard/company-dashboard.php";
-      }, 1000);
-    });
-}
 function formValidation() {
   let current = document.password.current.value;
   let newP = document.password.new.value;
@@ -64,11 +33,7 @@ function formValidation() {
     document.getElementById("same-error").style.visibility = "hidden";
   }
 
-  if (result) {
-    newP = md5(newP);
-    changePassword(newP);
-  }
-  return false;
+  return result;
 }
 
 function goBack() {

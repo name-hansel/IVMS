@@ -252,8 +252,6 @@ input[type="number"] {
 }
 
 .link {
-  font-family: "Alata", sans-serif;
-  color: #99d8d0;
+  color: white;
   text-decoration: none;
-  font-size: 26px;
 }

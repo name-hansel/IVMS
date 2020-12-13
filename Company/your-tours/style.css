@@ -265,3 +265,7 @@ body {
   color: rgba(54, 54, 54, 0.6);
   letter-spacing: 3px;
 }
+.link {
+  color: white;
+  text-decoration: none;
+}

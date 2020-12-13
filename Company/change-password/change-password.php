@@ -30,7 +30,7 @@ $company = $company['data'][0]['password'];
 
 <body>
     <div class="header">
-        <h1>Industrial Visit Management System</h1>
+        <h1><a href="../../index.php" class="link">Industrial Visit Management System</a></h1>
         <div class="header-right">
             <h5>Add New Tour</h5>
         </div>
@@ -49,7 +49,7 @@ $company = $company['data'][0]['password'];
 
     <main class="content">
         <h3 class="form-heading">Change password</h3>
-        <form name="password" onSubmit="return formValidation()" method="post">
+        <form name="password" onSubmit="return formValidation()" method="post" action="change.php">
             <div class="form-element">
                 <label for="current" class="form-label">enter current password</label>
                 <input type="password" name="current" class="form-input" required />

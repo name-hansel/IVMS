@@ -31,7 +31,7 @@ $tour_array = $tour_array[0];
 <body>
   <!-- header -->
   <div class="header">
-    <h1>Industrial Visit Management System</h1>
+    <h1><a href="../../index.php" class="link">Industrial Visit Management System</a></h1>
     <div class="header-right">
       <h5>Tour Booking</h5>
     </div>

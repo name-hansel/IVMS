@@ -237,3 +237,8 @@ body {
 .rate-button:hover {
   background-color: rgba(54, 54, 54, 1);
 }
+
+.link {
+  color: white;
+  text-decoration: none;
+}
