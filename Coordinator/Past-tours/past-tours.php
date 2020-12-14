@@ -30,7 +30,7 @@ $tourArray = json_decode($json_data, true);
                     closeModal: false,
                 },
             }).then(rating => {
-                if (rating > 5 || rating < 0) {
+                if (rating > 5 || rating < 0 || rating == null || rating == "") {
                     swal("Please enter a valid rating", "", 'error');
                     return false;
                 } else {

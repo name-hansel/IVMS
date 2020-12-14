@@ -186,6 +186,7 @@ section > h1 {
   font-family: "Open Sans", sans-serif;
   font-size: 24px;
   color: #363636;
+  margin: 10px;
 }
 
 .tour-description,

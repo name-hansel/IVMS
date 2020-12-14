@@ -100,7 +100,7 @@ $ptour_arr = json_decode($json_data, true);
                     ?>
                         <div class="tour-item available-item">
                             <h3 class="tour-name"><?= $item['name'] ?></h3>
-                            <h3 class="tour-name">College: <?= $item['college'] ?></h3>
+                            <h3 class="tour-name"><?= $item['college'] ?></h3>
                             <p class="tour-description">Company: <?= $item['company'] ?></p>
                             <p class="tour-description">Date: <?= $item['date'] ?></p>
                             <p class="tour-description">Number of attendees: <?= $item['number_people'] ?></p>
