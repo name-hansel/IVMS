@@ -30,7 +30,7 @@ $companyData = json_decode($jsonData, true);
       <?php
       } elseif (isset($_SESSION['user_id'])) {
       ?>
-        <a href="Coordinator/coordinator-dashboard/coordinator-dashboard.php">Dashboard</a>
+        <a href="Coordinator/Coordinator-dashboard/coordinator-dashboard.php">Dashboard</a>
       <?php
       } elseif (isset($_SESSION['company_id'])) {
       ?>
